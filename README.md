@@ -1,4 +1,4 @@
-# AGENT — Esports Coverage Network
+# AgentTV — Esports Coverage Network
 
 A serious source for esports coverage. ESPN-style live scores, player profiles, team profiles, tournament archives, and full historical timeline. Built Fortnite-first, designed to expand to Counter-Strike, Valorant, League of Legends and more.
 
