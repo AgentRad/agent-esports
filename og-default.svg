@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a8a"/>
+      <stop offset="50%" stop-color="#5b1f7a"/>
+      <stop offset="100%" stop-color="#cc0033"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="60" y="160" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="900" fill="rgba(255,255,255,0.85)" letter-spacing="2">★ ESPORTS COVERAGE NETWORK</text>
+  <rect x="60" y="200" width="80" height="80" fill="#cc0000" rx="12"/>
+  <text x="100" y="262" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="900" fill="#fff" text-anchor="middle">A</text>
+  <text x="160" y="262" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="900" fill="#fff" letter-spacing="-2">AGENT</text>
+  <text x="60" y="380" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="900" fill="#fff" letter-spacing="-3">Live esports.</text>
+  <text x="60" y="468" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="900" fill="#fff" letter-spacing="-3">Every game.</text>
+  <text x="60" y="556" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="900" fill="#fff" letter-spacing="-3">Every player.</text>
+  <text x="1140" y="590" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="rgba(255,255,255,0.7)" text-anchor="end">agent-esports.vercel.app</text>
+</svg>
