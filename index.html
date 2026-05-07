@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-marks.css">
 </head>
 <body>
 
@@ -92,67 +93,58 @@
 
   <!-- GAME TILES ROW -->
   <div class="section-label">Browse by Game <a href="#" class="more">All games</a></div>
-  <div class="games-row" style="margin-bottom: 32px;">
-    <a href="fortnite.html" class="game-card bg-grad-fortnite" style="color: #fff; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">Epic Games</div>
+  <div class="games-tile-row" style="margin-bottom: 32px;">
+    <a href="fortnite.html" class="game-tile gt-fortnite">
+      <div class="gt-mark">FN</div>
+      <div class="gt-publisher">Epic Games</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px;">Fortnite</div>
-        <div style="font-size: 12px; opacity: 0.92; display: flex; align-items: center; gap: 6px;">
-          <span style="display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%;"></span>
-          FNCS Summit · Day 2 · LIVE
-        </div>
+        <div class="gt-name">Fortnite</div>
+        <div class="gt-status"><span class="dot"></span> FNCS Summit · Day 2 · LIVE</div>
       </div>
     </a>
 
-    <a href="cs2.html" class="game-card bg-grad-cs" style="color: #fff; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">Valve</div>
+    <a href="cs2.html" class="game-tile gt-cs2">
+      <div class="gt-mark">CS</div>
+      <div class="gt-publisher">Valve</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px;">Counter-Strike 2</div>
-        <div style="font-size: 12px; opacity: 0.92; display: flex; align-items: center; gap: 6px;">
-          <span style="display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%;"></span>
-          IEM Katowice QF · LIVE
-        </div>
+        <div class="gt-name">Counter-Strike 2</div>
+        <div class="gt-status"><span class="dot"></span> IEM Katowice QF · LIVE</div>
       </div>
     </a>
 
-    <a href="valorant.html" class="game-card bg-grad-valorant" style="color: #fff; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">Riot Games</div>
+    <a href="valorant.html" class="game-tile gt-valorant">
+      <div class="gt-mark">V</div>
+      <div class="gt-publisher">Riot Games</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px;">Valorant</div>
-        <div style="font-size: 12px; opacity: 0.92; display: flex; align-items: center; gap: 6px;">
-          <span style="display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%;"></span>
-          VCT Masters Toronto · LIVE
-        </div>
+        <div class="gt-name">Valorant</div>
+        <div class="gt-status"><span class="dot"></span> VCT Masters Toronto · LIVE</div>
       </div>
     </a>
 
-    <a href="lol.html" class="game-card bg-grad-lol" style="color: #0a1428; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; color: #0a1428;">Riot Games</div>
+    <a href="lol.html" class="game-tile gt-lol">
+      <div class="gt-mark" style="color: rgba(200,155,60,0.18);">LoL</div>
+      <div class="gt-publisher" style="color: rgba(200,155,60,0.95);">Riot Games</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px; color: #0a1428;">League of Legends</div>
-        <div style="font-size: 12px; opacity: 0.85; color: #0a1428;">
-          LCS Spring · Week 8 · Tonight 5pm PT
-        </div>
+        <div class="gt-name">League of Legends</div>
+        <div class="gt-status"><span class="dot"></span> LCK Spring Final · Today</div>
       </div>
     </a>
 
-    <a href="apex.html" class="game-card bg-grad-5" style="color: #fff; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">EA</div>
+    <a href="apex.html" class="game-tile gt-apex">
+      <div class="gt-mark">AL</div>
+      <div class="gt-publisher">EA · Respawn</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px;">Apex Legends</div>
-        <div style="font-size: 12px; opacity: 0.92;">
-          ALGS Split 1 Playoffs · Sat 10am ET
-        </div>
+        <div class="gt-name">Apex Legends</div>
+        <div class="gt-status">ALGS Split 1 Playoffs · Sat</div>
       </div>
     </a>
 
-    <a href="#" class="game-card bg-grad-2" style="color: #fff; min-height: 140px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">Psyonix</div>
+    <a href="#" class="game-tile gt-rl">
+      <div class="gt-mark">RL</div>
+      <div class="gt-publisher">Psyonix</div>
       <div>
-        <div style="font-size: 22px; font-weight: 900; line-height: 1.1; margin-bottom: 6px;">Rocket League</div>
-        <div style="font-size: 12px; opacity: 0.92;">
-          RLCS Major 2 · Group Stage Wed
-        </div>
+        <div class="gt-name">Rocket League</div>
+        <div class="gt-status">RLCS Major 2 · Group Stage Wed</div>
       </div>
     </a>
   </div>

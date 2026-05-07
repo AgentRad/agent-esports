@@ -1,0 +1,69 @@
+/* Stylized game marks for game tiles (custom designs in brand colors, not copies of official logos) */
+.game-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  min-height: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.game-tile:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.game-tile .gt-mark {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: 220px;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.08em;
+  color: rgba(255,255,255,0.10);
+  pointer-events: none;
+  font-family: "Inter", system-ui, sans-serif;
+}
+.game-tile .gt-publisher {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  position: relative;
+  z-index: 2;
+}
+.game-tile .gt-name {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+}
+.game-tile .gt-status {
+  font-size: 12px;
+  opacity: 0.92;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+.game-tile .gt-status .dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; box-shadow: 0 0 6px rgba(255,255,255,0.6); animation: pulse 1.4s ease-in-out infinite; }
+
+/* Per-game brand backgrounds */
+.gt-fortnite { background: linear-gradient(135deg, #2d3aa8 0%, #6f3cc7 50%, #cf3289 100%); }
+.gt-cs2 { background: linear-gradient(135deg, #1f1f1f 0%, #4a2818 60%, #d2691e 100%); }
+.gt-valorant { background: linear-gradient(135deg, #0f1923 0%, #ff4655 100%); }
+.gt-lol { background: linear-gradient(135deg, #091428 0%, #1e2328 50%, #c89b3c 100%); }
+.gt-apex { background: linear-gradient(135deg, #1a0a0a 0%, #6a0a0a 50%, #da292a 100%); }
+.gt-rl { background: linear-gradient(135deg, #051937 0%, #d96b14 100%); }
+
+/* Wider grid for game tiles */
+.games-tile-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .games-tile-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .games-tile-row { grid-template-columns: 1fr; } }

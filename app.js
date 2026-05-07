@@ -62,7 +62,62 @@
     // Apex players
     { type: 'player', name: 'ImperialHal', meta: 'Phillip Dosen · Team Falcons · ALGS Champion · USA', url: 'imperialhal.html', cls: 'bg-default' },
     { type: 'player', name: 'Verhulst', meta: 'Evan Verhulst · Crazy Thieves · 2023 ALGS Champion · USA', url: 'verhulst.html', cls: 'bg-default' },
-    { type: 'player', name: 'Reps', meta: 'Jordan Wolfe · Free Agent · 2023 ALGS Champion · USA', url: 'reps.html', cls: 'bg-default' }
+    { type: 'player', name: 'Reps', meta: 'Jordan Wolfe · Free Agent · 2023 ALGS Champion · USA', url: 'reps.html', cls: 'bg-default' },
+    // Fortnite depth
+    { type: 'player', name: 'Mero', meta: 'Matthew Faitel · Team Liquid · 2x FNCS Global Champion · CAN', url: 'mero.html', cls: 'bg-default' },
+    { type: 'player', name: 'Andilex', meta: 'Alexandre Christophe · Team Liquid · 2025 FNCS GC winner · FRA', url: 'andilex.html', cls: 'bg-default' },
+    { type: 'player', name: 'Reet', meta: 'Nathan Allen Amundson · JOGO · 19 yo · USA', url: 'reet.html', cls: 'bg-default' },
+    { type: 'player', name: 'Cooper', meta: 'Cooper Cole Smith · Dignitas · 2023 FNCS GC Champion · USA', url: 'cooper.html', cls: 'bg-default' },
+    { type: 'player', name: 'Setty', meta: 'Iwo Zajac · 2022 FNCS Invitational winner · POL', url: 'setty.html', cls: 'bg-default' },
+    { type: 'player', name: 'TaySon', meta: 'Tai Starcic · ex-Falcons · 5x FNCS Major · SVN', url: 'tayson.html', cls: 'bg-default' },
+    { type: 'team', name: 'Twisted Minds', meta: 'Saudi org · signed Acorn Feb 2026 · $1.4M earnings', url: 'twistedminds.html', cls: 'bg-twisted' },
+    { type: 'team', name: 'Wave Esports', meta: 'Austrian org · DACH region', url: 'wave.html', cls: 'bg-wave' },
+    { type: 'team', name: 'Quest Esports', meta: 'UAE org · MENA/EU operations', url: 'quest.html', cls: 'bg-quest' },
+    { type: 'team', name: 'TSM', meta: 'American org · founded 2009 · $2.2M Fortnite earnings', url: 'tsm.html', cls: 'bg-tsm' },
+    // CS2 depth
+    { type: 'player', name: 'NiKo', meta: 'Nikola Kovac · Team Falcons · 2x HLTV #2 · BIH', url: 'niko.html', cls: 'bg-default' },
+    { type: 'player', name: 'm0NESY', meta: 'Ilya Osipov · Team Falcons · AWPer · RUS', url: 'm0nesy.html', cls: 'bg-default' },
+    { type: 'player', name: 'Twistzz', meta: 'Russel Van Dulken · FaZe Clan · Antwerp Major Champ · CAN', url: 'twistzz.html', cls: 'bg-default' },
+    { type: 'player', name: 'broky', meta: 'Helvijs Saukants · FaZe · BLAST Paris MVP · LAT', url: 'broky.html', cls: 'bg-default' },
+    { type: 'player', name: 'ropz', meta: 'Robin Kool · Vitality · Antwerp Major Champ · EST', url: 'ropz.html', cls: 'bg-default' },
+    { type: 'team', name: 'Vitality', meta: 'French org · 3 Majors · ZywOo team · $11.6M', url: 'vitality.html', cls: 'bg-vit' },
+    { type: 'team', name: 'Team Spirit', meta: 'Russian org · Shanghai Major 2024 · donk team', url: 'spirit.html', cls: 'bg-default' },
+    { type: 'team', name: 'NaVi', meta: 'Ukrainian org · 2 Majors · ex-s1mple team · $12.5M', url: 'navi.html', cls: 'bg-navi' },
+    { type: 'team', name: 'MOUZ', meta: 'German org · longest-running CS scene · $7.1M', url: 'mouz.html', cls: 'bg-default' },
+    { type: 'team', name: 'G2 CS', meta: 'Berlin org · IEM Cologne 2023 · $7.3M CS earnings', url: 'g2cs.html', cls: 'bg-g2' },
+    // Valorant depth
+    { type: 'player', name: 'Boostio', meta: 'Kelden Pupello · Free Agent · VCT Champions 2023 · USA', url: 'boostio.html', cls: 'bg-default' },
+    { type: 'player', name: 'saadhak', meta: 'Matias Delipetro · KRU · VCT Champions 2022 · ARG', url: 'saadhak.html', cls: 'bg-default' },
+    { type: 'player', name: 'Jinggg', meta: 'Wang Jing Jie · Paper Rex · Masters Toronto 2025 · SGP', url: 'jinggg.html', cls: 'bg-default' },
+    { type: 'player', name: 'f0rsakeN', meta: 'Jason Susanto · Paper Rex · 2025 APAC POTY · IDN', url: 'forsaken.html', cls: 'bg-default' },
+    { type: 'player', name: 'Less', meta: 'Felipe Basso · KRU · VCT Champions 2022 · BRA', url: 'less.html', cls: 'bg-default' },
+    { type: 'team', name: 'Sentinels Valorant', meta: '2x Masters · Reykjavik 2021 + Madrid 2024', url: 'sentinelsval.html', cls: 'bg-sentinels' },
+    { type: 'team', name: 'Evil Geniuses', meta: 'VCT Champions 2023 · Demon1 + Boostio', url: 'eg.html', cls: 'bg-default' },
+    { type: 'team', name: 'LOUD', meta: 'Brazilian org · VCT Champions 2022', url: 'loud.html', cls: 'bg-loud' },
+    { type: 'team', name: 'FNATIC Valorant', meta: 'London org · 2x Masters · Champions 2025 finalist', url: 'fnatic.html', cls: 'bg-default' },
+    { type: 'team', name: 'Paper Rex', meta: 'Singapore org · Masters Toronto 2025 · Pacific power', url: 'paperrex.html', cls: 'bg-default' },
+    // LoL depth
+    { type: 'player', name: 'Keria', meta: 'Ryu Min-seok · T1 · 3x World Champion · KOR', url: 'keria.html', cls: 'bg-default' },
+    { type: 'player', name: 'Ruler', meta: 'Park Jae-hyuk · Gen.G · 2017 World Champion · KOR', url: 'ruler.html', cls: 'bg-default' },
+    { type: 'player', name: 'Zeus', meta: 'Choi Woo-je · Hanwha Life · 2x World Champion · KOR', url: 'zeus.html', cls: 'bg-default' },
+    { type: 'player', name: 'ShowMaker', meta: 'Heo Su · Dplus KIA · 2020 World Champion · KOR', url: 'showmaker.html', cls: 'bg-default' },
+    { type: 'player', name: 'Knight', meta: 'Zhuo Ding · BLG · 2024 Worlds finalist · CHN', url: 'knight.html', cls: 'bg-default' },
+    { type: 'team', name: 'T1', meta: 'Seoul · 6x World Champions · Faker org · the GOAT', url: 't1.html', cls: 'bg-default' },
+    { type: 'team', name: 'Gen.G', meta: 'Seoul · 2x MSI Champion · Chovy + Ruler era', url: 'geng.html', cls: 'bg-default' },
+    { type: 'team', name: 'JDG', meta: 'Beijing · 2023 MSI Champion · LPL powerhouse', url: 'jdg.html', cls: 'bg-default' },
+    { type: 'team', name: 'BLG', meta: 'Shanghai · 2024 Worlds finalist · Knight team', url: 'blg.html', cls: 'bg-default' },
+    { type: 'team', name: 'G2 Esports', meta: 'Berlin · 2019 MSI Champion · 12 LEC titles', url: 'g2.html', cls: 'bg-g2' },
+    // Apex depth
+    { type: 'player', name: 'Sweetdreams', meta: 'Christopher Sexton · Free Agent · Apex veteran · USA', url: 'sweet.html', cls: 'bg-default' },
+    { type: 'player', name: 'Albralelie', meta: 'Mac Beckwith · Team Nemesis · ex-TSM · USA', url: 'albralelie.html', cls: 'bg-default' },
+    { type: 'player', name: 'Genburten', meta: 'Noyan Ozkose · Crazy Thieves · 2022 ALGS Champion · AUS', url: 'genburten.html', cls: 'bg-default' },
+    { type: 'player', name: 'Gent', meta: 'Rigoberto Padilla · GodLike · IGL · USA', url: 'gent.html', cls: 'bg-default' },
+    { type: 'player', name: 'Zer0', meta: 'Rhys Perry · Team Liquid · 2022 ALGS Champion · AUS', url: 'zer0.html', cls: 'bg-default' },
+    { type: 'team', name: 'TSM Apex', meta: 'LA · 2023 ALGS Champion · ImperialHal era', url: 'tsmapex.html', cls: 'bg-tsm' },
+    { type: 'team', name: 'NRG Apex', meta: 'LA · 2021 Winter Circuit NA Champion', url: 'nrgapex.html', cls: 'bg-nrg' },
+    { type: 'team', name: 'FURIA Apex', meta: 'Brazilian SA powerhouse · 2022 Championship 2nd', url: 'furia.html', cls: 'bg-default' },
+    { type: 'team', name: 'DarkZero', meta: 'US org · 2022 ALGS Champion · Genburten team', url: 'darkzero.html', cls: 'bg-default' },
+    { type: 'team', name: 'Team Falcons Apex', meta: 'Saudi-backed · ImperialHal Apex team · top-3 NA', url: 'falconsapex.html', cls: 'bg-falcons' }
   ];
 
   // Inject overlay into the page
