@@ -18,12 +18,15 @@
     { type: 'player', name: 'Acorn', meta: 'Abdullah Akhras · Twisted Minds · 21 yo · CAN · 4x FNCS Major', url: 'acorn.html', cls: 'bg-default' },
     { type: 'player', name: 'Ajerss', meta: 'Aidan Bernero · Gen.G Esports · 20 yo · USA · 2x FNCS Major', url: 'ajerss.html', cls: 'bg-default' },
     { type: 'player', name: 'Flickzy', meta: 'Felix G · GodLike Esports · 19 yo · GER · 2x EU Major', url: 'flickzy.html', cls: 'bg-default' },
+    { type: 'player', name: 'Pixie', meta: 'Wilmer Juriander · HavoK by Vitality · 18 yo · SWE', url: 'pixie.html', cls: 'bg-default' },
     // Teams
     { type: 'team', name: 'Team Falcons', meta: 'Saudi-backed · #1 Org Power Index · 8 active FN players', url: 'team.html', cls: 'bg-falcons' },
     { type: 'team', name: 'Dignitas', meta: 'New Jersey · #2 Org Power Index · 4 active FN players', url: 'dignitas.html', cls: 'bg-dignitas' },
     { type: 'team', name: 'FaZe Clan', meta: 'Los Angeles · #3 Org Power Index · 5 active FN players', url: 'faze.html', cls: 'bg-faze' },
     { type: 'team', name: 'NRG', meta: 'Los Angeles · #4 Org Power Index · 6 active FN players', url: 'nrg.html', cls: 'bg-nrg' },
     { type: 'team', name: '100 Thieves', meta: 'Founded by Nadeshot · #5 Org Power Index', url: '100thieves.html', cls: 'bg-100t' },
+    { type: 'team', name: 'Team Liquid', meta: 'Dutch-American · 2025 FNCS Global Champions (Mero+Andilex)', url: 'liquid.html', cls: 'bg-liquid' },
+    { type: 'team', name: 'Sentinels', meta: 'Bugha alma mater · 2019 World Cup org', url: 'sentinels.html', cls: 'bg-sentinels' },
     // Tournaments
     { type: 'tournament', name: 'Fortnite World Cup 2019', meta: 'Arthur Ashe Stadium · $30M prize pool · Bugha won Solo', url: 'tournament-wc2019.html', cls: 'bg-default' },
     { type: 'tournament', name: 'FNCS 2024 Global Championship', meta: 'Copenhagen LAN · Peterbot &amp; Pollo won $400K', url: 'tournament-fncs2024-global.html', cls: 'bg-faze' },
