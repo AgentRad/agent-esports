@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="My Watchlist · Players, teams, and events you follow · AgentTV" />
+<meta property="og:description" content="Your personal AgentTV watchlist. Players, teams, and tournaments you've starred · all in one feed." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/watchlist.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="My Watchlist · AgentTV" />
+<meta name="twitter:description" content="Your personal AgentTV watchlist. Players, teams, and tournaments you follow." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>My Watchlist · AgentTV</title>
+<meta name="description" content="Your personal AgentTV watchlist. Players, teams, and tournaments you've starred · all in one feed." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="tier-list.html">Tier List</a>
+    <a href="predictions.html">Predictions</a>
+    <a href="watchlist.html" class="active">My Watchlist</a>
+    <a href="compare-games.html">Compare Games</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="article.html">News</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <span class="here">My Watchlist</span>
+  </div>
+
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">★ Personal feed · synced to this browser</div>
+    <h1 class="page-title">My Watchlist</h1>
+    <p class="page-sub">Everything you follow on AgentTV, in one place. Players, teams, and tournaments you've starred. We'll surface their next match, latest news, and earnings updates here.</p>
+  </div>
+
+  <!-- Stats summary -->
+  <div id="wl-summary" class="card" style="margin-bottom:20px;">
+    <div class="card-body" style="padding:0;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);">
+        <div style="padding:18px;text-align:center;border-right:1px solid var(--border);"><div id="wl-c-total" style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:900;">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Following</div></div>
+        <div style="padding:18px;text-align:center;border-right:1px solid var(--border);"><div id="wl-c-players" style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:900;color:var(--red);">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Players</div></div>
+        <div style="padding:18px;text-align:center;border-right:1px solid var(--border);"><div id="wl-c-teams" style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:900;color:var(--gold);">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Teams</div></div>
+        <div style="padding:18px;text-align:center;"><div id="wl-c-tournaments" style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:900;color:var(--win);">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Tournaments</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter pills -->
+  <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+    <button type="button" class="wl-filter" data-f="all" style="padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid #1d1d1d;background:#1d1d1d;color:#fff;border-radius:2px;cursor:pointer;">All</button>
+    <button type="button" class="wl-filter" data-f="player" style="padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Players</button>
+    <button type="button" class="wl-filter" data-f="team" style="padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Teams</button>
+    <button type="button" class="wl-filter" data-f="tournament" style="padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Tournaments</button>
+    <button type="button" id="wl-clear" style="margin-left:auto;padding:8px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;color:var(--text-2);">Clear all</button>
+  </div>
+
+  <!-- Watchlist body -->
+  <div id="wl-body"></div>
+
+  <!-- Empty state template -->
+  <template id="wl-empty-tpl">
+    <div class="card">
+      <div class="card-body" style="padding:60px 24px;text-align:center;">
+        <div style="font-size:48px;line-height:1;color:var(--border-strong);margin-bottom:12px;">★</div>
+        <h2 style="font-size:22px;font-weight:900;letter-spacing:-0.02em;margin-bottom:8px;">Nothing here yet</h2>
+        <p style="color:var(--text-2);max-width:520px;margin:0 auto 20px;line-height:1.55;">Add players from any wiki page using the <strong style="color:var(--red);">★ Follow</strong> button. They'll appear here with their next match, recent news, and live earnings.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a href="bugha.html" class="btn-watch" style="padding:10px 16px;font-size:11px;background:#cc0000;color:#fff;border-radius:2px;">Try a player page</a>
+          <a href="players.html" style="padding:10px 16px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;">Browse all players</a>
+          <a href="tournaments.html" style="padding:10px 16px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;">Browse tournaments</a>
+        </div>
+        <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);font-size:11px;color:var(--text-3);">Try the example: <button id="wl-seed" style="font-size:11px;color:var(--link);font-weight:700;text-decoration:underline;cursor:pointer;background:none;border:0;padding:0;">add a few suggestions</button> to see what your watchlist will look like.</div>
+      </div>
+    </div>
+  </template>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Build</h5><a href="tier-list.html">Tier List</a><a href="predictions.html">Predictions</a><a href="watchlist.html">My Watchlist</a><a href="compare-games.html">Compare Games</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>Player photos via Liquipedia (CC-BY-SA 3.0).</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var body = document.getElementById('wl-body');
+  var filter = 'all';
+
+  function counts(list) {
+    var c = { player: 0, team: 0, tournament: 0 };
+    list.forEach(function (f) { if (c[f.type] != null) c[f.type]++; });
+    return c;
+  }
+
+  function render() {
+    var list = window.AgentTV.getFollows();
+    var c = counts(list);
+    document.getElementById('wl-c-total').textContent = list.length;
+    document.getElementById('wl-c-players').textContent = c.player;
+    document.getElementById('wl-c-teams').textContent = c.team;
+    document.getElementById('wl-c-tournaments').textContent = c.tournament;
+
+    body.innerHTML = '';
+    if (list.length === 0) {
+      var tpl = document.getElementById('wl-empty-tpl');
+      body.appendChild(tpl.content.cloneNode(true));
+      var seed = document.getElementById('wl-seed');
+      if (seed) seed.addEventListener('click', function () {
+        window.AgentTV.addToWatchlist('Bugha', 'player', 'bugha.html');
+        window.AgentTV.addToWatchlist('Peterbot', 'player', 'player.html');
+        window.AgentTV.addToWatchlist('Faker', 'player', 'faker.html');
+        window.AgentTV.addToWatchlist('Sentinels', 'team', 'sentinels.html');
+        window.AgentTV.addToWatchlist('FNCS Major 2 · 2026', 'tournament', 'tournaments.html');
+        render();
+      });
+      return;
+    }
+
+    var visible = list.filter(function (f) { return filter === 'all' || f.type === filter; });
+    if (visible.length === 0) {
+      body.innerHTML = '<div class="card"><div class="card-body" style="padding:32px;text-align:center;color:var(--text-2);">No items match this filter.</div></div>';
+      return;
+    }
+
+    // Group by type
+    var groups = { player: [], team: [], tournament: [] };
+    visible.forEach(function (f) { (groups[f.type] || (groups.player)).push(f); });
+
+    Object.keys(groups).forEach(function (type) {
+      if (groups[type].length === 0) return;
+      var card = document.createElement('div');
+      card.className = 'card';
+      card.style.marginBottom = '16px';
+      var label = type.charAt(0).toUpperCase() + type.slice(1) + 's · ' + groups[type].length;
+      var head = document.createElement('div');
+      head.className = 'card-head';
+      head.innerHTML = '<div><div class="card-title">' + label + '</div><div class="card-sub">Tap a row to open the page · click ✕ to unfollow</div></div>';
+      card.appendChild(head);
+      var bodyEl = document.createElement('div');
+      bodyEl.className = 'card-body';
+      bodyEl.style.padding = '0';
+      groups[type].forEach(function (f) {
+        var row = document.createElement('div');
+        row.style.cssText = 'display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);';
+        var added = '';
+        try { added = new Date(f.addedAt).toLocaleDateString(undefined, { month:'short', day:'numeric' }); } catch (e) {}
+        var initial = (f.name[0] || '?').toUpperCase();
+        var badgeColor = type === 'player' ? '#cc0000' : type === 'team' ? '#b8860b' : '#008a3c';
+        row.innerHTML =
+          '<div style="width:40px;height:40px;border-radius:50%;background:#1d1d1d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex-shrink:0;">' + initial + '</div>' +
+          '<div style="flex:1;min-width:0;">' +
+            '<div style="font-weight:800;font-size:14px;"><a href="' + (f.url || '#') + '">' + f.name + '</a></div>' +
+            '<div style="font-size:11px;color:var(--text-3);font-weight:500;text-transform:uppercase;letter-spacing:0.04em;"><span style="color:' + badgeColor + ';font-weight:800;">● ' + type + '</span> · added ' + added + ' · ' + window.AgentTV.getFollowCount(f.name).toLocaleString() + ' following</div>' +
+          '</div>' +
+          '<a href="' + (f.url || '#') + '" style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-2);padding:6px 10px;border:1px solid var(--border);border-radius:2px;">Open</a>' +
+          '<button type="button" data-remove="' + f.name.replace(/"/g, '&quot;') + '" style="background:none;border:1px solid var(--border);border-radius:2px;padding:6px 10px;font-size:11px;font-weight:800;color:var(--text-3);cursor:pointer;">✕ Unfollow</button>';
+        bodyEl.appendChild(row);
+      });
+      // last row, drop border
+      var rows = bodyEl.querySelectorAll('div');
+      if (rows.length) rows[rows.length-1].style.borderBottom = '0';
+      card.appendChild(bodyEl);
+      body.appendChild(card);
+    });
+
+    body.querySelectorAll('[data-remove]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        window.AgentTV.removeFromWatchlist(btn.getAttribute('data-remove'));
+        render();
+      });
+    });
+  }
+
+  document.querySelectorAll('.wl-filter').forEach(function (b) {
+    b.addEventListener('click', function () {
+      filter = b.dataset.f;
+      document.querySelectorAll('.wl-filter').forEach(function (x) {
+        var active = x === b;
+        x.style.background = active ? '#1d1d1d' : 'var(--bg)';
+        x.style.color = active ? '#fff' : 'var(--text)';
+        x.style.borderColor = active ? '#1d1d1d' : 'var(--border)';
+      });
+      render();
+    });
+  });
+
+  document.getElementById('wl-clear').addEventListener('click', function () {
+    if (!confirm('Clear your entire AgentTV watchlist?')) return;
+    var list = window.AgentTV.getFollows().slice();
+    list.forEach(function (f) { window.AgentTV.removeFromWatchlist(f.name); });
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

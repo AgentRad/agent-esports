@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Cross-Game Compare · Faker vs Bugha and beyond · AgentTV" />
+<meta property="og:description" content="Compare any two pro esports players from any game. Career earnings, age, years pro, peak achievements, side by side." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/compare-games.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cross-Game Compare · AgentTV" />
+<meta name="twitter:description" content="Compare any two pro esports players from any game · earnings, age, peak achievements." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cross-Game Player Compare · AgentTV</title>
+<meta name="description" content="Compare any two pro esports players from any game. Career earnings, age, years pro, peak achievements, side by side." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="tier-list.html">Tier List</a>
+    <a href="predictions.html">Predictions</a>
+    <a href="watchlist.html">My Watchlist</a>
+    <a href="compare-games.html" class="active">Compare Games</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="article.html">News</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <a href="compare.html">Compare</a><span class="sep">›</span>
+    <span class="here">Cross-Game</span>
+  </div>
+
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">★ Cross-game · prestige across titles</div>
+    <h1 class="page-title">Compare Across Games</h1>
+    <p class="page-sub">Faker vs Bugha. s1mple vs Peterbot. ImperialHal vs TenZ. Pick any two pros from any game and stack their careers side by side. The numbers tell stories that single-game leaderboards never could.</p>
+  </div>
+
+  <!-- Pickers -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-head"><div><div class="card-title">Pick two players</div><div class="card-sub">Switch sides any time. Try the suggested matchups below.</div></div></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:16px;align-items:end;">
+        <div>
+          <label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-3);">Player A</label>
+          <select id="pl-a" style="width:100%;padding:12px;font-size:14px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;margin-top:6px;"></select>
+        </div>
+        <div style="text-align:center;font-size:24px;font-weight:900;color:var(--red);padding-bottom:10px;">VS</div>
+        <div>
+          <label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-3);">Player B</label>
+          <select id="pl-b" style="width:100%;padding:12px;font-size:14px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;margin-top:6px;"></select>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;align-self:center;">Suggested:</span>
+        <button type="button" class="cmp-preset" data-a="faker" data-b="bugha" style="padding:6px 12px;font-size:11px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Faker vs Bugha</button>
+        <button type="button" class="cmp-preset" data-a="s1mple" data-b="peterbot" style="padding:6px 12px;font-size:11px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">s1mple vs Peterbot</button>
+        <button type="button" class="cmp-preset" data-a="tenz" data-b="imperialhal" style="padding:6px 12px;font-size:11px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">TenZ vs ImperialHal</button>
+        <button type="button" class="cmp-preset" data-a="zywoo" data-b="aspas" style="padding:6px 12px;font-size:11px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">ZywOo vs aspas</button>
+        <button type="button" class="cmp-preset" data-a="niko" data-b="chovy" style="padding:6px 12px;font-size:11px;font-weight:700;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">NiKo vs Chovy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison output -->
+  <div id="cmp-output"></div>
+
+  <div class="card" style="margin-top:20px;">
+    <div class="card-head"><div><div class="card-title">Notes on the numbers</div></div></div>
+    <div class="card-body" style="font-size:12px;color:var(--text-2);line-height:1.6;">
+      <p>Career earnings sourced from publicly reported tournament prize pools. Streamer income, salaries, and sponsorships are not included · they would dwarf prize money for most LoL and Valorant players. Bugha's $3.67M and Faker's $1.6M in <strong>tournament earnings only</strong> tell a very different story than the broader career value of each.</p>
+      <p style="margin-top:8px;">"Peak achievement" is editorial. Multi-year dominance (Faker, Bugha) and one-night legendary runs (Demon1) sit on the same axis. That tension is the point.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Build</h5><a href="tier-list.html">Tier List</a><a href="predictions.html">Predictions</a><a href="watchlist.html">My Watchlist</a><a href="compare-games.html">Compare Games</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>Player photos via Liquipedia (CC-BY-SA 3.0). Earnings sourced from public tournament prize pools.</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // Career data · figures are public tournament prize money, rounded.
+  var PLAYERS = {
+    faker:       { name:'Faker',       real:'Lee Sang-hyeok',  game:'League of Legends', country:'🇰🇷 South Korea', born:1996, debut:2013, earnings:1640000,  team:'T1',           role:'Mid laner',         peak:'5x World Champion (2013, 2015, 2016, 2023, 2024)', accolade:'Most decorated esports player in history', url:'faker.html' },
+    bugha:       { name:'Bugha',       real:'Kyle Giersdorf',  game:'Fortnite',          country:'🇺🇸 United States', born:2002, debut:2018, earnings:3672184,  team:'Free agent',   role:'Solo / Trios',      peak:'2019 World Cup Solo Champion · $3M single payout',  accolade:'#1 all-time Fortnite earnings', url:'bugha.html' },
+    peterbot:    { name:'Peterbot',    real:'Peter Kata',      game:'Fortnite',          country:'🇺🇸 United States', born:2005, debut:2020, earnings:1850000,  team:'DarkZero',     role:'Duos / Trios',      peak:'2024 Global Championship · back-to-back FNCS titles', accolade:'Heir apparent to the Fortnite throne', url:'player.html' },
+    s1mple:      { name:'s1mple',      real:'Oleksandr Kostyliev', game:'CS2',           country:'🇺🇦 Ukraine',     born:1997, debut:2014, earnings:1670000,  team:'B8',           role:'AWPer',             peak:'2018 IEM Major MVP · multiple HLTV #1',                accolade:'Widely called the best CS player ever', url:'s1mple.html' },
+    zywoo:       { name:'ZywOo',       real:'Mathieu Herbaut', game:'CS2',               country:'🇫🇷 France',      born:2000, debut:2018, earnings:1090000,  team:'Vitality',     role:'AWPer',             peak:'4x HLTV Player of the Year',                          accolade:'Most consistent rifler/AWPer of his era', url:'zywoo.html' },
+    niko:        { name:'NiKo',        real:'Nikola Kovač',    game:'CS2',               country:'🇧🇦 Bosnia',      born:1997, debut:2013, earnings:1380000,  team:'G2 Esports',   role:'Rifler',            peak:'IEM Cologne 2022 champion · top-3 HLTV repeat',       accolade:'Pinpoint precision · gold standard rifler', url:'niko.html' },
+    tenz:        { name:'TenZ',        real:'Tyson Ngo',       game:'Valorant',          country:'🇨🇦 Canada',      born:2001, debut:2020, earnings:520000,   team:'Sentinels',    role:'Duelist',           peak:'2021 VCT Masters Reykjavík · global icon',            accolade:'Face of Valorant · 4M+ following', url:'tenz.html' },
+    aspas:       { name:'aspas',       real:'Erick Santos',    game:'Valorant',          country:'🇧🇷 Brazil',      born:2003, debut:2021, earnings:610000,   team:'Leviatán',     role:'Duelist',           peak:'2022 + 2024 Champions · double crown',                accolade:'Only player with two VCT Champions titles', url:'aspas.html' },
+    demon1:      { name:'Demon1',      real:'Max Mazanov',     game:'Valorant',          country:'🇺🇸 United States', born:2002, debut:2022, earnings:280000,   team:'Evil Geniuses',role:'Duelist',           peak:'2023 VCT Champions MVP · undefeated playoff run',     accolade:'Cinderella story of the decade', url:'demon1.html' },
+    chovy:       { name:'Chovy',       real:'Jeong Ji-hoon',   game:'League of Legends', country:'🇰🇷 South Korea', born:2001, debut:2018, earnings:480000,   team:'Gen.G',        role:'Mid laner',         peak:'2024 LCK Spring + Summer · 4x LCK MVP',               accolade:'Statistical mid GOAT in domestic play', url:'chovy.html' },
+    keria:       { name:'Keria',       real:'Ryu Min-seok',    game:'League of Legends', country:'🇰🇷 South Korea', born:2002, debut:2020, earnings:520000,   team:'T1',           role:'Support',           peak:'2023 + 2024 World Champion · back-to-back',           accolade:'Best support of his generation', url:'keria.html' },
+    imperialhal: { name:'ImperialHal', real:'Phillip Dosen',   game:'Apex Legends',      country:'🇺🇸 United States', born:2000, debut:2019, earnings:780000,   team:'TSM',          role:'IGL · Assault',     peak:'5x ALGS championship · won every event format',       accolade:'Most decorated Apex player', url:'imperialhal.html' },
+    verhulst:    { name:'Verhulst',    real:'Evan Verhulst',   game:'Apex Legends',      country:'🇺🇸 United States', born:1999, debut:2019, earnings:720000,   team:'TSM',          role:'Skirmisher',        peak:'5x ALGS championship with TSM',                       accolade:'Glue of the most successful Apex roster', url:'verhulst.html' },
+    pollo:       { name:'Pollo',       real:'Tom Schwartzendin',game:'Fortnite',         country:'🇺🇸 United States', born:2008, debut:2023, earnings:480000,   team:'Lazarus',      role:'Trios · NA-E',      peak:'2024 FNCS Major 3 finals · rookie phenom',            accolade:'Youngest top-10 NA-E', url:'pollo.html' },
+    khanada:     { name:'Khanada',     real:'Khanyon Marlow',  game:'Fortnite',          country:'🇺🇸 United States', born:2004, debut:2019, earnings:710000,   team:'Dignitas',     role:'Solo · NA-W',       peak:'NA-W solo throne · multi-FNCS qualifier',             accolade:'Best NA-West player of his era', url:'khanada.html' }
+  };
+
+  function fmtMoney(n) { return '$' + n.toLocaleString(); }
+
+  var aSel = document.getElementById('pl-a');
+  var bSel = document.getElementById('pl-b');
+  Object.keys(PLAYERS).sort(function (x, y) { return PLAYERS[x].name.localeCompare(PLAYERS[y].name); }).forEach(function (k) {
+    var p = PLAYERS[k];
+    var label = p.name + '  ·  ' + p.game;
+    aSel.appendChild(new Option(label, k));
+    bSel.appendChild(new Option(label, k));
+  });
+  aSel.value = 'faker';
+  bSel.value = 'bugha';
+
+  function statRow(label, valA, valB, opts) {
+    opts = opts || {};
+    var winner = opts.winner; // 'a' | 'b' | null
+    var aWin = winner === 'a', bWin = winner === 'b';
+    return '' +
+      '<div style="display:grid;grid-template-columns:1fr 200px 1fr;gap:0;border-bottom:1px solid var(--border);">' +
+        '<div style="padding:14px 16px;text-align:right;font-weight:' + (aWin ? '900' : '700') + ';color:' + (aWin ? 'var(--red)' : 'var(--text)') + ';font-size:' + (opts.large ? '20px' : '14px') + ';font-family:' + (opts.mono ? "'JetBrains Mono', monospace" : 'inherit') + ';">' + valA + '</div>' +
+        '<div style="padding:14px 12px;text-align:center;font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;font-weight:800;background:var(--bg-alt);">' + label + '</div>' +
+        '<div style="padding:14px 16px;text-align:left;font-weight:' + (bWin ? '900' : '700') + ';color:' + (bWin ? 'var(--red)' : 'var(--text)') + ';font-size:' + (opts.large ? '20px' : '14px') + ';font-family:' + (opts.mono ? "'JetBrains Mono', monospace" : 'inherit') + ';">' + valB + '</div>' +
+      '</div>';
+  }
+
+  function render(aKey, bKey) {
+    var a = PLAYERS[aKey], b = PLAYERS[bKey];
+    if (!a || !b) return;
+    var thisYear = 2026;
+    var ageA = thisYear - a.born, ageB = thisYear - b.born;
+    var ypA = thisYear - a.debut, ypB = thisYear - b.debut;
+    var earnW = a.earnings > b.earnings ? 'a' : (b.earnings > a.earnings ? 'b' : null);
+    var ageW = ageA < ageB ? 'a' : (ageB < ageA ? 'b' : null);  // younger highlighted
+    var ypW = ypA > ypB ? 'a' : (ypB > ypA ? 'b' : null);  // veteran highlighted
+
+    var html =
+      '<div class="card" style="margin-bottom:20px;overflow:hidden;">' +
+        '<div style="display:grid;grid-template-columns:1fr 200px 1fr;background:#1d1d1d;color:#fff;">' +
+          '<div style="padding:24px 20px;text-align:right;">' +
+            '<div style="font-size:10px;color:#9a9aa3;text-transform:uppercase;letter-spacing:0.08em;font-weight:800;">' + a.game + '</div>' +
+            '<a href="' + a.url + '" style="display:block;font-size:32px;font-weight:900;letter-spacing:-0.02em;color:#fff;margin-top:4px;">' + a.name + '</a>' +
+            '<div style="font-size:12px;color:#9a9aa3;margin-top:4px;">' + a.real + ' · ' + a.country + '</div>' +
+          '</div>' +
+          '<div style="display:flex;align-items:center;justify-content:center;background:#cc0000;color:#fff;font-size:36px;font-weight:900;letter-spacing:-0.04em;">VS</div>' +
+          '<div style="padding:24px 20px;text-align:left;">' +
+            '<div style="font-size:10px;color:#9a9aa3;text-transform:uppercase;letter-spacing:0.08em;font-weight:800;">' + b.game + '</div>' +
+            '<a href="' + b.url + '" style="display:block;font-size:32px;font-weight:900;letter-spacing:-0.02em;color:#fff;margin-top:4px;">' + b.name + '</a>' +
+            '<div style="font-size:12px;color:#9a9aa3;margin-top:4px;">' + b.real + ' · ' + b.country + '</div>' +
+          '</div>' +
+        '</div>' +
+        statRow('Career earnings', fmtMoney(a.earnings), fmtMoney(b.earnings), { large: true, mono: true, winner: earnW }) +
+        statRow('Age',             ageA + ' yrs',         ageB + ' yrs',         { mono: true, winner: ageW }) +
+        statRow('Years pro',       ypA + ' yrs',          ypB + ' yrs',          { mono: true, winner: ypW }) +
+        statRow('Current team',    a.team,                b.team) +
+        statRow('Role',            a.role,                b.role) +
+        statRow('Peak achievement',a.peak,                b.peak) +
+        statRow('What they\'re known for', a.accolade,    b.accolade) +
+      '</div>';
+
+    // narrative takeaway
+    var diff = Math.abs(a.earnings - b.earnings);
+    var leader = a.earnings >= b.earnings ? a : b;
+    var trailer = a.earnings >= b.earnings ? b : a;
+    var ratio = (leader.earnings / Math.max(1, trailer.earnings)).toFixed(2);
+
+    html +=
+      '<div class="card">' +
+        '<div class="card-head"><div><div class="card-title">★ AgentTV take</div><div class="card-sub">What this matchup actually says</div></div></div>' +
+        '<div class="card-body" style="font-size:14px;line-height:1.6;color:var(--text);">' +
+          '<p><strong>' + leader.name + '</strong> leads the prize money column by <strong>' + fmtMoney(diff) + '</strong> · roughly <strong>' + ratio + 'x</strong> ' + trailer.name + '\'s career take.</p>' +
+          '<p style="margin-top:10px;">But the comparison cuts both ways. ' + a.name + ' built his case in <strong>' + a.game + '</strong>, where the prize structure rewards <em>' + (a.game === 'Fortnite' ? 'one-shot tournament wins' : a.game === 'League of Legends' ? 'long franchised seasons' : 'a tight major calendar') + '</em>. ' + b.name + ' came up in <strong>' + b.game + '</strong>, a different economy, a different schedule, a different definition of greatness. Cross-game prestige is never a single number.</p>' +
+        '</div>' +
+      '</div>';
+
+    document.getElementById('cmp-output').innerHTML = html;
+  }
+
+  function update() { render(aSel.value, bSel.value); }
+  aSel.addEventListener('change', update);
+  bSel.addEventListener('change', update);
+  document.querySelectorAll('.cmp-preset').forEach(function (b) {
+    b.addEventListener('click', function () {
+      aSel.value = b.dataset.a;
+      bSel.value = b.dataset.b;
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>

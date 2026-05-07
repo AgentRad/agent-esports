@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Predictions · Pick the winners of every major event · AgentTV" />
+<meta property="og:description" content="Make your predictions for FNCS Major 2, IEM Katowice, VCT Masters Toronto, LCK Spring, and ALGS Split 2. See where you rank against the community." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/predictions.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Predictions · AgentTV" />
+<meta name="twitter:description" content="Pick the winners of every major event. See where you rank." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Predictions · AgentTV</title>
+<meta name="description" content="Make your predictions for FNCS Major 2, IEM Katowice, VCT Masters Toronto, LCK Spring, and ALGS Split 2. See where you rank against the community." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="tier-list.html">Tier List</a>
+    <a href="predictions.html" class="active">Predictions</a>
+    <a href="watchlist.html">My Watchlist</a>
+    <a href="compare-games.html">Compare Games</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="article.html">News</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <span class="here">Predictions</span>
+  </div>
+
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">★ Live · 6 events open · brackets locked</div>
+    <h1 class="page-title">Make Your Predictions</h1>
+    <p class="page-sub">Pick the winners of the next six majors. One click locks your call. Earn streaks, climb the AgentTV leaderboard, and see how the community is split before puck-drop.</p>
+  </div>
+
+  <div class="two-col" style="margin-top: 8px;">
+    <div>
+      <div id="pred-events"></div>
+    </div>
+
+    <aside>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-head"><div><div class="card-title">★ Your scoresheet</div><div class="card-sub">Picks made · streak · accuracy</div></div></div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">
+            <div style="padding:14px 6px;background:var(--bg-alt);border-radius:2px;"><div id="pred-stat-picks" style="font-size:24px;font-weight:900;font-family:'JetBrains Mono',monospace;">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Picks</div></div>
+            <div style="padding:14px 6px;background:var(--bg-alt);border-radius:2px;"><div style="font-size:24px;font-weight:900;font-family:'JetBrains Mono',monospace;color:var(--win);">0</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Hits</div></div>
+            <div style="padding:14px 6px;background:var(--bg-alt);border-radius:2px;"><div style="font-size:24px;font-weight:900;font-family:'JetBrains Mono',monospace;">·</div><div style="font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;">Streak</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-3);margin-top:10px;line-height:1.5;">Hits are graded after each event ends. Sign in soon to compete on the global ladder.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><div><div class="card-title">Top predictors · this week</div><div class="card-sub">Leaderboard · placeholder</div></div></div>
+        <div class="card-body" style="padding:0;">
+          <table class="t-rank">
+            <tbody>
+              <tr><td class="rk gold">1</td><td><div class="pl-cell"><div class="avatar bg-default">F</div><div><div style="font-weight:800;">FlowZone</div><div style="font-size:10px;color:var(--text-3);">9 of 11 hits · 5 streak</div></div></div></td><td class="num">+862</td></tr>
+              <tr><td class="rk">2</td><td><div class="pl-cell"><div class="avatar bg-default">N</div><div><div style="font-weight:800;">NeonScroll</div><div style="font-size:10px;color:var(--text-3);">8 of 11 · 3 streak</div></div></div></td><td class="num">+714</td></tr>
+              <tr><td class="rk">3</td><td><div class="pl-cell"><div class="avatar bg-default">P</div><div><div style="font-weight:800;">parsecpilot</div><div style="font-size:10px;color:var(--text-3);">8 of 12 · 2 streak</div></div></div></td><td class="num">+658</td></tr>
+              <tr><td class="rk">4</td><td><div class="pl-cell"><div class="avatar bg-default">K</div><div><div style="font-weight:800;">koldcuts</div><div style="font-size:10px;color:var(--text-3);">7 of 11 · 4 streak</div></div></div></td><td class="num">+602</td></tr>
+              <tr><td class="rk">5</td><td><div class="pl-cell"><div class="avatar bg-default">A</div><div><div style="font-weight:800;">aimlocked</div><div style="font-size:10px;color:var(--text-3);">7 of 12 · 1 streak</div></div></div></td><td class="num">+541</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <div class="card-head"><div><div class="card-title">How scoring works</div></div></div>
+        <div class="card-body" style="font-size:12px;color:var(--text-2);line-height:1.55;">
+          <p>+100 base for a correct winner. +50 for picking before the bracket reveals. Streak bonus stacks at +25 per consecutive correct call.</p>
+          <p style="margin-top:8px;">Predictions lock at the start of the grand final. No edits after lock.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Build</h5><a href="tier-list.html">Tier List</a><a href="predictions.html">Predictions</a><a href="watchlist.html">My Watchlist</a><a href="compare-games.html">Compare Games</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>Player photos via Liquipedia (CC-BY-SA 3.0).</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var EVENTS = [
+    {
+      id: 'fncs-major-2-2026',
+      game: 'Fortnite',
+      title: 'FNCS Major 2 · 2026',
+      sub: 'Global Final · Trios · prize pool $4M · starts June 6',
+      friends: 1428,
+      contenders: [
+        { id: 'peterbot',    name: 'Peterbot',         tag: 'NA-E · DZ',          odds: '+220' },
+        { id: 'tayson',      name: 'Tayson',           tag: 'EU · solo crown',    odds: '+450' },
+        { id: 'andilex',     name: 'Andilex',          tag: 'EU · trio',          odds: '+500' },
+        { id: 'mero',        name: 'Mero',             tag: 'NA-E · trio',        odds: '+650' },
+        { id: 'epikwhale',   name: 'EpikWhale',        tag: 'NRG · NA-W',         odds: '+900' }
+      ]
+    },
+    {
+      id: 'iem-katowice-2026',
+      game: 'CS2',
+      title: 'IEM Katowice 2026 · Winner',
+      sub: 'Spodek Arena · CS2 · prize pool $1M · starts Feb 14',
+      friends: 2104,
+      contenders: [
+        { id: 'spirit',   name: 'Team Spirit',  tag: 'donk · zont1x · sh1ro',     odds: '+180' },
+        { id: 'g2',       name: 'G2 Esports',   tag: 'NiKo · m0NESY · huNter',    odds: '+260' },
+        { id: 'faze',     name: 'FaZe',         tag: 'broky · ropz · rain',       odds: '+320' },
+        { id: 'navi',     name: 'NAVI',         tag: 'b1t · iM · w0nderful',      odds: '+450' },
+        { id: 'vitality', name: 'Vitality',     tag: 'ZywOo · apEX · flameZ',     odds: '+550' }
+      ]
+    },
+    {
+      id: 'vct-masters-toronto-2026',
+      game: 'Valorant',
+      title: 'VCT Masters Toronto · Winner',
+      sub: 'Scotiabank Arena · April 4-19 · prize pool $500k',
+      friends: 1670,
+      contenders: [
+        { id: 'paperrex',   name: 'Paper Rex',  tag: 'PAC · jingg · forsaken',  odds: '+220' },
+        { id: 'sentinels',  name: 'Sentinels',  tag: 'AMER · TenZ · zekken',    odds: '+300' },
+        { id: 'fnatic',     name: 'Fnatic',     tag: 'EMEA · Boaster · Derke',  odds: '+380' },
+        { id: 'geng',       name: 'Gen.G',      tag: 'PAC · t3xture · Karon',   odds: '+450' },
+        { id: 'loud',       name: 'LOUD',       tag: 'AMER · saadhak · less',   odds: '+550' }
+      ]
+    },
+    {
+      id: 'lck-spring-2026',
+      game: 'League of Legends',
+      title: 'LCK Spring 2026 · Final',
+      sub: 'LoL Park, Seoul · April 18 · best-of-five',
+      friends: 2412,
+      contenders: [
+        { id: 't1',     name: 'T1',         tag: 'Faker · Keria · Gumayusi',  odds: '+150' },
+        { id: 'geng',   name: 'Gen.G',      tag: 'Chovy · Ruler · Kiin',      odds: '+180' },
+        { id: 'kt',     name: 'KT Rolster', tag: 'Bdd · Cyan · Aiming',       odds: '+700' },
+        { id: 'hle',    name: 'Hanwha',     tag: 'Zeka · Viper · Doran',      odds: '+800' }
+      ]
+    },
+    {
+      id: 'algs-split-2-2026',
+      game: 'Apex Legends',
+      title: 'ALGS Split 2 Playoffs · 2026',
+      sub: 'Sapporo · Trios · prize pool $2M · starts July 11',
+      friends: 1086,
+      contenders: [
+        { id: 'tsm',         name: 'TSM',          tag: 'ImperialHal · Verhulst · Reps', odds: '+200' },
+        { id: 'darkzero',    name: 'DarkZero',     tag: 'Genburten · Sweet · Zer0',       odds: '+280' },
+        { id: 'falcons',     name: 'Falcons',      tag: 'Hakis · Yuki · Sharky',          odds: '+400' },
+        { id: 'twistedminds',name: 'Twisted Minds',tag: 'Wxltzy · Rhys · Awakening',      odds: '+550' },
+        { id: 'nrg',         name: 'NRG',          tag: 'Albralelie · Gild · sweetdreams',odds: '+650' }
+      ]
+    },
+    {
+      id: 'fortnite-summer-cup-2026',
+      game: 'Fortnite',
+      title: 'Summer Cash Cup · 2026',
+      sub: 'Solos · NA-E · prize pool $250k · starts July 27',
+      friends: 612,
+      contenders: [
+        { id: 'peterbot',  name: 'Peterbot',   tag: 'DZ · NA-E',     odds: '+180' },
+        { id: 'cooper',    name: 'Cooper',     tag: 'NRG · NA-E',    odds: '+450' },
+        { id: 'reet',      name: 'Reet',       tag: 'NRG · NA-E',    odds: '+500' },
+        { id: 'mero',      name: 'Mero',       tag: 'NA-E',          odds: '+550' }
+      ]
+    }
+  ];
+
+  var STORAGE = 'agenttv-predictions';
+  function load() { try { return JSON.parse(localStorage.getItem(STORAGE)) || {}; } catch (e) { return {}; } }
+  function save(s) { try { localStorage.setItem(STORAGE, JSON.stringify(s)); } catch (e) {} }
+
+  var picks = load();
+
+  var host = document.getElementById('pred-events');
+
+  EVENTS.forEach(function (ev) {
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.style.marginBottom = '20px';
+    var picked = picks[ev.id];
+    var locked = !!picked;
+
+    card.innerHTML =
+      '<div class="card-head" style="display:flex;align-items:center;gap:12px;">' +
+        '<div style="flex:1;">' +
+          '<div style="font-size:10px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">' + ev.game + '</div>' +
+          '<div class="card-title">' + ev.title + '</div>' +
+          '<div class="card-sub">' + ev.sub + '</div>' +
+        '</div>' +
+        '<div style="text-align:right;">' +
+          '<div style="font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;">' + ev.friends.toLocaleString() + ' friends predicting</div>' +
+          '<div style="font-size:11px;color:var(--text-2);margin-top:2px;" data-pick-status>' + (locked ? '✓ Picked: <strong style="color:var(--win);">' + (ev.contenders.find(function(c){return c.id===picked;})||{}).name + '</strong>' : 'Pick a winner below') + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="card-body" style="padding:12px;">' +
+        '<div data-contenders style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;"></div>' +
+      '</div>';
+
+    var grid = card.querySelector('[data-contenders]');
+    ev.contenders.forEach(function (c) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.dataset.cid = c.id;
+      var isPick = picked === c.id;
+      b.style.cssText = 'text-align:left;padding:14px;border:2px solid ' + (isPick ? '#cc0000' : 'var(--border)') + ';border-radius:2px;background:' + (isPick ? 'rgba(204,0,0,0.05)' : 'var(--bg)') + ';cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:border-color 0.12s;';
+      b.innerHTML =
+        '<div style="display:flex;align-items:center;gap:8px;">' +
+          '<div style="width:28px;height:28px;border-radius:50%;background:#1d1d1d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;">' + (c.name[0]||'?').toUpperCase() + '</div>' +
+          '<div style="font-weight:800;font-size:14px;flex:1;">' + c.name + '</div>' +
+          '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;font-weight:700;color:var(--text-2);">' + c.odds + '</div>' +
+        '</div>' +
+        '<div style="font-size:11px;color:var(--text-3);font-weight:500;line-height:1.35;">' + c.tag + '</div>' +
+        '<div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:' + (isPick ? '#cc0000' : 'var(--text-3)') + ';margin-top:4px;" data-pick-flag>' + (isPick ? '★ Your Pick' : '· Tap to pick') + '</div>';
+      b.addEventListener('click', function () {
+        picks[ev.id] = c.id;
+        save(picks);
+        // re-render this card's buttons
+        ev.contenders.forEach(function (cc) {
+          var btn = grid.querySelector('[data-cid="' + cc.id + '"]');
+          if (!btn) return;
+          var sel = picks[ev.id] === cc.id;
+          btn.style.borderColor = sel ? '#cc0000' : 'var(--border)';
+          btn.style.background = sel ? 'rgba(204,0,0,0.05)' : 'var(--bg)';
+          var flag = btn.querySelector('[data-pick-flag]');
+          if (flag) {
+            flag.textContent = sel ? '★ Your Pick' : '· Tap to pick';
+            flag.style.color = sel ? '#cc0000' : 'var(--text-3)';
+          }
+        });
+        var status = card.querySelector('[data-pick-status]');
+        if (status) status.innerHTML = '✓ Picked: <strong style="color:var(--win);">' + c.name + '</strong>';
+        updateScoresheet();
+      });
+      grid.appendChild(b);
+    });
+
+    host.appendChild(card);
+  });
+
+  function updateScoresheet() {
+    var n = Object.keys(picks).length;
+    var el = document.getElementById('pred-stat-picks');
+    if (el) el.textContent = n;
+  }
+  updateScoresheet();
+})();
+</script>
+</body>
+</html>

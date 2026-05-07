@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tier List Builder · Rank the GOATs across every game · AgentTV" />
+<meta property="og:description" content="Build your own S/A/B/C/D tier list of pro esports players. Drag, click, save. Switch between Fortnite, CS2, Valorant, League, and Apex." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/tier-list.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tier List Builder · AgentTV" />
+<meta name="twitter:description" content="Build your own S/A/B/C/D tier list of pro esports players. Saved automatically." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tier List Builder · AgentTV</title>
+<meta name="description" content="Build your own S/A/B/C/D tier list of pro esports players. Drag, click, save. Switch between Fortnite, CS2, Valorant, League, and Apex." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="tier-list.html" class="active">Tier List</a>
+    <a href="predictions.html">Predictions</a>
+    <a href="watchlist.html">My Watchlist</a>
+    <a href="compare-games.html">Compare Games</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="article.html">News</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <span class="here">Tier List Builder</span>
+  </div>
+
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">★ Interactive · Auto-saved to your browser</div>
+    <h1 class="page-title">Tier List Builder</h1>
+    <p class="page-sub">Rank the best players in the world, your way. Click a player to send them up the ladder, or drag-and-drop into S, A, B, C, or D. Switch games at the top. Your list saves automatically and stays here when you come back.</p>
+  </div>
+
+  <!-- Game switcher -->
+  <div class="card" style="margin-bottom: 20px;">
+    <div class="card-head"><div><div class="card-title">1 · Pick a game</div><div class="card-sub">Switch any time. Each game keeps its own tier list.</div></div></div>
+    <div class="card-body" style="display:flex;gap:8px;flex-wrap:wrap;">
+      <button type="button" class="tl-game" data-game="fortnite" style="padding:10px 16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Fortnite</button>
+      <button type="button" class="tl-game" data-game="cs2" style="padding:10px 16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">CS2</button>
+      <button type="button" class="tl-game" data-game="valorant" style="padding:10px 16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Valorant</button>
+      <button type="button" class="tl-game" data-game="lol" style="padding:10px 16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">League of Legends</button>
+      <button type="button" class="tl-game" data-game="apex" style="padding:10px 16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;">Apex Legends</button>
+      <button type="button" id="tl-reset" style="margin-left:auto;padding:10px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--border);background:var(--bg);border-radius:2px;cursor:pointer;color:var(--text-2);">↺ Reset this list</button>
+    </div>
+  </div>
+
+  <!-- Tiers -->
+  <div class="card" style="margin-bottom: 20px;">
+    <div class="card-head"><div><div class="card-title">2 · Drop them in</div><div class="card-sub">Click a player below, then click a tier · or drag them in.</div></div></div>
+    <div class="card-body" style="padding:0;">
+      <div id="tl-tiers" style="display:flex;flex-direction:column;">
+        <div class="tl-row" data-tier="S" style="display:flex;border-bottom:1px solid var(--border);min-height:88px;">
+          <div style="width:88px;background:#cc0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;letter-spacing:-0.04em;flex-shrink:0;">S</div>
+          <div class="tl-bin" data-tier="S" style="flex:1;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;"></div>
+        </div>
+        <div class="tl-row" data-tier="A" style="display:flex;border-bottom:1px solid var(--border);min-height:88px;">
+          <div style="width:88px;background:#e55300;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;letter-spacing:-0.04em;flex-shrink:0;">A</div>
+          <div class="tl-bin" data-tier="A" style="flex:1;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;"></div>
+        </div>
+        <div class="tl-row" data-tier="B" style="display:flex;border-bottom:1px solid var(--border);min-height:88px;">
+          <div style="width:88px;background:#b8860b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;letter-spacing:-0.04em;flex-shrink:0;">B</div>
+          <div class="tl-bin" data-tier="B" style="flex:1;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;"></div>
+        </div>
+        <div class="tl-row" data-tier="C" style="display:flex;border-bottom:1px solid var(--border);min-height:88px;">
+          <div style="width:88px;background:#008a3c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;letter-spacing:-0.04em;flex-shrink:0;">C</div>
+          <div class="tl-bin" data-tier="C" style="flex:1;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;"></div>
+        </div>
+        <div class="tl-row" data-tier="D" style="display:flex;min-height:88px;">
+          <div style="width:88px;background:#1d1d1d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;letter-spacing:-0.04em;flex-shrink:0;">D</div>
+          <div class="tl-bin" data-tier="D" style="flex:1;padding:10px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pool -->
+  <div class="card" style="margin-bottom: 20px;">
+    <div class="card-head"><div><div class="card-title">Player pool</div><div class="card-sub">Click a name then a tier, or drag into the bins above.</div></div></div>
+    <div class="card-body">
+      <div id="tl-pool" class="tl-bin" data-tier="POOL" style="display:flex;gap:8px;flex-wrap:wrap;min-height:60px;"></div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;color:var(--text-3);text-align:center;padding:8px 0;">Saved locally to your browser · clearing site data will reset all tier lists.</div>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Build</h5><a href="tier-list.html">Tier List</a><a href="predictions.html">Predictions</a><a href="watchlist.html">My Watchlist</a><a href="compare-games.html">Compare Games</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>Player photos via Liquipedia (CC-BY-SA 3.0).</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script>
+(function () {
+  'use strict';
+  var POOLS = {
+    fortnite: [
+      { name: 'Peterbot',   url: 'player.html',     sub: '2024 Global Champion' },
+      { name: 'Bugha',      url: 'bugha.html',      sub: '2019 World Cup Solo' },
+      { name: 'Khanada',    url: 'khanada.html',    sub: 'NA-W · Dignitas' },
+      { name: 'EpikWhale',  url: 'epikwhale.html',  sub: '2019 WC Solo 3rd' },
+      { name: 'Mongraal',   url: 'mongraal.html',   sub: 'EU legend' },
+      { name: 'Clix',       url: 'clix.html',       sub: 'NRG · NA-E' },
+      { name: 'MrSavage',   url: 'mrsavage.html',   sub: '100T · EU' },
+      { name: 'Tayson',     url: 'tayson.html',     sub: 'EU · solo' },
+      { name: 'Nyhrox',     url: 'nyhrox.html',     sub: '2019 WC Duos' }
+    ],
+    cs2: [
+      { name: 's1mple',     url: 's1mple.html',     sub: 'NAVI · GOAT' },
+      { name: 'ZywOo',      url: 'zywoo.html',      sub: 'Vitality · AWPer' },
+      { name: 'NiKo',       url: 'niko.html',       sub: 'G2 · rifler' },
+      { name: 'm0NESY',     url: 'm0nesy.html',     sub: 'G2 · AWPer' },
+      { name: 'donk',       url: 'donk.html',       sub: 'Spirit · prodigy' },
+      { name: 'broky',      url: 'broky.html',      sub: 'FaZe · AWPer' },
+      { name: 'ropz',       url: 'ropz.html',       sub: 'FaZe · rifler' },
+      { name: 'Twistzz',    url: 'twistzz.html',    sub: 'FaZe · rifler' }
+    ],
+    valorant: [
+      { name: 'TenZ',       url: 'tenz.html',       sub: 'Sentinels · 2021 Champ' },
+      { name: 'aspas',      url: 'aspas.html',      sub: 'Leviatán · 2x champ' },
+      { name: 'Demon1',     url: 'demon1.html',     sub: 'EG · 2023 Champ' },
+      { name: 'Less',       url: 'less.html',       sub: 'LOUD · controller' },
+      { name: 'Saadhak',    url: 'saadhak.html',    sub: 'IGL · LOUD' },
+      { name: 'Jinggg',     url: 'jinggg.html',     sub: 'Paper Rex · duelist' },
+      { name: 'forsaken',   url: 'forsaken.html',   sub: 'Paper Rex' }
+    ],
+    lol: [
+      { name: 'Faker',      url: 'faker.html',      sub: 'T1 · 5x World Champ' },
+      { name: 'Keria',      url: 'keria.html',      sub: 'T1 · support' },
+      { name: 'Chovy',      url: 'chovy.html',      sub: 'GenG · mid' },
+      { name: 'Caps',       url: 'caps.html',       sub: 'G2 · mid' },
+      { name: 'Knight',     url: 'knight.html',     sub: 'BLG · mid' },
+      { name: 'Showmaker',  url: 'showmaker.html',  sub: 'DK · mid' },
+      { name: 'Ruler',      url: 'ruler.html',      sub: 'JDG · ADC' }
+    ],
+    apex: [
+      { name: 'ImperialHal',url: 'imperialhal.html',sub: 'TSM · IGL' },
+      { name: 'Verhulst',   url: 'verhulst.html',   sub: 'TSM · skirmisher' },
+      { name: 'Reps',       url: 'reps.html',       sub: 'TSM · support' },
+      { name: 'Albralelie', url: 'albralelie.html', sub: 'NRG · veteran' },
+      { name: 'Genburten',  url: 'genburten.html',  sub: 'DZ · skirmisher' },
+      { name: 'sweetdreams',url: 'sweet.html',      sub: 'DZ · IGL' },
+      { name: 'zer0',       url: 'zer0.html',       sub: 'TSM · veteran' }
+    ]
+  };
+
+  var TIERS = ['S', 'A', 'B', 'C', 'D', 'POOL'];
+  var STORAGE = 'agenttv-tierlist';
+  var GAME_KEY = 'agenttv-tierlist-game';
+
+  function loadAll() {
+    try { return JSON.parse(localStorage.getItem(STORAGE)) || {}; } catch (e) { return {}; }
+  }
+  function saveAll(s) {
+    try { localStorage.setItem(STORAGE, JSON.stringify(s)); } catch (e) {}
+  }
+  function loadGame() { return localStorage.getItem(GAME_KEY) || 'fortnite'; }
+  function saveGame(g) { try { localStorage.setItem(GAME_KEY, g); } catch (e) {} }
+
+  function defaultStateFor(game) {
+    var state = { S: [], A: [], B: [], C: [], D: [], POOL: [] };
+    (POOLS[game] || []).forEach(function (p) { state.POOL.push(p.name); });
+    return state;
+  }
+
+  var currentGame = loadGame();
+  var allStates = loadAll();
+  if (!allStates[currentGame]) allStates[currentGame] = defaultStateFor(currentGame);
+
+  function playerByName(name) {
+    var pool = POOLS[currentGame] || [];
+    for (var i = 0; i < pool.length; i++) if (pool[i].name === name) return pool[i];
+    return { name: name, url: '#', sub: '' };
+  }
+
+  function chipEl(name) {
+    var p = playerByName(name);
+    var d = document.createElement('div');
+    d.className = 'tl-chip';
+    d.draggable = true;
+    d.dataset.name = name;
+    d.style.cssText = 'display:flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;background:var(--bg);border:1px solid var(--border);border-radius:2px;cursor:grab;font-size:12px;font-weight:700;user-select:none;box-shadow:var(--shadow-sm);';
+    var initial = (name[0] || '?').toUpperCase();
+    d.innerHTML =
+      '<div style="width:26px;height:26px;border-radius:50%;background:#1d1d1d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">' + initial + '</div>' +
+      '<div style="display:flex;flex-direction:column;gap:1px;line-height:1.1;"><span>' + name + '</span><span style="font-size:10px;color:var(--text-3);font-weight:500;">' + (p.sub || '') + '</span></div>';
+    d.addEventListener('dragstart', function (e) {
+      d.style.opacity = '0.4';
+      e.dataTransfer.setData('text/plain', name);
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    d.addEventListener('dragend', function () { d.style.opacity = '1'; });
+    d.addEventListener('click', function () {
+      // click-to-promote: cycles POOL → D → C → B → A → S → POOL
+      var order = ['POOL','D','C','B','A','S','POOL'];
+      var cur = currentTierOf(name);
+      var idx = order.indexOf(cur);
+      var next = order[idx + 1] || 'POOL';
+      moveTo(name, next);
+    });
+    return d;
+  }
+
+  function currentTierOf(name) {
+    var s = allStates[currentGame];
+    for (var i = 0; i < TIERS.length; i++) {
+      if (s[TIERS[i]].indexOf(name) !== -1) return TIERS[i];
+    }
+    return 'POOL';
+  }
+
+  function moveTo(name, tier) {
+    var s = allStates[currentGame];
+    TIERS.forEach(function (t) {
+      var idx = s[t].indexOf(name);
+      if (idx !== -1) s[t].splice(idx, 1);
+    });
+    if (!s[tier]) s[tier] = [];
+    s[tier].push(name);
+    saveAll(allStates);
+    render();
+  }
+
+  function render() {
+    var s = allStates[currentGame];
+    // ensure pool reflects new entries (e.g. game switch)
+    var pool = POOLS[currentGame] || [];
+    pool.forEach(function (p) {
+      if (!TIERS.some(function (t) { return s[t].indexOf(p.name) !== -1; })) s.POOL.push(p.name);
+    });
+
+    TIERS.forEach(function (t) {
+      var el = (t === 'POOL') ? document.getElementById('tl-pool') : document.querySelector('.tl-bin[data-tier="' + t + '"]');
+      if (!el) return;
+      el.innerHTML = '';
+      s[t].forEach(function (name) { el.appendChild(chipEl(name)); });
+    });
+
+    document.querySelectorAll('.tl-game').forEach(function (b) {
+      var active = b.dataset.game === currentGame;
+      b.style.background = active ? '#1d1d1d' : 'var(--bg)';
+      b.style.color = active ? '#fff' : 'var(--text)';
+      b.style.borderColor = active ? '#1d1d1d' : 'var(--border)';
+    });
+  }
+
+  // dnd targets
+  function wireDropTargets() {
+    document.querySelectorAll('.tl-bin').forEach(function (bin) {
+      bin.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        bin.style.background = 'rgba(204,0,0,0.06)';
+      });
+      bin.addEventListener('dragleave', function () { bin.style.background = ''; });
+      bin.addEventListener('drop', function (e) {
+        e.preventDefault();
+        bin.style.background = '';
+        var name = e.dataTransfer.getData('text/plain');
+        if (name) moveTo(name, bin.dataset.tier);
+      });
+    });
+  }
+
+  document.querySelectorAll('.tl-game').forEach(function (b) {
+    b.addEventListener('click', function () {
+      currentGame = b.dataset.game;
+      saveGame(currentGame);
+      if (!allStates[currentGame]) allStates[currentGame] = defaultStateFor(currentGame);
+      saveAll(allStates);
+      render();
+    });
+  });
+
+  document.getElementById('tl-reset').addEventListener('click', function () {
+    allStates[currentGame] = defaultStateFor(currentGame);
+    saveAll(allStates);
+    render();
+  });
+
+  wireDropTargets();
+  render();
+})();
+</script>
+</body>
+</html>
