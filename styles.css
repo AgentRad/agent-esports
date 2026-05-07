@@ -593,7 +593,11 @@ main { padding: 24px 0 48px; }
 .t-rank .num.muted { color: var(--text-2); font-weight: 500; }
 .t-rank .pl-cell { display: flex; align-items: center; gap: 10px; }
 .t-rank .pl-cell:hover .pl-name { color: var(--red); }
-.avatar { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 12px; flex-shrink: 0; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 12px; flex-shrink: 0; overflow: hidden; }
+.avatar.with-photo { padding: 0; }
+.avatar.with-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.org-shield.with-logo { background: #fff; padding: 6px; }
+.org-shield.with-logo img { width: 100%; height: 100%; object-fit: contain; }
 .avatar.sq { border-radius: 4px; }
 .avatar.sm { width: 26px; height: 26px; font-size: 11px; }
 .avatar.lg { width: 56px; height: 56px; font-size: 22px; }

@@ -15,6 +15,9 @@
     { type: 'player', name: 'Aqua', meta: 'David Wang · 2019 World Cup Duo Champion · AUT', url: 'aqua.html', cls: 'bg-liquid' },
     { type: 'player', name: 'Nyhrox', meta: 'Emil Bergquist Pedersen · 2019 World Cup Duo Champion · NOR', url: 'nyhrox.html', cls: 'bg-default' },
     { type: 'player', name: 'MariusCOW', meta: 'Marius Wendt · Gentle Mates · 19 yo · DEN', url: 'mariuscow.html', cls: 'bg-default' },
+    { type: 'player', name: 'Acorn', meta: 'Abdullah Akhras · Twisted Minds · 21 yo · CAN · 4x FNCS Major', url: 'acorn.html', cls: 'bg-default' },
+    { type: 'player', name: 'Ajerss', meta: 'Aidan Bernero · Gen.G Esports · 20 yo · USA · 2x FNCS Major', url: 'ajerss.html', cls: 'bg-default' },
+    { type: 'player', name: 'Flickzy', meta: 'Felix G · GodLike Esports · 19 yo · GER · 2x EU Major', url: 'flickzy.html', cls: 'bg-default' },
     // Teams
     { type: 'team', name: 'Team Falcons', meta: 'Saudi-backed · #1 Org Power Index · 8 active FN players', url: 'team.html', cls: 'bg-falcons' },
     { type: 'team', name: 'Dignitas', meta: 'New Jersey · #2 Org Power Index · 4 active FN players', url: 'dignitas.html', cls: 'bg-dignitas' },
