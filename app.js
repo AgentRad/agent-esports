@@ -40,6 +40,7 @@
     { type: 'page', name: 'History', meta: 'Fortnite competitive timeline 2018 to 2026', url: 'history.html', cls: 'bg-default' },
     { type: 'page', name: 'Compare Players', meta: 'Side-by-side stat comparison', url: 'compare.html', cls: 'bg-default' },
     { type: 'page', name: 'Coach Profiles', meta: 'Cordell · Falcons head coach', url: 'coach.html', cls: 'bg-default' },
+    { type: 'page', name: 'Methodology and Data Sources', meta: 'How we source, verify, and present data · third-party trackers', url: 'methodology.html', cls: 'bg-default' },
     { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' },
     // Game sections
     { type: 'page', name: 'Fortnite', meta: 'Section landing · FNCS, Cash Cup, Power Rankings', url: 'fortnite.html', cls: 'bg-default' },

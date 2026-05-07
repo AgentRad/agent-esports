@@ -1506,6 +1506,53 @@ footer.site .brand-suffix { color: rgba(255,255,255,0.5); }
 .wiki-body .references li::marker { color: var(--text-3); font-weight: 700; }
 .wiki-body cite { font-style: normal; color: var(--text-2); }
 
+/* ============= STATS TRACKER LINKS (Fortnite wiki integration) ============= */
+.stats-trackers {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.stats-trackers .stk-title {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-2);
+  margin-bottom: 10px;
+}
+.stats-trackers .stk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+.stats-trackers a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.12s;
+}
+.stats-trackers a:hover { background: var(--text); color: #fff; border-color: var(--text); }
+.stats-trackers a .stk-arrow { font-size: 14px; opacity: 0.5; }
+.stats-trackers a:hover .stk-arrow { opacity: 1; }
+.stats-trackers .stk-disclaimer {
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: 8px;
+  font-style: italic;
+}
+
 /* ============= GLOBAL SEARCH OVERLAY ============= */
 .search-overlay {
   position: fixed;
