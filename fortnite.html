@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AgentTV · Esports News, Scores, Stats & Live Coverage" />
+<meta property="og:description" content="The serious source for esports. FNCS live coverage, player profiles, team news, tournament results, and stats across Fortnite, Counter-Strike, Valorant and more." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/fortnite.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AgentTV · Esports News, Scores, Stats & Live Coverage" />
+<meta name="twitter:description" content="The serious source for esports. FNCS live coverage, player profiles, team news, tournament results, and stats across Fortnite, Counter-Strike, Valorant and more." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fortnite Esports · FNCS Live, Players, Teams · AgentTV</title>
+<meta name="description" content="The serious source for esports. FNCS live coverage, player profiles, team news, tournament results, and stats across Fortnite, Counter-Strike, Valorant and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link active">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="#" class="active">Fortnite</a>
+      <a href="#">CS2</a>
+      <a href="#">Valorant</a>
+      <a href="#">League</a>
+      <a href="#">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">Call of Duty</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." />
+      <button class="btn-watch">Watch FNCS</button>
+    </div>
+  </div>
+</header>
+
+<!-- FORTNITE SUB NAV -->
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html" class="active">Home</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="event.html">Live Coverage</a>
+    <a href="history.html">History</a>
+    <a href="stats.html">Stats</a>
+    <a href="compare.html">Compare</a>
+    <a href="article.html">News</a>
+    <span class="subnav-divider"></span>
+    <a href="#">FNCS</a>
+    <a href="#">Cash Cup</a>
+    <a href="#">Icon Series</a>
+    <a href="tournament-wc2019.html">World Cup '19</a>
+    <a href="#">Scrims</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- HERO + RIGHT RAIL HEADLINES -->
+  <div class="hero-grid">
+    <a href="article.html" class="hero-card">
+      <div class="hero-bg bg-grad-fortnite"></div>
+      <div class="hero-content">
+        <div class="hero-tag live">Live</div>
+        <div class="hero-eyebrow">FNCS 2026 · Major 1 Summit · Day 2</div>
+        <h1 class="hero-headline">Falcons trio Pollo, Acorn, Ajerss lead Summit field with 770 points heading into final game</h1>
+        <p class="hero-dek">Khanada and the Dignitas duo sit second at 710 as Peterbot's Falcons trio chase from third with one game left. Top three advance to the FNCS Global LAN.</p>
+        <div class="hero-byline">
+          <strong>By Jordan Romero</strong>
+          <span>·</span>
+          <span>4 min read</span>
+          <span>·</span>
+          <span>Updated 12 minutes ago</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="hero-side">
+      <div class="section-label red">Top Headlines <a href="#" class="more">All news</a></div>
+      <div class="hero-side-list">
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">FNCS</div>
+            <div class="hsi-headline">VicterV & Khanada win NA West Major 1 by 160 points, take $30K</div>
+            <div class="hsi-meta">2h ago · by S. Patel</div>
+          </div>
+          <div class="hsi-thumb bg-grad-2">NA<br>WEST</div>
+        </a>
+        <a href="bugha.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Roster</div>
+            <div class="hsi-headline">Bugha confirms full-time streaming move, declines four offers</div>
+            <div class="hsi-meta">5h ago · by L. Brooks</div>
+          </div>
+          <div class="hsi-thumb bg-grad-3">BUGHA</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Analysis</div>
+            <div class="hsi-headline">Why Pollo + Peterbot reuniting is the most consequential duo in 2026</div>
+            <div class="hsi-meta">8h ago · by M. Chen</div>
+          </div>
+          <div class="hsi-thumb bg-grad-4">DUO</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Europe</div>
+            <div class="hsi-headline">MariusCOW, 18, anchors Pixie/Vanyak trio to second straight Major</div>
+            <div class="hsi-meta">12h ago · by T. Larsen</div>
+          </div>
+          <div class="hsi-thumb bg-grad-1">EU<br>MAJ 2</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Org News</div>
+            <div class="hsi-headline">Team Falcons expands Fortnite roster to 8 players across 3 regions</div>
+            <div class="hsi-meta">14h ago · by E. Aldhafeeri</div>
+          </div>
+          <div class="hsi-thumb bg-grad-5">FALC</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Counter-Strike</div>
+            <div class="hsi-headline">Vitality survive Spirit in OT to take BLAST Premier opener</div>
+            <div class="hsi-meta">16h ago · by J. Costa</div>
+          </div>
+          <div class="hsi-thumb bg-grad-cs">CS2</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOW: GAME-BY-GAME CARDS -->
+  <div class="section-label">Live Now <a href="event.html" class="more">All games</a></div>
+  <div class="games-row">
+    <a href="event.html" class="game-card">
+      <div class="game-card-head">
+        <span>FNCS Major 1 Summit · Game 11</span>
+        <span class="live-tag">Live</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo with-logo"><img src="https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/100px-Team_Falcons_2022_allmode.png" alt="Falcons" referrerpolicy="no-referrer" /></div>
+        <div class="t-name">Ajerss · Acorn · Pollo</div>
+        <div class="t-record">Falcons</div>
+        <div class="t-score">770</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo with-logo"><img src="https://liquipedia.net/commons/images/thumb/5/56/Dignitas_2021_allmode.png/100px-Dignitas_2021_allmode.png" alt="Dignitas" referrerpolicy="no-referrer" /></div>
+        <div class="t-name muted">Rapid · Khanada · Boltz</div>
+        <div class="t-record">Dignitas</div>
+        <div class="t-score muted">710</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>CS2 · IEM Katowice · Map 2</span>
+        <span class="live-tag">Live · Mirage</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-vit">V</div>
+        <div class="t-name">Vitality</div>
+        <div class="t-record">14-3</div>
+        <div class="t-score">13</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo with-logo"><img src="https://liquipedia.net/commons/images/thumb/4/40/FaZe_Clan_2018_lightmode.png/100px-FaZe_Clan_2018_lightmode.png" alt="FaZe" referrerpolicy="no-referrer" /></div>
+        <div class="t-name muted">FaZe</div>
+        <div class="t-record">12-5</div>
+        <div class="t-score muted">11</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>Valorant · VCT Masters · Map 1</span>
+        <span class="live-tag">Live · Bind</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-sentinels">S</div>
+        <div class="t-name">Sentinels</div>
+        <div class="t-record">Group A</div>
+        <div class="t-score">8</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-100t">EG</div>
+        <div class="t-name muted">Evil Geniuses</div>
+        <div class="t-record">Group A</div>
+        <div class="t-score muted">6</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>FNCS · EU · Major 2 GF</span>
+        <span class="live-tag">Live · Game 8</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">M</div>
+        <div class="t-name">MariusCOW · Pixie · Vanyak</div>
+        <div class="t-record">EU</div>
+        <div class="t-score">298</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">F</div>
+        <div class="t-name muted">Flickzy · Sky · Scroll</div>
+        <div class="t-record">EU</div>
+        <div class="t-score muted">284</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- TWO COLUMN: STORIES + RAIL -->
+  <div class="two-col">
+
+    <!-- LEFT: stories + standings -->
+    <div>
+
+      <!-- TOP STORIES GRID -->
+      <div class="section-label">Top Stories <a href="#" class="more">All stories</a></div>
+      <div class="story-grid" style="margin-bottom: 32px;">
+        <a href="article.html" class="story-card">
+          <div class="story-thumb bg-grad-fortnite">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Feature</div>
+            <div class="story-thumb-text">PETER<br>BOT</div>
+          </div>
+          <div class="story-cat">Profile · Team Falcons</div>
+          <div class="story-headline">Inside Peterbot's path from 13-year-old qualifier to the FNCS Global Champion at 17</div>
+          <div class="story-dek">Peter Kata's rise from Hungarian-American gamer to the most decorated player of the Chapter 4 era.</div>
+          <div class="story-byline">By M. Chen · 12 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-cs">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag live">Live</div>
+            <div class="story-thumb-text">IEM<br>KATO</div>
+          </div>
+          <div class="story-cat">Tournament</div>
+          <div class="story-headline">IEM Katowice quarterfinals open with Vitality vs FaZe · winner faces Spirit</div>
+          <div class="story-dek">The third-ranked Vitality look to break their 7-month trophy drought against a rebuilt FaZe core.</div>
+          <div class="story-byline">By J. Costa · 6 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-valorant">
+            <div class="story-thumb-game">Valorant</div>
+            <div class="story-thumb-tag dur">8:42</div>
+            <div class="story-thumb-text">VCT<br>MAST</div>
+          </div>
+          <div class="story-cat">Highlights</div>
+          <div class="story-headline">VCT Masters Toronto: every clutch from Sentinels' come-from-behind 2-1 win</div>
+          <div class="story-dek">Watch the moments that flipped Group A · including an unbelievable 1v4 from TenZ on Bind.</div>
+          <div class="story-byline">By A. Park · 9 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-3">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Analysis</div>
+            <div class="story-thumb-text">DUOS<br>MAP</div>
+          </div>
+          <div class="story-cat">Meta · Chapter 6</div>
+          <div class="story-headline">The duo meta has rewritten Fortnite · here's how the top 10 teams actually play it</div>
+          <div class="story-dek">After three Majors of duos, a clear divide has emerged between rotation-first and elim-first archetypes.</div>
+          <div class="story-byline">By S. Patel · 14 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-7">
+            <div class="story-thumb-game">Multi-game</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">SAUDI<br>ESPORTS</div>
+          </div>
+          <div class="story-cat">Business</div>
+          <div class="story-headline">Inside Team Falcons' $400M expansion: how the Saudi-backed org became #1 in 2026</div>
+          <div class="story-dek">A deep look at the most aggressive roster strategy in modern esports · and what it means for everyone else.</div>
+          <div class="story-byline">By E. Aldhafeeri · 22 min read</div>
+        </a>
+
+        <a href="bugha.html" class="story-card">
+          <div class="story-thumb bg-grad-2">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Roster</div>
+            <div class="story-thumb-text">BUGHA<br>FA</div>
+          </div>
+          <div class="story-cat">News</div>
+          <div class="story-headline">Bugha is officially a free agent · and he says he's done with team play</div>
+          <div class="story-dek">The 2019 World Cup champion will focus on streaming and content. Here's what four orgs offered.</div>
+          <div class="story-byline">By L. Brooks · 5 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-5">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Coaching</div>
+            <div class="story-thumb-text">COACH</div>
+          </div>
+          <div class="story-cat">Org News</div>
+          <div class="story-headline">Falcons hire former NRG analyst as first dedicated Fortnite coach across regions</div>
+          <div class="story-dek">The org doubles down on infrastructure as it preps eight players for FNCS Global LAN.</div>
+          <div class="story-byline">By J. Romero · 7 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-8">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Investigation</div>
+            <div class="story-thumb-text">PR<br>MATH</div>
+          </div>
+          <div class="story-cat">Stats Deep Dive</div>
+          <div class="story-headline">We rebuilt the Power Rankings algorithm. Here's why our top 10 looks different.</div>
+          <div class="story-dek">A new weighted-recency model that accounts for region strength, lobby difficulty and head-to-head signals.</div>
+          <div class="story-byline">By R. Park · 10 min read</div>
+        </a>
+      </div>
+
+      <!-- POWER RANKINGS -->
+      <div class="section-label">Fortnite Power Rankings <a href="#" class="more">Full top 100</a></div>
+      <div class="table-card" style="margin-bottom: 32px;">
+        <table class="t-rank">
+          <thead>
+            <tr>
+              <th style="width: 40px;">#</th>
+              <th>Player</th>
+              <th>Region</th>
+              <th>Move</th>
+              <th>Form</th>
+              <th class="num">PR</th>
+              <th class="num">FNCS Avg.</th>
+              <th class="num">Earnings (90d)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rk gold">1</td>
+              <td><a href="player.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a8/Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg/100px-Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg" alt="Peterbot" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Peterbot</div><div class="pl-meta">Peter Kata · Falcons · 18 yo · 🇺🇸 USA</div></div></a></td>
+              <td><span class="badge r-na">NA</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill W">1</span><span class="form-pill W">3</span><span class="form-pill W">1</span></div></td>
+              <td class="num">3,284</td>
+              <td class="num">2.1</td>
+              <td class="num">$214,500</td>
+            </tr>
+            <tr>
+              <td class="rk gold">2</td>
+              <td><a href="pollo.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/8/80/Gentle_Mates_Pollo_at_the_FNCS_2025_Global_Championship.jpg/100px-Gentle_Mates_Pollo_at_the_FNCS_2025_Global_Championship.jpg" alt="Pollo" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Pollo</div><div class="pl-meta">Miguel Moreno · Falcons · 17 yo · 🇺🇸 USA</div></div></a></td>
+              <td><span class="badge r-na">NA</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill T">5</span><span class="form-pill W">1</span></div></td>
+              <td class="num">3,201</td>
+              <td class="num">2.4</td>
+              <td class="num">$198,400</td>
+            </tr>
+            <tr>
+              <td class="rk gold">3</td>
+              <td><a href="acorn.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a1/Dignitas_Acorn_at_the_FNCS_2025_Global_Championship.jpg/300px-Dignitas_Acorn_at_the_FNCS_2025_Global_Championship.jpg" alt="Acorn" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Acorn</div><div class="pl-meta">Abdullah Akhras · Twisted Minds · 21 yo · 🇨🇦 CAN</div></div></a></td>
+              <td><span class="badge r-na">NA</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">2</span><span class="form-pill W">1</span><span class="form-pill T">5</span><span class="form-pill W">3</span><span class="form-pill W">1</span></div></td>
+              <td class="num">3,142</td>
+              <td class="num">2.7</td>
+              <td class="num">$182,200</td>
+            </tr>
+            <tr>
+              <td class="rk">4</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-falcons">A</div><div><div class="pl-name">Ajerss</div><div class="pl-meta">Aidan Bernero · Gen.G · 20 yo · 🇺🇸 USA</div></div></a></td>
+              <td><span class="badge r-na">NA</span></td>
+              <td><span class="move up">▲ 2</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill W">2</span><span class="form-pill T">6</span><span class="form-pill W">3</span></div></td>
+              <td class="num">3,068</td>
+              <td class="num">2.9</td>
+              <td class="num">$164,800</td>
+            </tr>
+            <tr>
+              <td class="rk">5</td>
+              <td><a href="khanada.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/6/69/DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg/100px-DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg" alt="Khanada" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Khanada</div><div class="pl-meta">Leon Khim Woobin · Dignitas · 21 yo · 🇺🇸🇰🇷</div></div></a></td>
+              <td><span class="badge r-na">NA-W</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill L">9</span><span class="form-pill W">1</span><span class="form-pill W">2</span></div></td>
+              <td class="num">2,991</td>
+              <td class="num">3.1</td>
+              <td class="num">$148,900</td>
+            </tr>
+            <tr>
+              <td class="rk">6</td>
+              <td><a href="players.html" class="pl-cell"><div class="avatar bg-dignitas">V</div><div><div class="pl-name">VicterV</div><div class="pl-meta">Dignitas · 21 yo · 🇺🇸 USA</div></div></a></td>
+              <td><span class="badge r-na">NA-W</span></td>
+              <td><span class="move up">▲ 3</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill W">2</span><span class="form-pill T">5</span><span class="form-pill W">1</span></div></td>
+              <td class="num">2,948</td>
+              <td class="num">3.0</td>
+              <td class="num">$142,300</td>
+            </tr>
+            <tr>
+              <td class="rk">7</td>
+              <td><a href="flickzy.html" class="pl-cell"><div class="avatar bg-default">F</div><div><div class="pl-name">Flickzy</div><div class="pl-meta">Felix G. · GodLike Esports · 19 yo · 🇩🇪 GER</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">2</span><span class="form-pill T">6</span><span class="form-pill W">2</span><span class="form-pill W">3</span><span class="form-pill W">1</span></div></td>
+              <td class="num">2,902</td>
+              <td class="num">3.2</td>
+              <td class="num">$132,400</td>
+            </tr>
+            <tr>
+              <td class="rk">8</td>
+              <td><a href="mariuscow.html" class="pl-cell"><div class="avatar bg-default">M</div><div><div class="pl-name">MariusCOW</div><div class="pl-meta">Falcons · 18 yo · 🇩🇪 GER</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 4</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill W">3</span><span class="form-pill T">6</span><span class="form-pill W">2</span></div></td>
+              <td class="num">2,861</td>
+              <td class="num">3.4</td>
+              <td class="num">$118,200</td>
+            </tr>
+            <tr>
+              <td class="rk">9</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">P</div><div><div class="pl-name">Pixie</div><div class="pl-meta">Quest Esports · 19 yo · 🇮🇸 ISL</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 2</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">2</span><span class="form-pill W">3</span><span class="form-pill T">5</span><span class="form-pill W">2</span></div></td>
+              <td class="num">2,818</td>
+              <td class="num">3.3</td>
+              <td class="num">$114,500</td>
+            </tr>
+            <tr>
+              <td class="rk">10</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">V</div><div><div class="pl-name">Vanyak</div><div class="pl-meta">Falcons · 17 yo · 🇫🇷 FRA</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">1</span><span class="form-pill W">3</span><span class="form-pill W">2</span><span class="form-pill T">7</span><span class="form-pill W">3</span></div></td>
+              <td class="num">2,793</td>
+              <td class="num">3.5</td>
+              <td class="num">$108,800</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- UPCOMING EVENTS -->
+      <div class="section-label">Schedule <a href="event.html" class="more">All events</a></div>
+      <div class="card">
+        <div class="card-body" style="padding: 0 18px;">
+          <div class="events">
+            <a href="event.html" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">06</div></div>
+              <div class="ev-info">
+                <div class="ev-title">FNCS Major 1 Summit · Final Day</div>
+                <div class="ev-meta"><span class="live-mini">Live</span><span>Fortnite · Global</span><span>Top 3 advance to LAN</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$1.5M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">09</div></div>
+              <div class="ev-info">
+                <div class="ev-title">IEM Katowice 2026 · Quarterfinals</div>
+                <div class="ev-meta"><span>Counter-Strike 2</span><span>Spodek Arena · Poland</span><span>BO3 · 8 teams</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$1.0M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">10</div></div>
+              <div class="ev-info">
+                <div class="ev-title">VCT Masters Toronto · Group Stage Day 4</div>
+                <div class="ev-meta"><span>Valorant</span><span>Toronto, ON</span><span>12 teams · 4 groups</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$1.0M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">14</div></div>
+              <div class="ev-info">
+                <div class="ev-title">BLAST Premier Spring Showdown</div>
+                <div class="ev-meta"><span>Counter-Strike 2</span><span>Studio · Copenhagen</span><span>16 teams</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$425K</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">17</div></div>
+              <div class="ev-info">
+                <div class="ev-title">FNCS Major 2 Summit Qualifiers</div>
+                <div class="ev-meta"><span>Fortnite</span><span>Open · all regions</span><span>Top 16 duos qualify</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$50K</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">21</div></div>
+              <div class="ev-info">
+                <div class="ev-title">ESL Pro League Season 21 · Playoffs</div>
+                <div class="ev-meta"><span>Counter-Strike 2</span><span>Online · LAN finals</span><span>32 teams</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$850K</div><div class="lab">Prize Pool</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL -->
+    <div>
+
+      <!-- TRENDING PLAYERS -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Searched · 24h</div>
+          <div class="rail-sub">Trending player profiles</div>
+        </div>
+        <div class="rail-body">
+          <a href="player.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a8/Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg/100px-Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg" alt="Peterbot" referrerpolicy="no-referrer" /></div><div><div class="rail-name">Peterbot</div><div class="rail-meta">Falcons · 18 yo</div></div></div>
+            <div class="rail-val win">▲ 142%</div>
+          </a>
+          <a href="pollo.html" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div><div class="rail-name">Pollo</div><div class="rail-meta">Falcons</div></div>
+            <div class="rail-val win">▲ 98%</div>
+          </a>
+          <a href="khanada.html" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div><div class="rail-name">Khanada</div><div class="rail-meta">Dignitas</div></div>
+            <div class="rail-val win">▲ 71%</div>
+          </a>
+          <a href="bugha.html" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/21/Bugha.jpg/100px-Bugha.jpg" alt="Bugha" referrerpolicy="no-referrer" /></div><div><div class="rail-name">Bugha</div><div class="rail-meta">Free Agent · streaming</div></div></div>
+            <div class="rail-val win">▲ 64%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">VicterV</div><div class="rail-meta">Dignitas</div></div>
+            <div class="rail-val win">▲ 52%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">MariusCOW</div><div class="rail-meta">Falcons · EU</div></div>
+            <div class="rail-val win">▲ 47%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">Acorn</div><div class="rail-meta">Falcons</div></div>
+            <div class="rail-val win">▲ 39%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">Flickzy</div><div class="rail-meta">GodLike · EU</div></div>
+            <div class="rail-val loss">▼ 8%</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TOP EARNERS LIFETIME -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">All-Time Earnings · Fortnite</div>
+          <div class="rail-sub">Lifetime tournament prize money</div>
+        </div>
+        <div class="rail-body">
+          <a href="bugha.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div><div class="rail-name">Bugha</div><div class="rail-meta">Kyle Giersdorf · 🇺🇸</div></div>
+            <div class="rail-val mono">$3.67M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div><div class="rail-name">Aqua</div><div class="rail-meta">David W. · 🇦🇹</div></div>
+            <div class="rail-val mono">$2.11M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div><div class="rail-name">Nyhrox</div><div class="rail-meta">E. Bergquist · 🇳🇴</div></div>
+            <div class="rail-val mono">$1.96M</div>
+          </a>
+          <a href="player.html" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">Peterbot</div><div class="rail-meta">Peter Kata · 🇺🇸</div></div>
+            <div class="rail-val mono">$1.21M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">EpikWhale</div><div class="rail-meta">S. Cotton · 🇺🇸</div></div>
+            <div class="rail-val mono">$1.74M</div>
+          </a>
+          <a href="mongraal.html" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">Mongraal</div><div class="rail-meta">K. Jackson · 🇬🇧</div></div>
+            <div class="rail-val mono">$1.53M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">MrSavage</div><div class="rail-meta">M. Foss · 🇳🇴</div></div>
+            <div class="rail-val mono">$1.40M</div>
+          </a>
+          <a href="khanada.html" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">Khanada</div><div class="rail-meta">L. Khim · 🇺🇸🇰🇷</div></div>
+            <div class="rail-val mono">$1.28M</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- MOST WATCHED -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Watched Streams · Live</div>
+          <div class="rail-sub">Twitch + YouTube combined</div>
+        </div>
+        <div class="rail-body">
+          <a href="#" class="rail-row">
+            <div class="rail-rank">1</div>
+            <div><div class="rail-name">Fortnite Official</div><div class="rail-meta">FNCS Summit Day 2</div></div>
+            <div class="rail-val">847K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">2</div>
+            <div><div class="rail-name">Bugha</div><div class="rail-meta">Reacting to FNCS</div></div>
+            <div class="rail-val">94K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">3</div>
+            <div><div class="rail-name">Khanada (POV)</div><div class="rail-meta">Live in lobby</div></div>
+            <div class="rail-val">76K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">Peterbot (POV)</div><div class="rail-meta">Live in lobby</div></div>
+            <div class="rail-val">68K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">ESL CS · Main</div><div class="rail-meta">Vitality vs FaZe</div></div>
+            <div class="rail-val">214K</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="#">Fortnite</a>
+        <a href="#">Counter-Strike 2</a>
+        <a href="#">Valorant</a>
+        <a href="#">League of Legends</a>
+        <a href="#">Apex Legends</a>
+        <a href="#">Rocket League</a>
+        <a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a>
+        <a href="#">Player Profiles</a>
+        <a href="#">Team Profiles</a>
+        <a href="#">Power Rankings</a>
+        <a href="#">Earnings</a>
+        <a href="#">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="#">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Epic Games, Valve, Riot Games or any publisher.</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

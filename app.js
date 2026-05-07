@@ -40,7 +40,29 @@
     { type: 'page', name: 'History', meta: 'Fortnite competitive timeline 2018 to 2026', url: 'history.html', cls: 'bg-default' },
     { type: 'page', name: 'Compare Players', meta: 'Side-by-side stat comparison', url: 'compare.html', cls: 'bg-default' },
     { type: 'page', name: 'Coach Profiles', meta: 'Cordell · Falcons head coach', url: 'coach.html', cls: 'bg-default' },
-    { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' }
+    { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' },
+    // Game sections
+    { type: 'page', name: 'Fortnite', meta: 'Section landing · FNCS, Cash Cup, Power Rankings', url: 'fortnite.html', cls: 'bg-default' },
+    { type: 'page', name: 'Counter-Strike 2', meta: 'Section landing · IEM, BLAST, ESL, HLTV', url: 'cs2.html', cls: 'bg-default' },
+    { type: 'page', name: 'Valorant', meta: 'Section landing · VCT Masters, Champions, regional leagues', url: 'valorant.html', cls: 'bg-default' },
+    { type: 'page', name: 'League of Legends', meta: 'Section landing · Worlds, MSI, LCK, LEC, LCS, LPL', url: 'lol.html', cls: 'bg-default' },
+    { type: 'page', name: 'Apex Legends', meta: 'Section landing · ALGS Pro League, Championship, Split Playoffs', url: 'apex.html', cls: 'bg-default' },
+    // CS2 players
+    { type: 'player', name: 's1mple', meta: 'Oleksandr Kostyliev · BC.Game · 3x HLTV #1 · UKR', url: 's1mple.html', cls: 'bg-default' },
+    { type: 'player', name: 'ZywOo', meta: 'Mathieu Herbaut · Vitality · 4x HLTV #1 · FRA', url: 'zywoo.html', cls: 'bg-default' },
+    { type: 'player', name: 'donk', meta: 'Danil Kryshkovets · Team Spirit · HLTV Best 2024 · RUS', url: 'donk.html', cls: 'bg-default' },
+    // Valorant players
+    { type: 'player', name: 'TenZ', meta: 'Tyson Ngo · Sentinels Content · Reykjavik 2021 · CAN', url: 'tenz.html', cls: 'bg-default' },
+    { type: 'player', name: 'aspas', meta: 'Erick Santos · MIBR · 2025 VCT Player of Year · BRA', url: 'aspas.html', cls: 'bg-default' },
+    { type: 'player', name: 'Demon1', meta: 'Maximilian Mazanov · ENVY · VCT Champions 2023 MVP · USA', url: 'demon1.html', cls: 'bg-default' },
+    // LoL players
+    { type: 'player', name: 'Faker', meta: 'Lee Sang-hyeok · T1 · 6x World Champion · KOR', url: 'faker.html', cls: 'bg-default' },
+    { type: 'player', name: 'Caps', meta: 'Rasmus Winther · G2 Esports · 2019 MSI Champion · DNK', url: 'caps.html', cls: 'bg-default' },
+    { type: 'player', name: 'Chovy', meta: 'Jeong Ji-hoon · Gen.G · 2x MSI Champion · KOR', url: 'chovy.html', cls: 'bg-default' },
+    // Apex players
+    { type: 'player', name: 'ImperialHal', meta: 'Phillip Dosen · Team Falcons · ALGS Champion · USA', url: 'imperialhal.html', cls: 'bg-default' },
+    { type: 'player', name: 'Verhulst', meta: 'Evan Verhulst · Crazy Thieves · 2023 ALGS Champion · USA', url: 'verhulst.html', cls: 'bg-default' },
+    { type: 'player', name: 'Reps', meta: 'Jordan Wolfe · Free Agent · 2023 ALGS Champion · USA', url: 'reps.html', cls: 'bg-default' }
   ];
 
   // Inject overlay into the page

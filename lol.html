@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="League of Legends Esports · Worlds, MSI, LCK & LEC · AgentTV" />
+<meta property="og:description" content="The serious source for League of Legends esports. Worlds coverage, LCK and LEC standings, player profiles, power rankings and live scores across every major region." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/lol.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="League of Legends Esports · Worlds, MSI, LCK & LEC · AgentTV" />
+<meta name="twitter:description" content="The serious source for League of Legends esports. Worlds coverage, LCK and LEC standings, player profiles, power rankings and live scores across every major region." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>League of Legends Esports · Worlds, MSI, LCK & LEC · AgentTV</title>
+<meta name="description" content="The serious source for League of Legends esports. Worlds coverage, LCK and LEC standings, player profiles, power rankings and live scores across every major region." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="fortnite.html">Fortnite</a>
+      <a href="#">CS2</a>
+      <a href="#">Valorant</a>
+      <a href="lol.html" class="active">League</a>
+      <a href="#">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">Call of Duty</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." />
+      <button class="btn-watch">Watch Worlds</button>
+    </div>
+  </div>
+</header>
+
+<!-- LEAGUE SUB NAV -->
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="lol.html" class="active">Home</a>
+    <a href="#">Players</a>
+    <a href="#">Teams</a>
+    <a href="#">Tournaments</a>
+    <a href="#">Live Coverage</a>
+    <a href="#">History</a>
+    <a href="#">Stats</a>
+    <a href="#">News</a>
+    <span class="subnav-divider"></span>
+    <a href="#">Worlds</a>
+    <a href="#">MSI</a>
+    <a href="#">LCK</a>
+    <a href="#">LEC</a>
+    <a href="#">LCS</a>
+    <a href="#">LPL</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- HERO + RIGHT RAIL HEADLINES -->
+  <div class="hero-grid">
+    <a href="#" class="hero-card">
+      <div class="hero-bg bg-grad-1"></div>
+      <div class="hero-content">
+        <div class="hero-tag live">Live</div>
+        <div class="hero-eyebrow">LCK 2026 Spring · Week 6 · T1 vs Gen.G</div>
+        <h1 class="hero-headline">Faker and T1 face Chovy's Gen.G in the rivalry that defines another LCK Spring</h1>
+        <p class="hero-dek">Six months after T1 lifted a third straight Summoner's Cup in Beijing, Faker and the defending world champions return to the Gen.G ace who has won four straight LCK titles but still hunts a maiden Worlds trophy.</p>
+        <div class="hero-byline">
+          <strong>By Jordan Romero</strong>
+          <span>·</span>
+          <span>5 min read</span>
+          <span>·</span>
+          <span>Updated 18 minutes ago</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="hero-side">
+      <div class="section-label red">Top Headlines <a href="#" class="more">All news</a></div>
+      <div class="hero-side-list">
+        <a href="faker.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">T1 · Mid</div>
+            <div class="hsi-headline">Faker turns 30 today as the only six-time World Champion in League history</div>
+            <div class="hsi-meta">2h ago · by S. Patel</div>
+          </div>
+          <div class="hsi-thumb bg-grad-2">FAKER<br>30</div>
+        </a>
+        <a href="caps.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">G2 · Mid</div>
+            <div class="hsi-headline">Caps signs three-year G2 extension, ending Western free-agency rumors</div>
+            <div class="hsi-meta">6h ago · by L. Brooks</div>
+          </div>
+          <div class="hsi-thumb bg-grad-3">CAPS</div>
+        </a>
+        <a href="chovy.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Gen.G · Mid</div>
+            <div class="hsi-headline">Chovy's MSI back-to-back puts him in rare company despite missing Worlds title</div>
+            <div class="hsi-meta">9h ago · by M. Chen</div>
+          </div>
+          <div class="hsi-thumb bg-grad-4">CHOVY</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">LEC</div>
+            <div class="hsi-headline">Fnatic stun MAD Lions to take Spring opener as Razork debuts new role</div>
+            <div class="hsi-meta">12h ago · by T. Larsen</div>
+          </div>
+          <div class="hsi-thumb bg-grad-1">FNC<br>LEC</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">LPL</div>
+            <div class="hsi-headline">Bilibili Gaming and JDG headline a top-heavy 2026 LPL Spring opening week</div>
+            <div class="hsi-meta">14h ago · by E. Aldhafeeri</div>
+          </div>
+          <div class="hsi-thumb bg-grad-5">LPL</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Roster</div>
+            <div class="hsi-headline">Hanwha Life rebuild around Zeus and Peyz after a quiet 2025 by their standards</div>
+            <div class="hsi-meta">18h ago · by J. Costa</div>
+          </div>
+          <div class="hsi-thumb bg-grad-cs">HLE</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOW: GAME-BY-GAME CARDS -->
+  <div class="section-label">Live Now <a href="#" class="more">All games</a></div>
+  <div class="games-row">
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>LCK 2026 Spring · Week 6 · Game 2</span>
+        <span class="live-tag">Live</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">T1</div>
+        <div class="t-name">T1</div>
+        <div class="t-record">10-2</div>
+        <div class="t-score">1</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">GEN</div>
+        <div class="t-name muted">Gen.G</div>
+        <div class="t-record">11-1</div>
+        <div class="t-score muted">1</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>LEC 2026 Spring · Week 4 · BO1</span>
+        <span class="live-tag">Live</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">G2</div>
+        <div class="t-name">G2 Esports</div>
+        <div class="t-record">7-1</div>
+        <div class="t-score">1</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">FNC</div>
+        <div class="t-name muted">Fnatic</div>
+        <div class="t-record">5-3</div>
+        <div class="t-score muted">0</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>LPL 2026 Spring · Group A</span>
+        <span class="live-tag">Live</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">JDG</div>
+        <div class="t-name">JD Gaming</div>
+        <div class="t-record">8-3</div>
+        <div class="t-score">2</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">BLG</div>
+        <div class="t-name muted">Bilibili Gaming</div>
+        <div class="t-record">9-2</div>
+        <div class="t-score muted">1</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>LCK 2026 Spring · Week 6 · Game 1</span>
+        <span class="live-tag">Final</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">HLE</div>
+        <div class="t-name">Hanwha Life</div>
+        <div class="t-record">7-5</div>
+        <div class="t-score">2</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">KT</div>
+        <div class="t-name muted">KT Rolster</div>
+        <div class="t-record">6-6</div>
+        <div class="t-score muted">0</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- TWO COLUMN: STORIES + RAIL -->
+  <div class="two-col">
+
+    <!-- LEFT: stories + standings -->
+    <div>
+
+      <!-- TOP STORIES GRID -->
+      <div class="section-label">Top Stories <a href="#" class="more">All stories</a></div>
+      <div class="story-grid" style="margin-bottom: 32px;">
+        <a href="faker.html" class="story-card">
+          <div class="story-thumb bg-grad-2">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Profile</div>
+            <div class="story-thumb-text">FAKER<br>×6</div>
+          </div>
+          <div class="story-cat">Profile · T1</div>
+          <div class="story-headline">Faker at 30: how the Unkillable Demon King won a sixth Summoner's Cup and rewrote his own ceiling</div>
+          <div class="story-dek">Lee Sang-hyeok's 2025 wasn't just another title run · it cemented a debate the rest of the scene has stopped pretending exists.</div>
+          <div class="story-byline">By M. Chen · 14 min read</div>
+        </a>
+
+        <a href="chovy.html" class="story-card">
+          <div class="story-thumb bg-grad-4">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Feature</div>
+            <div class="story-thumb-text">CHOVY<br>MSI</div>
+          </div>
+          <div class="story-cat">Profile · Gen.G</div>
+          <div class="story-headline">Chovy is the most dominant LCK regular-season mid laner since Faker. He still wants Worlds.</div>
+          <div class="story-dek">Back-to-back MSI titles in 2024 and 2025, four straight LCK trophies, and one missing piece that defines the rest of his career.</div>
+          <div class="story-byline">By S. Park · 11 min read</div>
+        </a>
+
+        <a href="caps.html" class="story-card">
+          <div class="story-thumb bg-grad-3">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Profile</div>
+            <div class="story-thumb-text">CAPS<br>G2</div>
+          </div>
+          <div class="story-cat">Profile · G2 Esports</div>
+          <div class="story-headline">Caps and the long Western project: the case for the LEC's most decorated mid laner</div>
+          <div class="story-dek">Two Worlds finals, an MSI title, and a rebuild around him in 2026 that may be his last real shot at the trophy that's still missing.</div>
+          <div class="story-byline">By T. Larsen · 9 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-7">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Analysis</div>
+            <div class="story-thumb-text">LCK<br>META</div>
+          </div>
+          <div class="story-cat">Meta · 14.24 patch</div>
+          <div class="story-headline">The LCK has a tank-jungle problem and three teams have already adapted</div>
+          <div class="story-dek">Patch 14.24 reset the early game in ways that punish solo-carry junglers · here's how T1, Gen.G and KT are handling it differently.</div>
+          <div class="story-byline">By J. Costa · 8 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-5">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">RIOT<br>FORMAT</div>
+          </div>
+          <div class="story-cat">Business · Riot</div>
+          <div class="story-headline">Inside Riot's 2026 calendar overhaul: what First Stand, MSI and Worlds actually look like now</div>
+          <div class="story-dek">A breakdown of the new three-tournament global structure, the leagues affected, and the players already gaming the format.</div>
+          <div class="story-byline">By E. Aldhafeeri · 18 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-8">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Stats</div>
+            <div class="story-thumb-text">CSPM<br>2026</div>
+          </div>
+          <div class="story-cat">Stats Deep Dive</div>
+          <div class="story-headline">The 2026 mid lane CSPM leaderboard, and why one number says more than KDA</div>
+          <div class="story-dek">A weighted-lobby analysis of every starting mid laner in the four major regions through Spring split week 6.</div>
+          <div class="story-byline">By R. Park · 10 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-1">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Roster</div>
+            <div class="story-thumb-text">TL<br>NA</div>
+          </div>
+          <div class="story-cat">News · LCS</div>
+          <div class="story-headline">Team Liquid bring in Korean coaching staff for an LCS Spring rebuild around Yeon</div>
+          <div class="story-dek">After a disappointing 2025, the org doubles down on infrastructure as it preps a roster built around a homegrown bot lane.</div>
+          <div class="story-byline">By J. Romero · 6 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-fortnite">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Investigation</div>
+            <div class="story-thumb-text">PR<br>MATH</div>
+          </div>
+          <div class="story-cat">Methodology</div>
+          <div class="story-headline">We rebuilt our League Power Rankings to account for region strength and head-to-head</div>
+          <div class="story-dek">A new weighted-recency model that adjusts LPL, LCK, LEC and LCS results based on cross-region results and meta age.</div>
+          <div class="story-byline">By R. Park · 11 min read</div>
+        </a>
+      </div>
+
+      <!-- POWER RANKINGS · TEAMS -->
+      <div class="section-label">League Power Rankings · Top 10 Teams <a href="#" class="more">Full top 50</a></div>
+      <div class="table-card" style="margin-bottom: 32px;">
+        <table class="t-rank">
+          <thead>
+            <tr>
+              <th style="width: 40px;">#</th>
+              <th>Team</th>
+              <th>Region</th>
+              <th>Move</th>
+              <th>Form</th>
+              <th class="num">PR</th>
+              <th class="num">Record</th>
+              <th class="num">Last result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rk gold">1</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">T1</div><div><div class="pl-name">T1</div><div class="pl-meta">LCK · Faker, Zeus, Oner, Gumayusi, Keria · 🇰🇷</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span></div></td>
+              <td class="num">3,412</td>
+              <td class="num">10-2</td>
+              <td class="num">W vs HLE</td>
+            </tr>
+            <tr>
+              <td class="rk gold">2</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">GEN</div><div><div class="pl-name">Gen.G</div><div class="pl-meta">LCK · Kiin, Canyon, Chovy, Ruler, Duro · 🇰🇷</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span></div></td>
+              <td class="num">3,388</td>
+              <td class="num">11-1</td>
+              <td class="num">L vs T1</td>
+            </tr>
+            <tr>
+              <td class="rk gold">3</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">HLE</div><div><div class="pl-name">Hanwha Life Esports</div><div class="pl-meta">LCK · Doran, Peanut, Zeka, Viper, Delight · 🇰🇷</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span></div></td>
+              <td class="num">3,140</td>
+              <td class="num">7-5</td>
+              <td class="num">W vs KT</td>
+            </tr>
+            <tr>
+              <td class="rk">4</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">KT</div><div><div class="pl-name">KT Rolster</div><div class="pl-meta">LCK · PerfecT, Cuzz, BDD, Deft, Way · 🇰🇷</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill L">L</span></div></td>
+              <td class="num">3,074</td>
+              <td class="num">6-6</td>
+              <td class="num">L vs HLE</td>
+            </tr>
+            <tr>
+              <td class="rk">5</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">JDG</div><div><div class="pl-name">JD Gaming</div><div class="pl-meta">LPL · Beichuan, Kanavi, knight, Hope, Missing · 🇨🇳</div></div></a></td>
+              <td><span class="badge r-eu">LPL</span></td>
+              <td><span class="move up">▲ 2</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span></div></td>
+              <td class="num">3,021</td>
+              <td class="num">8-3</td>
+              <td class="num">W vs BLG</td>
+            </tr>
+            <tr>
+              <td class="rk">6</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">BLG</div><div><div class="pl-name">Bilibili Gaming</div><div class="pl-meta">LPL · Bin, Xun, Knight, Elk, ON · 🇨🇳</div></div></a></td>
+              <td><span class="badge r-eu">LPL</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill L">L</span></div></td>
+              <td class="num">2,988</td>
+              <td class="num">9-2</td>
+              <td class="num">L vs JDG</td>
+            </tr>
+            <tr>
+              <td class="rk">7</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">G2</div><div><div class="pl-name">G2 Esports</div><div class="pl-meta">LEC · BrokenBlade, SkewMond, Caps, Hans Sama, Mikyx · 🇪🇺</div></div></a></td>
+              <td><span class="badge r-eu">LEC</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span></div></td>
+              <td class="num">2,742</td>
+              <td class="num">7-1</td>
+              <td class="num">W vs FNC</td>
+            </tr>
+            <tr>
+              <td class="rk">8</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">FNC</div><div><div class="pl-name">Fnatic</div><div class="pl-meta">LEC · Oscarinin, Razork, Humanoid, Noah, Jun · 🇪🇺</div></div></a></td>
+              <td><span class="badge r-eu">LEC</span></td>
+              <td><span class="move up">▲ 3</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span></div></td>
+              <td class="num">2,608</td>
+              <td class="num">5-3</td>
+              <td class="num">L vs G2</td>
+            </tr>
+            <tr>
+              <td class="rk">9</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">C9</div><div><div class="pl-name">Cloud9</div><div class="pl-meta">LCS · Thanatos, River, Loyal, Berserker, Vulcan · 🇺🇸</div></div></a></td>
+              <td><span class="badge r-na">LCS</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill L">L</span></div></td>
+              <td class="num">2,541</td>
+              <td class="num">8-2</td>
+              <td class="num">W vs FLY</td>
+            </tr>
+            <tr>
+              <td class="rk">10</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">TL</div><div><div class="pl-name">Team Liquid</div><div class="pl-meta">LCS · Impact, UmTi, APA, Yeon, CoreJJ · 🇺🇸</div></div></a></td>
+              <td><span class="badge r-na">LCS</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span><span class="form-pill L">L</span><span class="form-pill W">W</span></div></td>
+              <td class="num">2,488</td>
+              <td class="num">6-4</td>
+              <td class="num">W vs DIG</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TOP PLAYERS -->
+      <div class="section-label">Top Players · 2026 Spring <a href="#" class="more">All players</a></div>
+      <div class="table-card" style="margin-bottom: 32px;">
+        <table class="t-rank">
+          <thead>
+            <tr>
+              <th style="width: 40px;">#</th>
+              <th>Player</th>
+              <th>Region</th>
+              <th>Role</th>
+              <th class="num">KDA</th>
+              <th class="num">CSPM</th>
+              <th class="num">Worlds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rk gold">1</td>
+              <td><a href="faker.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/9/9e/T1_Faker_at_Worlds_2025_Finals.jpg/100px-T1_Faker_at_Worlds_2025_Finals.jpg" alt="Faker" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Faker</div><div class="pl-meta">Lee Sang-hyeok · T1 · 30 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Mid</td>
+              <td class="num">5.8</td>
+              <td class="num">9.4</td>
+              <td class="num">6×</td>
+            </tr>
+            <tr>
+              <td class="rk gold">2</td>
+              <td><a href="chovy.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/f/f5/GEN_Chovy_at_Worlds_2025_Semifinals.jpg/100px-GEN_Chovy_at_Worlds_2025_Semifinals.jpg" alt="Chovy" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Chovy</div><div class="pl-meta">Jeong Ji-hoon · Gen.G · 25 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Mid</td>
+              <td class="num">7.1</td>
+              <td class="num">10.2</td>
+              <td class="num">SF</td>
+            </tr>
+            <tr>
+              <td class="rk gold">3</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">Z</div><div><div class="pl-name">Zeus</div><div class="pl-meta">Choi Woo-je · T1 · 21 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Top</td>
+              <td class="num">4.2</td>
+              <td class="num">8.7</td>
+              <td class="num">3×</td>
+            </tr>
+            <tr>
+              <td class="rk">4</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">K</div><div><div class="pl-name">Keria</div><div class="pl-meta">Ryu Min-seok · T1 · 23 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Support</td>
+              <td class="num">6.4</td>
+              <td class="num">·</td>
+              <td class="num">3×</td>
+            </tr>
+            <tr>
+              <td class="rk">5</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">R</div><div><div class="pl-name">Ruler</div><div class="pl-meta">Park Jae-hyuk · Gen.G · 27 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Bot</td>
+              <td class="num">6.7</td>
+              <td class="num">10.1</td>
+              <td class="num">1×</td>
+            </tr>
+            <tr>
+              <td class="rk">6</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">C</div><div><div class="pl-name">Canyon</div><div class="pl-meta">Kim Geon-bu · Gen.G · 25 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCK</span></td>
+              <td>Jungle</td>
+              <td class="num">5.2</td>
+              <td class="num">5.8</td>
+              <td class="num">1×</td>
+            </tr>
+            <tr>
+              <td class="rk">7</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">K</div><div><div class="pl-name">Knight</div><div class="pl-meta">Zhuo Ding · Bilibili Gaming · 24 yo · 🇨🇳 CHN</div></div></a></td>
+              <td><span class="badge r-eu">LPL</span></td>
+              <td>Mid</td>
+              <td class="num">6.1</td>
+              <td class="num">9.6</td>
+              <td class="num">·</td>
+            </tr>
+            <tr>
+              <td class="rk">8</td>
+              <td><a href="caps.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/3/3c/G2_Caps_at_Worlds_2025_Quarterfinals.jpg/100px-G2_Caps_at_Worlds_2025_Quarterfinals.jpg" alt="Caps" referrerpolicy="no-referrer" /></div><div><div class="pl-name">Caps</div><div class="pl-meta">Rasmus B. Winther · G2 Esports · 26 yo · 🇩🇰 DEN</div></div></a></td>
+              <td><span class="badge r-eu">LEC</span></td>
+              <td>Mid</td>
+              <td class="num">5.4</td>
+              <td class="num">9.0</td>
+              <td class="num">F</td>
+            </tr>
+            <tr>
+              <td class="rk">9</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">B</div><div><div class="pl-name">Bin</div><div class="pl-meta">Chen Ze-Bin · Bilibili Gaming · 23 yo · 🇨🇳 CHN</div></div></a></td>
+              <td><span class="badge r-eu">LPL</span></td>
+              <td>Top</td>
+              <td class="num">4.8</td>
+              <td class="num">8.4</td>
+              <td class="num">F</td>
+            </tr>
+            <tr>
+              <td class="rk">10</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">B</div><div><div class="pl-name">Berserker</div><div class="pl-meta">Kim Min-cheol · Cloud9 · 23 yo · 🇰🇷 KOR</div></div></a></td>
+              <td><span class="badge r-na">LCS</span></td>
+              <td>Bot</td>
+              <td class="num">5.6</td>
+              <td class="num">9.7</td>
+              <td class="num">·</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- UPCOMING EVENTS -->
+      <div class="section-label">Schedule <a href="#" class="more">All events</a></div>
+      <div class="card">
+        <div class="card-body" style="padding: 0 18px;">
+          <div class="events">
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">07</div></div>
+              <div class="ev-info">
+                <div class="ev-title">LCK 2026 Spring · Week 6 · T1 vs Gen.G</div>
+                <div class="ev-meta"><span class="live-mini">Live</span><span>League · Seoul</span><span>BO3 · LoL Park</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$200K</div><div class="lab">Split Prize</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">10</div></div>
+              <div class="ev-info">
+                <div class="ev-title">LEC 2026 Spring · Week 4 · G2 vs MAD Lions</div>
+                <div class="ev-meta"><span>League · Berlin</span><span>BO1 · Riot Studios</span><span>Top of standings</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">€100K</div><div class="lab">Split Prize</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">14</div></div>
+              <div class="ev-info">
+                <div class="ev-title">LPL 2026 Spring · Playoffs Round 1</div>
+                <div class="ev-meta"><span>League · Shanghai</span><span>BO5 · 8 teams</span><span>JDG, BLG, TES, WBG seeded</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">¥3.5M</div><div class="lab">Split Prize</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">22</div></div>
+              <div class="ev-info">
+                <div class="ev-title">MSI 2026 · Group Stage Day 1</div>
+                <div class="ev-meta"><span>League · Vancouver</span><span>11 teams · 4 regions</span><span>Format: BO3 round-robin</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$2.0M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Jun</div><div class="d">01</div></div>
+              <div class="ev-info">
+                <div class="ev-title">MSI 2026 · Grand Final</div>
+                <div class="ev-meta"><span>League · Vancouver</span><span>BO5 · Rogers Arena</span><span>Top seeds advance to Worlds</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$2.0M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Jun</div><div class="d">12</div></div>
+              <div class="ev-info">
+                <div class="ev-title">LCK 2026 Summer · Opening Week</div>
+                <div class="ev-meta"><span>League · Seoul</span><span>10 teams · BO3</span><span>T1 vs Gen.G headline</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$200K</div><div class="lab">Split Prize</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Oct</div><div class="d">10</div></div>
+              <div class="ev-info">
+                <div class="ev-title">Worlds 2026 · Group Stage Day 1</div>
+                <div class="ev-meta"><span>League · Paris and Madrid</span><span>22 teams · 4 stages</span><span>Final at Bercy Arena</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$2.5M</div><div class="lab">Prize Pool</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL -->
+    <div>
+
+      <!-- TRENDING PLAYERS -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Searched · 24h</div>
+          <div class="rail-sub">Trending player profiles</div>
+        </div>
+        <div class="rail-body">
+          <a href="faker.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/9/9e/T1_Faker_at_Worlds_2025_Finals.jpg/100px-T1_Faker_at_Worlds_2025_Finals.jpg" alt="Faker" referrerpolicy="no-referrer" /></div><div><div class="rail-name">Faker</div><div class="rail-meta">T1 · 30 yo</div></div></div>
+            <div class="rail-val win">▲ 184%</div>
+          </a>
+          <a href="chovy.html" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/f/f5/GEN_Chovy_at_Worlds_2025_Semifinals.jpg/100px-GEN_Chovy_at_Worlds_2025_Semifinals.jpg" alt="Chovy" referrerpolicy="no-referrer" /></div><div><div class="rail-name">Chovy</div><div class="rail-meta">Gen.G</div></div></div>
+            <div class="rail-val win">▲ 112%</div>
+          </a>
+          <a href="caps.html" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/3/3c/G2_Caps_at_Worlds_2025_Quarterfinals.jpg/100px-G2_Caps_at_Worlds_2025_Quarterfinals.jpg" alt="Caps" referrerpolicy="no-referrer" /></div><div><div class="rail-name">Caps</div><div class="rail-meta">G2 Esports</div></div></div>
+            <div class="rail-val win">▲ 78%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">Zeus</div><div class="rail-meta">T1 · Top</div></div>
+            <div class="rail-val win">▲ 64%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">Keria</div><div class="rail-meta">T1 · Support</div></div>
+            <div class="rail-val win">▲ 51%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">Ruler</div><div class="rail-meta">Gen.G · Bot</div></div>
+            <div class="rail-val win">▲ 47%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">Knight</div><div class="rail-meta">BLG · Mid</div></div>
+            <div class="rail-val win">▲ 39%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">Canyon</div><div class="rail-meta">Gen.G · Jungle</div></div>
+            <div class="rail-val loss">▼ 6%</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- WORLDS WINS -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Worlds Titles · Active</div>
+          <div class="rail-sub">By player, all-time League</div>
+        </div>
+        <div class="rail-body">
+          <a href="faker.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div><div class="rail-name">Faker</div><div class="rail-meta">Lee Sang-hyeok · 🇰🇷</div></div>
+            <div class="rail-val mono">6×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div><div class="rail-name">Zeus</div><div class="rail-meta">Choi Woo-je · 🇰🇷</div></div>
+            <div class="rail-val mono">3×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div><div class="rail-name">Oner</div><div class="rail-meta">Mun Hyeon-jun · 🇰🇷</div></div>
+            <div class="rail-val mono">3×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">Gumayusi</div><div class="rail-meta">Lee Min-hyeong · 🇰🇷</div></div>
+            <div class="rail-val mono">3×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">Keria</div><div class="rail-meta">Ryu Min-seok · 🇰🇷</div></div>
+            <div class="rail-val mono">3×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">Canyon</div><div class="rail-meta">Kim Geon-bu · 🇰🇷</div></div>
+            <div class="rail-val mono">1×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">Ruler</div><div class="rail-meta">Park Jae-hyuk · 🇰🇷</div></div>
+            <div class="rail-val mono">1×</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">Bin</div><div class="rail-meta">Chen Ze-bin · 🇨🇳</div></div>
+            <div class="rail-val mono">0×</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- MOST WATCHED -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Watched Streams · Live</div>
+          <div class="rail-sub">Twitch + AfreecaTV combined</div>
+        </div>
+        <div class="rail-body">
+          <a href="#" class="rail-row">
+            <div class="rail-rank">1</div>
+            <div><div class="rail-name">LCK Official</div><div class="rail-meta">T1 vs Gen.G</div></div>
+            <div class="rail-val">612K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">2</div>
+            <div><div class="rail-name">Faker (POV)</div><div class="rail-meta">Live · scrim queue</div></div>
+            <div class="rail-val">128K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">3</div>
+            <div><div class="rail-name">LPL Official</div><div class="rail-meta">JDG vs BLG</div></div>
+            <div class="rail-val">286K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">LEC Official</div><div class="rail-meta">G2 vs Fnatic</div></div>
+            <div class="rail-val">94K</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">Caps (POV)</div><div class="rail-meta">Live · solo queue</div></div>
+            <div class="rail-val">38K</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="fortnite.html">Fortnite</a>
+        <a href="#">Counter-Strike 2</a>
+        <a href="#">Valorant</a>
+        <a href="lol.html">League of Legends</a>
+        <a href="#">Apex Legends</a>
+        <a href="#">Rocket League</a>
+        <a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a>
+        <a href="#">Player Profiles</a>
+        <a href="#">Team Profiles</a>
+        <a href="#">Power Rankings</a>
+        <a href="#">Earnings</a>
+        <a href="#">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="#">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Riot Games or any publisher.</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

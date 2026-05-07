@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Counter-Strike 2 Esports · IEM, BLAST, ESL Pro League · AgentTV" />
+<meta property="og:description" content="The serious source for Counter-Strike 2. Live coverage of IEM Katowice, BLAST Premier and the Majors. Power rankings, player profiles, team news and stats." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/cs2.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Counter-Strike 2 Esports · IEM, BLAST, ESL Pro League · AgentTV" />
+<meta name="twitter:description" content="The serious source for Counter-Strike 2. Live coverage of IEM Katowice, BLAST Premier and the Majors. Power rankings, player profiles, team news and stats." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Counter-Strike 2 Esports · IEM, BLAST, ESL Pro League · AgentTV</title>
+<meta name="description" content="The serious source for Counter-Strike 2. Live coverage of IEM Katowice, BLAST Premier and the Majors. Power rankings, player profiles, team news and stats." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html" class="active">CS2</a>
+      <a href="#">Valorant</a>
+      <a href="#">League</a>
+      <a href="#">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">Call of Duty</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." />
+      <button class="btn-watch">Watch IEM</button>
+    </div>
+  </div>
+</header>
+
+<!-- CS2 SUB NAV -->
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="cs2.html" class="active">Home</a>
+    <a href="#">Players</a>
+    <a href="#">Teams</a>
+    <a href="#">Tournaments</a>
+    <a href="#">Live Coverage</a>
+    <a href="#">History</a>
+    <a href="#">Stats</a>
+    <a href="#">News</a>
+    <span class="subnav-divider"></span>
+    <a href="#">IEM</a>
+    <a href="#">BLAST Premier</a>
+    <a href="#">ESL Pro League</a>
+    <a href="#">Majors</a>
+    <a href="#">Pro League</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- HERO + RIGHT RAIL HEADLINES -->
+  <div class="hero-grid">
+    <a href="#" class="hero-card">
+      <div class="hero-bg bg-grad-cs"></div>
+      <div class="hero-content">
+        <div class="hero-tag live">Live</div>
+        <div class="hero-eyebrow">IEM Katowice 2026 · Quarterfinals · Spodek Arena</div>
+        <h1 class="hero-headline">Vitality and Spirit collide in Katowice with the Intel Grand Slam on the line</h1>
+        <p class="hero-dek">ZywOo's Vitality enter the bracket as the world's top-ranked side with a chance at IGS#5. Donk and Spirit stand in the way after sweeping group play. FaZe and NaVi await on the other half.</p>
+        <div class="hero-byline">
+          <strong>By Joao Costa</strong>
+          <span>·</span>
+          <span>5 min read</span>
+          <span>·</span>
+          <span>Updated 8 minutes ago</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="hero-side">
+      <div class="section-label red">Top Headlines <a href="#" class="more">All news</a></div>
+      <div class="hero-side-list">
+        <a href="zywoo.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Profile</div>
+            <div class="hsi-headline">ZywOo eyes a fifth HLTV #1 finish as Vitality push for back-to-back trophies</div>
+            <div class="hsi-meta">2h ago · by J. Costa</div>
+          </div>
+          <div class="hsi-thumb bg-grad-cs">ZYW</div>
+        </a>
+        <a href="donk.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Spirit</div>
+            <div class="hsi-headline">Donk's 1.42 rating in Katowice groups is the best ever recorded at an IEM</div>
+            <div class="hsi-meta">4h ago · by A. Petrov</div>
+          </div>
+          <div class="hsi-thumb bg-grad-3">DONK</div>
+        </a>
+        <a href="s1mple.html" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Career</div>
+            <div class="hsi-headline">s1mple back to BC.Game form: 1.21 rating across BLAST Bounty groups</div>
+            <div class="hsi-meta">7h ago · by L. Brooks</div>
+          </div>
+          <div class="hsi-thumb bg-grad-2">S1M</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Roster</div>
+            <div class="hsi-headline">FaZe finalize 2026 lineup with rain returning as in-game leader</div>
+            <div class="hsi-meta">9h ago · by M. Chen</div>
+          </div>
+          <div class="hsi-thumb bg-faze">FAZE</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Analysis</div>
+            <div class="hsi-headline">Why MOUZ are the most improved side of the spring · the Brollan effect</div>
+            <div class="hsi-meta">12h ago · by S. Patel</div>
+          </div>
+          <div class="hsi-thumb bg-grad-4">MOUZ</div>
+        </a>
+        <a href="#" class="hero-side-item">
+          <div>
+            <div class="hsi-cat">Org News</div>
+            <div class="hsi-headline">G2 part ways with coach as 2026 results miss the playoff cut three times running</div>
+            <div class="hsi-meta">15h ago · by T. Larsen</div>
+          </div>
+          <div class="hsi-thumb bg-grad-5">G2</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOW: GAME-BY-GAME CARDS -->
+  <div class="section-label">Live Now <a href="#" class="more">All matches</a></div>
+  <div class="games-row">
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>IEM Katowice · QF · Map 2</span>
+        <span class="live-tag">Live · Mirage</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-vit">V</div>
+        <div class="t-name">Vitality</div>
+        <div class="t-record">14-3 maps</div>
+        <div class="t-score">13</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-faze">F</div>
+        <div class="t-name muted">FaZe</div>
+        <div class="t-record">12-5 maps</div>
+        <div class="t-score muted">11</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>IEM Katowice · QF · Map 1</span>
+        <span class="live-tag">Live · Inferno</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">S</div>
+        <div class="t-name">Spirit</div>
+        <div class="t-record">15-2 maps</div>
+        <div class="t-score">10</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-navi">N</div>
+        <div class="t-name muted">NaVi</div>
+        <div class="t-record">11-6 maps</div>
+        <div class="t-score muted">8</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>BLAST Premier · Group A · Map 1</span>
+        <span class="live-tag">Live · Nuke</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">M</div>
+        <div class="t-name">MOUZ</div>
+        <div class="t-record">10-7 maps</div>
+        <div class="t-score">12</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-g2">G</div>
+        <div class="t-name muted">G2</div>
+        <div class="t-record">9-8 maps</div>
+        <div class="t-score muted">10</div>
+      </div>
+    </a>
+
+    <a href="#" class="game-card">
+      <div class="game-card-head">
+        <span>ESL Pro League · S21 · Map 3</span>
+        <span class="live-tag">Live · Anubis</span>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-liquid">L</div>
+        <div class="t-name">Liquid</div>
+        <div class="t-record">8-9 maps</div>
+        <div class="t-score">7</div>
+      </div>
+      <div class="gc-team">
+        <div class="t-logo bg-default">H</div>
+        <div class="t-name muted">Heroic</div>
+        <div class="t-record">11-6 maps</div>
+        <div class="t-score muted">9</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- TWO COLUMN: STORIES + RAIL -->
+  <div class="two-col">
+
+    <!-- LEFT: stories + standings -->
+    <div>
+
+      <!-- TOP STORIES GRID -->
+      <div class="section-label">Top Stories <a href="#" class="more">All stories</a></div>
+      <div class="story-grid" style="margin-bottom: 32px;">
+        <a href="zywoo.html" class="story-card">
+          <div class="story-thumb bg-grad-cs">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Profile</div>
+            <div class="story-thumb-text">ZYW<br>OO</div>
+          </div>
+          <div class="story-cat">Profile · Team Vitality</div>
+          <div class="story-headline">Inside ZywOo's quiet dominance: how Vitality's AWPer became a four-time HLTV #1</div>
+          <div class="story-dek">Mathieu Herbaut, 25, has won three Majors and 32 HLTV MVPs · and somehow remains underdiscussed.</div>
+          <div class="story-byline">By J. Costa · 14 min read</div>
+        </a>
+
+        <a href="donk.html" class="story-card">
+          <div class="story-thumb bg-grad-3">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag live">Live</div>
+            <div class="story-thumb-text">DONK<br>2024</div>
+          </div>
+          <div class="story-cat">Feature · Team Spirit</div>
+          <div class="story-headline">From Spirit Academy to HLTV's Best Player of 2024 · Donk's 19-month rise</div>
+          <div class="story-dek">Danil Kryshkovets is rewriting the entry-fragger archetype with pace nobody has matched.</div>
+          <div class="story-byline">By A. Petrov · 11 min read</div>
+        </a>
+
+        <a href="s1mple.html" class="story-card">
+          <div class="story-thumb bg-grad-2">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Comeback</div>
+            <div class="story-thumb-text">S1M<br>PLE</div>
+          </div>
+          <div class="story-cat">Career arc</div>
+          <div class="story-headline">After Falcons and FaZe loans, s1mple finds his form at BC.Game</div>
+          <div class="story-dek">The three-time HLTV #1 looks comfortable again with a young Ukrainian core around him.</div>
+          <div class="story-byline">By L. Brooks · 9 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-faze">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Roster</div>
+            <div class="story-thumb-text">FAZE<br>'26</div>
+          </div>
+          <div class="story-cat">FaZe Clan</div>
+          <div class="story-headline">FaZe's 2026 reset: rain back as IGL, broky returns from medical leave</div>
+          <div class="story-dek">A new look core targets a Major run after three barren halves.</div>
+          <div class="story-byline">By M. Chen · 8 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-4">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Analysis</div>
+            <div class="story-thumb-text">MAP<br>POOL</div>
+          </div>
+          <div class="story-cat">Meta · Spring 2026</div>
+          <div class="story-headline">The Mirage and Inferno revival: how the new map pool reshaped tier-1 prep</div>
+          <div class="story-dek">A look at the post-update meta and which teams adapted fastest.</div>
+          <div class="story-byline">By S. Patel · 12 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-5">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Org</div>
+            <div class="story-thumb-text">SAUDI<br>CS</div>
+          </div>
+          <div class="story-cat">Business</div>
+          <div class="story-headline">Falcons' CS2 ambitions: inside the Saudi-backed org's $40M roster strategy</div>
+          <div class="story-dek">Niko at the helm and a stable of stars around him · what Falcons are really building.</div>
+          <div class="story-byline">By E. Aldhafeeri · 18 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-7">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">DONK<br>YEAR</div>
+          </div>
+          <div class="story-cat">Stats deep dive</div>
+          <div class="story-headline">Donk's 2024 statistically rivals s1mple 2018 and ZywOo 2019 · we ran the numbers</div>
+          <div class="story-dek">Rating, impact, big-event multipliers · a generational year on every axis.</div>
+          <div class="story-byline">By R. Park · 16 min read</div>
+        </a>
+
+        <a href="#" class="story-card">
+          <div class="story-thumb bg-grad-8">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Investigation</div>
+            <div class="story-thumb-text">RANK<br>2026</div>
+          </div>
+          <div class="story-cat">Power Rankings</div>
+          <div class="story-headline">We rebuilt the CS2 power rankings: here's why our top 10 looks different</div>
+          <div class="story-dek">A weighted-recency model that prices in event tier and head-to-head signal.</div>
+          <div class="story-byline">By R. Park · 10 min read</div>
+        </a>
+      </div>
+
+      <!-- POWER RANKINGS -->
+      <div class="section-label">CS2 Team Power Rankings <a href="#" class="more">Full top 30</a></div>
+      <div class="table-card" style="margin-bottom: 32px;">
+        <table class="t-rank">
+          <thead>
+            <tr>
+              <th style="width: 40px;">#</th>
+              <th>Team</th>
+              <th>Region</th>
+              <th>Move</th>
+              <th>Form</th>
+              <th class="num">PR</th>
+              <th class="num">Map W%</th>
+              <th class="num">Earnings (90d)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rk gold">1</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-vit">V</div><div><div class="pl-name">Vitality</div><div class="pl-meta">ZywOo · apEX · flameZ · mezii · ropz</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span></div></td>
+              <td class="num">2,184</td>
+              <td class="num">68.4%</td>
+              <td class="num">$612,000</td>
+            </tr>
+            <tr>
+              <td class="rk gold">2</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">S</div><div><div class="pl-name">Spirit</div><div class="pl-meta">donk · zont1x · chopper · sh1ro · magixx</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span><span class="form-pill W">W</span></div></td>
+              <td class="num">2,142</td>
+              <td class="num">66.1%</td>
+              <td class="num">$548,000</td>
+            </tr>
+            <tr>
+              <td class="rk gold">3</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-faze">F</div><div><div class="pl-name">FaZe Clan</div><div class="pl-meta">rain · broky · frozen · karrigan · Twistzz</div></div></a></td>
+              <td><span class="badge r-eu">INT</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span><span class="form-pill L">QF</span><span class="form-pill W">W</span></div></td>
+              <td class="num">2,038</td>
+              <td class="num">61.2%</td>
+              <td class="num">$402,000</td>
+            </tr>
+            <tr>
+              <td class="rk">4</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-navi">N</div><div><div class="pl-name">Natus Vincere</div><div class="pl-meta">b1t · Aleksib · iM · w0nderful · jL</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill T">QF</span><span class="form-pill W">W</span></div></td>
+              <td class="num">1,994</td>
+              <td class="num">59.8%</td>
+              <td class="num">$364,000</td>
+            </tr>
+            <tr>
+              <td class="rk">5</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">M</div><div><div class="pl-name">MOUZ</div><div class="pl-meta">torzsi · Brollan · Jimpphat · xertioN · Spinx</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 2</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span></div></td>
+              <td class="num">1,902</td>
+              <td class="num">57.4%</td>
+              <td class="num">$298,000</td>
+            </tr>
+            <tr>
+              <td class="rk">6</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-g2">G</div><div><div class="pl-name">G2 Esports</div><div class="pl-meta">NiKo · huNter · m0NESY · HeavyGod · malbsMd</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move down">▼ 2</span></td>
+              <td><div class="form-pills"><span class="form-pill T">QF</span><span class="form-pill W">W</span><span class="form-pill L">GS</span><span class="form-pill T">SF</span><span class="form-pill T">QF</span></div></td>
+              <td class="num">1,841</td>
+              <td class="num">55.1%</td>
+              <td class="num">$214,000</td>
+            </tr>
+            <tr>
+              <td class="rk">7</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">A</div><div><div class="pl-name">Astralis</div><div class="pl-meta">device · stavn · jabbi · Staehr · cadiaN</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill T">QF</span><span class="form-pill W">W</span><span class="form-pill T">SF</span></div></td>
+              <td class="num">1,782</td>
+              <td class="num">54.0%</td>
+              <td class="num">$192,000</td>
+            </tr>
+            <tr>
+              <td class="rk">8</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">H</div><div><div class="pl-name">Heroic</div><div class="pl-meta">tN1R · yxngstxr · NertZ · xfl0ud · sirah</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move up">▲ 3</span></td>
+              <td><div class="form-pills"><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill W">W</span><span class="form-pill T">QF</span><span class="form-pill T">SF</span></div></td>
+              <td class="num">1,718</td>
+              <td class="num">52.6%</td>
+              <td class="num">$168,000</td>
+            </tr>
+            <tr>
+              <td class="rk">9</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">B</div><div><div class="pl-name">BIG</div><div class="pl-meta">tabseN · krimbo · JDC · prosus · hyped</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td><span class="move flat">·</span></td>
+              <td><div class="form-pills"><span class="form-pill T">QF</span><span class="form-pill W">W</span><span class="form-pill T">SF</span><span class="form-pill L">GS</span><span class="form-pill T">QF</span></div></td>
+              <td class="num">1,664</td>
+              <td class="num">50.8%</td>
+              <td class="num">$142,000</td>
+            </tr>
+            <tr>
+              <td class="rk">10</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-liquid">L</div><div><div class="pl-name">Team Liquid</div><div class="pl-meta">YEKINDAR · NAF · ultimate · siuhy · Twistzz</div></div></a></td>
+              <td><span class="badge r-na">NA</span></td>
+              <td><span class="move down">▼ 1</span></td>
+              <td><div class="form-pills"><span class="form-pill T">SF</span><span class="form-pill T">QF</span><span class="form-pill L">GS</span><span class="form-pill W">W</span><span class="form-pill T">QF</span></div></td>
+              <td class="num">1,612</td>
+              <td class="num">49.4%</td>
+              <td class="num">$128,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TOP PLAYERS TABLE -->
+      <div class="section-label">Top Players · HLTV Rating 2.0 (90d) <a href="#" class="more">Full top 50</a></div>
+      <div class="table-card" style="margin-bottom: 32px;">
+        <table class="t-rank">
+          <thead>
+            <tr>
+              <th style="width: 40px;">#</th>
+              <th>Player</th>
+              <th>Region</th>
+              <th>Role</th>
+              <th class="num">Rating</th>
+              <th class="num">KAST</th>
+              <th class="num">ADR</th>
+              <th class="num">Earnings (career)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rk gold">1</td>
+              <td><a href="donk.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a5/Donk_at_BLAST_Open_Spring_2026.jpg/100px-Donk_at_BLAST_Open_Spring_2026.jpg" alt="donk" referrerpolicy="no-referrer" /></div><div><div class="pl-name">donk</div><div class="pl-meta">Danil Kryshkovets · Spirit · 19 yo · 🇷🇺 RUS</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td>Entry</td>
+              <td class="num">1.34</td>
+              <td class="num">74.1%</td>
+              <td class="num">96.4</td>
+              <td class="num">$911,592</td>
+            </tr>
+            <tr>
+              <td class="rk gold">2</td>
+              <td><a href="zywoo.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/2b/ZywOo_at_BLAST_Bounty_Winter_2026.jpg/100px-ZywOo_at_BLAST_Bounty_Winter_2026.jpg" alt="ZywOo" referrerpolicy="no-referrer" /></div><div><div class="pl-name">ZywOo</div><div class="pl-meta">Mathieu Herbaut · Vitality · 25 yo · 🇫🇷 FRA</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td>AWPer</td>
+              <td class="num">1.28</td>
+              <td class="num">75.8%</td>
+              <td class="num">88.2</td>
+              <td class="num">$2,167,560</td>
+            </tr>
+            <tr>
+              <td class="rk gold">3</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-g2">M</div><div><div class="pl-name">m0NESY</div><div class="pl-meta">Ilya Osipov · G2 · 20 yo · 🇷🇺 RUS</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td>AWPer</td>
+              <td class="num">1.21</td>
+              <td class="num">73.4%</td>
+              <td class="num">82.6</td>
+              <td class="num">$724,000</td>
+            </tr>
+            <tr>
+              <td class="rk">4</td>
+              <td><a href="s1mple.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/d/d8/S1mple_at_IEM_Krak%C3%B3w_2026.jpg/100px-S1mple_at_IEM_Krak%C3%B3w_2026.jpg" alt="s1mple" referrerpolicy="no-referrer" /></div><div><div class="pl-name">s1mple</div><div class="pl-meta">Oleksandr Kostyliev · BC.Game · 28 yo · 🇺🇦 UKR</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td>AWPer</td>
+              <td class="num">1.19</td>
+              <td class="num">73.8%</td>
+              <td class="num">82.1</td>
+              <td class="num">$1,746,722</td>
+            </tr>
+            <tr>
+              <td class="rk">5</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-navi">B</div><div><div class="pl-name">b1t</div><div class="pl-meta">Valeriy Vakhovskyi · NaVi · 22 yo · 🇺🇦 UKR</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td>Rifler</td>
+              <td class="num">1.18</td>
+              <td class="num">74.0%</td>
+              <td class="num">81.8</td>
+              <td class="num">$612,000</td>
+            </tr>
+            <tr>
+              <td class="rk">6</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">S</div><div><div class="pl-name">sh1ro</div><div class="pl-meta">Dmitry Sokolov · Spirit · 22 yo · 🇷🇺 RUS</div></div></a></td>
+              <td><span class="badge r-eu">CIS</span></td>
+              <td>AWPer</td>
+              <td class="num">1.17</td>
+              <td class="num">75.4%</td>
+              <td class="num">76.8</td>
+              <td class="num">$640,000</td>
+            </tr>
+            <tr>
+              <td class="rk">7</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-vit">F</div><div><div class="pl-name">flameZ</div><div class="pl-meta">Shahar Shushan · Vitality · 22 yo · 🇮🇱 ISR</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td>Entry</td>
+              <td class="num">1.16</td>
+              <td class="num">73.0%</td>
+              <td class="num">84.4</td>
+              <td class="num">$298,000</td>
+            </tr>
+            <tr>
+              <td class="rk">8</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-g2">N</div><div><div class="pl-name">NiKo</div><div class="pl-meta">Nikola Kovač · G2 · 28 yo · 🇧🇦 BIH</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td>Rifler</td>
+              <td class="num">1.15</td>
+              <td class="num">72.8%</td>
+              <td class="num">83.0</td>
+              <td class="num">$1,540,000</td>
+            </tr>
+            <tr>
+              <td class="rk">9</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-vit">R</div><div><div class="pl-name">ropz</div><div class="pl-meta">Robin Kool · Vitality · 25 yo · 🇪🇪 EST</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td>Lurker</td>
+              <td class="num">1.13</td>
+              <td class="num">73.2%</td>
+              <td class="num">79.8</td>
+              <td class="num">$1,180,000</td>
+            </tr>
+            <tr>
+              <td class="rk">10</td>
+              <td><a href="#" class="pl-cell"><div class="avatar bg-default">T</div><div><div class="pl-name">torzsi</div><div class="pl-meta">Ádám Torzsás · MOUZ · 21 yo · 🇭🇺 HUN</div></div></a></td>
+              <td><span class="badge r-eu">EU</span></td>
+              <td>AWPer</td>
+              <td class="num">1.12</td>
+              <td class="num">73.6%</td>
+              <td class="num">76.4</td>
+              <td class="num">$284,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- UPCOMING EVENTS -->
+      <div class="section-label">Schedule <a href="#" class="more">All events</a></div>
+      <div class="card">
+        <div class="card-body" style="padding: 0 18px;">
+          <div class="events">
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">07</div></div>
+              <div class="ev-info">
+                <div class="ev-title">IEM Katowice 2026 · Quarterfinals</div>
+                <div class="ev-meta"><span class="live-mini">Live</span><span>Spodek Arena · Poland</span><span>BO3 · 8 teams</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$1.0M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">14</div></div>
+              <div class="ev-info">
+                <div class="ev-title">BLAST Premier · Spring Showdown</div>
+                <div class="ev-meta"><span>Studio · Copenhagen</span><span>16 teams</span><span>BO3 single elim</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$425K</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">May</div><div class="d">21</div></div>
+              <div class="ev-info">
+                <div class="ev-title">ESL Pro League Season 21 · Playoffs</div>
+                <div class="ev-meta"><span>Online groups · LAN finals</span><span>32 teams</span><span>Malta</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$850K</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Jun</div><div class="d">02</div></div>
+              <div class="ev-info">
+                <div class="ev-title">BLAST.tv Austin Major 2026 · Stage 1</div>
+                <div class="ev-meta"><span>Major · Moody Center</span><span>24 teams</span><span>Swiss · BO1</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$1.25M</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Jun</div><div class="d">10</div></div>
+              <div class="ev-info">
+                <div class="ev-title">IEM Dallas 2026</div>
+                <div class="ev-meta"><span>Kay Bailey Center · Dallas</span><span>16 teams</span><span>BO3 playoffs</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$500K</div><div class="lab">Prize Pool</div></div>
+            </a>
+            <a href="#" class="event-row">
+              <div class="ev-date"><div class="m">Jun</div><div class="d">22</div></div>
+              <div class="ev-info">
+                <div class="ev-title">BetBoom Dacha Belgrade 2026</div>
+                <div class="ev-meta"><span>Štark Arena · Belgrade</span><span>8 teams</span><span>Closed event</span></div>
+              </div>
+              <div class="ev-prize"><div class="amt">$300K</div><div class="lab">Prize Pool</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL -->
+    <div>
+
+      <!-- TRENDING PLAYERS -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Most Searched · 24h</div>
+          <div class="rail-sub">Trending CS2 player profiles</div>
+        </div>
+        <div class="rail-body">
+          <a href="donk.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a5/Donk_at_BLAST_Open_Spring_2026.jpg/100px-Donk_at_BLAST_Open_Spring_2026.jpg" alt="donk" referrerpolicy="no-referrer" /></div><div><div class="rail-name">donk</div><div class="rail-meta">Spirit · 19 yo</div></div></div>
+            <div class="rail-val win">▲ 188%</div>
+          </a>
+          <a href="zywoo.html" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/2b/ZywOo_at_BLAST_Bounty_Winter_2026.jpg/100px-ZywOo_at_BLAST_Bounty_Winter_2026.jpg" alt="ZywOo" referrerpolicy="no-referrer" /></div><div><div class="rail-name">ZywOo</div><div class="rail-meta">Vitality</div></div></div>
+            <div class="rail-val win">▲ 124%</div>
+          </a>
+          <a href="s1mple.html" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div style="display: flex; gap: 8px; align-items: center;"><div class="avatar sm with-photo"><img src="https://liquipedia.net/commons/images/thumb/d/d8/S1mple_at_IEM_Krak%C3%B3w_2026.jpg/100px-S1mple_at_IEM_Krak%C3%B3w_2026.jpg" alt="s1mple" referrerpolicy="no-referrer" /></div><div><div class="rail-name">s1mple</div><div class="rail-meta">BC.Game · CIS</div></div></div>
+            <div class="rail-val win">▲ 96%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">m0NESY</div><div class="rail-meta">G2 · 20 yo</div></div>
+            <div class="rail-val win">▲ 71%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">NiKo</div><div class="rail-meta">G2</div></div>
+            <div class="rail-val win">▲ 54%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">b1t</div><div class="rail-meta">NaVi</div></div>
+            <div class="rail-val win">▲ 42%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">device</div><div class="rail-meta">Astralis</div></div>
+            <div class="rail-val win">▲ 38%</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">ropz</div><div class="rail-meta">Vitality</div></div>
+            <div class="rail-val loss">▼ 4%</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TOP EARNERS LIFETIME -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">All-Time Earnings · CS2</div>
+          <div class="rail-sub">Lifetime tournament prize money</div>
+        </div>
+        <div class="rail-body">
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div><div class="rail-name">dupreeh</div><div class="rail-meta">P. Rasmussen · 🇩🇰</div></div>
+            <div class="rail-val mono">$2.34M</div>
+          </a>
+          <a href="zywoo.html" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div><div class="rail-name">ZywOo</div><div class="rail-meta">M. Herbaut · 🇫🇷</div></div>
+            <div class="rail-val mono">$2.17M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div><div class="rail-name">device</div><div class="rail-meta">N. Reedtz · 🇩🇰</div></div>
+            <div class="rail-val mono">$2.08M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div><div class="rail-name">Xyp9x</div><div class="rail-meta">A. Højsleth · 🇩🇰</div></div>
+            <div class="rail-val mono">$1.96M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div><div class="rail-name">gla1ve</div><div class="rail-meta">L. Rossander · 🇩🇰</div></div>
+            <div class="rail-val mono">$1.84M</div>
+          </a>
+          <a href="s1mple.html" class="rail-row">
+            <div class="rail-rank">6</div>
+            <div><div class="rail-name">s1mple</div><div class="rail-meta">O. Kostyliev · 🇺🇦</div></div>
+            <div class="rail-val mono">$1.75M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">7</div>
+            <div><div class="rail-name">NiKo</div><div class="rail-meta">N. Kovač · 🇧🇦</div></div>
+            <div class="rail-val mono">$1.54M</div>
+          </a>
+          <a href="#" class="rail-row">
+            <div class="rail-rank">8</div>
+            <div><div class="rail-name">ropz</div><div class="rail-meta">R. Kool · 🇪🇪</div></div>
+            <div class="rail-val mono">$1.18M</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- HLTV #1 HISTORY -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">HLTV #1 of the Year · Recent</div>
+          <div class="rail-sub">Best player of the year by HLTV</div>
+        </div>
+        <div class="rail-body">
+          <a href="zywoo.html" class="rail-row">
+            <div class="rail-rank gold">2025</div>
+            <div><div class="rail-name">ZywOo</div><div class="rail-meta">Vitality · 4th title</div></div>
+            <div class="rail-val">★★★★</div>
+          </a>
+          <a href="donk.html" class="rail-row">
+            <div class="rail-rank gold">2024</div>
+            <div><div class="rail-name">donk</div><div class="rail-meta">Spirit · breakthrough</div></div>
+            <div class="rail-val">★</div>
+          </a>
+          <a href="zywoo.html" class="rail-row">
+            <div class="rail-rank">2023</div>
+            <div><div class="rail-name">ZywOo</div><div class="rail-meta">Vitality · 3rd title</div></div>
+            <div class="rail-val">★★★</div>
+          </a>
+          <a href="s1mple.html" class="rail-row">
+            <div class="rail-rank">2022</div>
+            <div><div class="rail-name">s1mple</div><div class="rail-meta">NaVi · 3rd title</div></div>
+            <div class="rail-val">★★★</div>
+          </a>
+          <a href="s1mple.html" class="rail-row">
+            <div class="rail-rank">2021</div>
+            <div><div class="rail-name">s1mple</div><div class="rail-meta">NaVi · Major MVP</div></div>
+            <div class="rail-val">★★</div>
+          </a>
+          <a href="zywoo.html" class="rail-row">
+            <div class="rail-rank">2020</div>
+            <div><div class="rail-name">ZywOo</div><div class="rail-meta">Vitality · 2nd title</div></div>
+            <div class="rail-val">★★</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="fortnite.html">Fortnite</a>
+        <a href="cs2.html">Counter-Strike 2</a>
+        <a href="#">Valorant</a>
+        <a href="#">League of Legends</a>
+        <a href="#">Apex Legends</a>
+        <a href="#">Rocket League</a>
+        <a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a>
+        <a href="#">Player Profiles</a>
+        <a href="#">Team Profiles</a>
+        <a href="#">Power Rankings</a>
+        <a href="#">Earnings</a>
+        <a href="#">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="#">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Epic Games, Valve, Riot Games or any publisher. Player photos via Liquipedia (CC-BY-SA 3.0).</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
