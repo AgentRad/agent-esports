@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fortnite Stats & Leaderboards · AGENT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .stats-hero { background: #000; color: #fff; padding: 56px 0 40px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+  .stats-hero-bg { position: absolute; inset: 0; background:
+    linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center / cover no-repeat;
+  }
+  .stats-hero-inner { position: relative; z-index: 2; }
+  .stats-hero h1 { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; margin-bottom: 12px; }
+  .stats-hero .sub { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 720px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AGENT</a>
+      <a href="#" class="topbar-link">AGENT+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AGENT</a>
+    <nav class="gamenav">
+      <a href="index.html" class="active">Fortnite</a>
+      <a href="#">CS2</a><a href="#">Valorant</a><a href="#">League</a><a href="#">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="event.html">Live Coverage</a>
+    <a href="history.html">History</a>
+    <a href="stats.html" class="active">Stats</a>
+    <a href="compare.html">Compare</a>
+    <a href="#">News</a>
+  </div>
+</div>
+
+<section class="stats-hero">
+  <div class="stats-hero-bg"></div>
+  <div class="container stats-hero-inner">
+    <div class="breadcrumb" style="padding-top: 0; color: rgba(255,255,255,0.7);">
+      <a href="index.html" style="color: rgba(255,255,255,0.85);">Home</a>
+      <span class="sep" style="color: rgba(255,255,255,0.4);">›</span>
+      <span class="here" style="color: #fff;">Stats &amp; Leaderboards</span>
+    </div>
+    <h1>Fortnite Stats &amp; Leaderboards</h1>
+    <p class="sub">Every leaderboard that matters · career earnings, FNCS Power Rankings, K/D, win rates, head-to-head records, all-time tournament wins. Filter by region, season, mode.</p>
+  </div>
+</section>
+
+<main class="container" style="padding: 24px 0 48px;">
+
+  <div class="directory-filters">
+    <button class="filter active">All Time</button>
+    <button class="filter">2026 Season</button>
+    <button class="filter">90 Days</button>
+    <button class="filter">30 Days</button>
+    <span style="width: 1px; height: 20px; background: var(--border); margin: 0 4px;"></span>
+    <button class="filter">All Regions</button>
+    <button class="filter">NA</button>
+    <button class="filter">EU</button>
+    <button class="filter">BR</button>
+    <button class="filter">ME</button>
+    <button class="filter">OCE</button>
+    <button class="filter">Asia</button>
+    <span style="width: 1px; height: 20px; background: var(--border); margin: 0 4px;"></span>
+    <button class="filter">All Modes</button>
+    <button class="filter">Solo</button>
+    <button class="filter">Duos</button>
+    <button class="filter">Trios</button>
+    <button class="filter">Squads</button>
+  </div>
+
+  <!-- TOP-LEVEL STAT TILES -->
+  <div class="section-label">Career Earnings · All-Time <a href="#" class="more">Full top 1000</a></div>
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead><tr><th style="width: 36px;">#</th><th>Player</th><th>Country</th><th class="num">Tournaments</th><th class="num">Wins</th><th class="num">Top 3</th><th class="num">Career Earnings</th></tr></thead>
+      <tbody>
+        <tr><td class="rk gold">1</td><td><a href="bugha.html" class="pl-cell"><div class="avatar bg-default">B</div><div><div class="pl-name">Bugha</div><div class="pl-meta">Kyle Giersdorf · 2019 World Cup Solo Champion</div></div></a></td><td>🇺🇸 USA</td><td class="num">142</td><td class="num">11</td><td class="num">38</td><td class="num" style="font-weight: 800;">$3,672,184</td></tr>
+        <tr><td class="rk gold">2</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">A</div><div><div class="pl-name">Aqua</div><div class="pl-meta">David Wang · 2019 World Cup Duo</div></div></a></td><td>🇦🇹 AUT</td><td class="num">98</td><td class="num">7</td><td class="num">22</td><td class="num" style="font-weight: 800;">$2,108,440</td></tr>
+        <tr><td class="rk gold">3</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">N</div><div><div class="pl-name">Nyhrox</div><div class="pl-meta">Emil Bergquist · 2019 World Cup Duo</div></div></a></td><td>🇳🇴 NOR</td><td class="num">104</td><td class="num">6</td><td class="num">19</td><td class="num" style="font-weight: 800;">$1,964,820</td></tr>
+        <tr><td class="rk">4</td><td><a href="#" class="pl-cell"><div class="avatar bg-nrg">E</div><div><div class="pl-name">EpikWhale</div><div class="pl-meta">Shane Cotton · NRG · 2019 WC 3rd</div></div></a></td><td>🇺🇸 USA</td><td class="num">187</td><td class="num">9</td><td class="num">31</td><td class="num" style="font-weight: 800;">$1,742,050</td></tr>
+        <tr><td class="rk">5</td><td><a href="mongraal.html" class="pl-cell"><div class="avatar bg-default">M</div><div><div class="pl-name">Mongraal</div><div class="pl-meta">Kyle Jackson · former FaZe</div></div></a></td><td>🇬🇧 GBR</td><td class="num">126</td><td class="num">5</td><td class="num">17</td><td class="num" style="font-weight: 800;">$1,533,712</td></tr>
+        <tr><td class="rk">6</td><td><a href="#" class="pl-cell"><div class="avatar bg-100t">M</div><div><div class="pl-name">MrSavage</div><div class="pl-meta">Martin Foss Andersen · 100T</div></div></a></td><td>🇳🇴 NOR</td><td class="num">158</td><td class="num">7</td><td class="num">26</td><td class="num" style="font-weight: 800;">$1,402,665</td></tr>
+        <tr><td class="rk">7</td><td><a href="khanada.html" class="pl-cell"><div class="avatar bg-dignitas">K</div><div><div class="pl-name">Khanada</div><div class="pl-meta">Leon Khim Woobin · Dignitas</div></div></a></td><td>🇺🇸 USA</td><td class="num">131</td><td class="num">6</td><td class="num">20</td><td class="num" style="font-weight: 800;">$1,278,940</td></tr>
+        <tr><td class="rk">8</td><td><a href="player.html" class="pl-cell"><div class="avatar bg-falcons">P</div><div><div class="pl-name">Peterbot</div><div class="pl-meta">Peter Kata · Falcons · 2024 Global Champ</div></div></a></td><td>🇺🇸 USA</td><td class="num">110</td><td class="num">10</td><td class="num">28</td><td class="num" style="font-weight: 800;">$1,213,400</td></tr>
+        <tr><td class="rk">9</td><td><a href="pollo.html" class="pl-cell"><div class="avatar bg-falcons">P</div><div><div class="pl-name">Pollo</div><div class="pl-meta">Miguel Moreno · Falcons · 2024 Global Champ</div></div></a></td><td>🇺🇸 USA</td><td class="num">108</td><td class="num">9</td><td class="num">26</td><td class="num" style="font-weight: 800;">$1,184,200</td></tr>
+        <tr><td class="rk">10</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">M</div><div><div class="pl-name">Mero</div><div class="pl-meta">Liquid · 2025 Global Champ</div></div></a></td><td>🇩🇰 DNK</td><td class="num">94</td><td class="num">8</td><td class="num">23</td><td class="num" style="font-weight: 800;">$1,054,800</td></tr>
+        <tr><td class="rk">11</td><td><a href="#" class="pl-cell"><div class="avatar bg-falcons">A</div><div><div class="pl-name">Acorn</div><div class="pl-meta">Brandon Macias · Falcons</div></div></a></td><td>🇺🇸 USA</td><td class="num">82</td><td class="num">8</td><td class="num">19</td><td class="num" style="font-weight: 800;">$924,830</td></tr>
+        <tr><td class="rk">12</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">A</div><div><div class="pl-name">Andilex</div><div class="pl-meta">Liquid · 2025 Global Champ</div></div></a></td><td>🇩🇪 GER</td><td class="num">88</td><td class="num">7</td><td class="num">21</td><td class="num" style="font-weight: 800;">$884,200</td></tr>
+        <tr><td class="rk">13</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">B</div><div><div class="pl-name">Benjyfishy</div><div class="pl-meta">Now Valorant · Heretics</div></div></a></td><td>🇬🇧 GBR</td><td class="num">76</td><td class="num">5</td><td class="num">17</td><td class="num" style="font-weight: 800;">$894,300</td></tr>
+        <tr><td class="rk">14</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">T</div><div><div class="pl-name">TaySon</div><div class="pl-meta">Free Agent · former Falcons</div></div></a></td><td>🇸🇰 SVK</td><td class="num">82</td><td class="num">6</td><td class="num">19</td><td class="num" style="font-weight: 800;">$842,150</td></tr>
+        <tr><td class="rk">15</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">M</div><div><div class="pl-name">Merstach</div><div class="pl-meta">Free Agent · 2023 Major 1 EU winner</div></div></a></td><td>🇩🇪 GER</td><td class="num">68</td><td class="num">6</td><td class="num">18</td><td class="num" style="font-weight: 800;">$728,400</td></tr>
+        <tr><td class="rk">16</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">P</div><div><div class="pl-name">Psalm</div><div class="pl-meta">Retired · 2019 WC Solo 2nd</div></div></a></td><td>🇺🇸 USA</td><td class="num">42</td><td class="num">2</td><td class="num">8</td><td class="num" style="font-weight: 800;">$1,840,500</td></tr>
+        <tr><td class="rk">17</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">C</div><div><div class="pl-name">Cooper</div><div class="pl-meta">2023 Global Champion</div></div></a></td><td>🇺🇸 USA</td><td class="num">76</td><td class="num">5</td><td class="num">15</td><td class="num" style="font-weight: 800;">$684,920</td></tr>
+        <tr><td class="rk">18</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">D</div><div><div class="pl-name">Dukez</div><div class="pl-meta">Former Ghost · 2019 WC Top 8</div></div></a></td><td>🇺🇸 USA</td><td class="num">58</td><td class="num">3</td><td class="num">9</td><td class="num" style="font-weight: 800;">$612,400</td></tr>
+        <tr><td class="rk">19</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">N</div><div><div class="pl-name">Ninja</div><div class="pl-meta">Tyler Blevins · streamer</div></div></a></td><td>🇺🇸 USA</td><td class="num">48</td><td class="num">2</td><td class="num">8</td><td class="num" style="font-weight: 800;">$894,000</td></tr>
+        <tr><td class="rk">20</td><td><a href="#" class="pl-cell"><div class="avatar bg-default">T</div><div><div class="pl-name">Tfue</div><div class="pl-meta">Turner Tenney · streamer · former FaZe</div></div></a></td><td>🇺🇸 USA</td><td class="num">64</td><td class="num">3</td><td class="num">11</td><td class="num" style="font-weight: 800;">$682,150</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECONDARY LEADERBOARDS -->
+  <div class="section-label">Stat Leaders · By Category</div>
+  <div class="leaderboards-grid" style="margin-bottom: 32px;">
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">Most FNCS Wins</div><div class="leader-sub">Regional Major + Global · Lifetime</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Peterbot</span><span class="leader-val">8</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Pollo</span><span class="leader-val">8</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Khanada</span><span class="leader-val">5</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">EpikWhale</span><span class="leader-val">5</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">Aqua</span><span class="leader-val">4</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">MrSavage</span><span class="leader-val">4</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">Acorn</span><span class="leader-val">4</span></div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">Lifetime Eliminations</div><div class="leader-sub">Tracked competitive games only</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Mongraal</span><span class="leader-val">142,381</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Peterbot</span><span class="leader-val">138,920</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Acorn</span><span class="leader-val">132,418</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">Khanada</span><span class="leader-val">128,604</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">Pollo</span><span class="leader-val">124,712</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">EpikWhale</span><span class="leader-val">119,488</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">MrSavage</span><span class="leader-val">116,209</span></div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">Best K/D · 2026 Season</div><div class="leader-sub">Min. 200 ranked matches</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Peterbot</span><span class="leader-val">10.84</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Pollo</span><span class="leader-val">10.42</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Khanada</span><span class="leader-val">9.92</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">Acorn</span><span class="leader-val">9.71</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">VicterV</span><span class="leader-val">9.48</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">Flickzy</span><span class="leader-val">9.22</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">MariusCOW</span><span class="leader-val">8.98</span></div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">Win Rate · 2026</div><div class="leader-sub">Min. 100 ranked matches</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Peterbot</span><span class="leader-val">31.2%</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Pollo</span><span class="leader-val">29.8%</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Acorn</span><span class="leader-val">28.7%</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">Khanada</span><span class="leader-val">26.4%</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">VicterV</span><span class="leader-val">25.1%</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">Ajerss</span><span class="leader-val">24.8%</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">Flickzy</span><span class="leader-val">23.4%</span></div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">Earnings · Last 90 Days</div><div class="leader-sub">Tournament prize money</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Peterbot</span><span class="leader-val">$214K</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Pollo</span><span class="leader-val">$198K</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Acorn</span><span class="leader-val">$182K</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">Ajerss</span><span class="leader-val">$165K</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">Khanada</span><span class="leader-val">$149K</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">VicterV</span><span class="leader-val">$142K</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">Flickzy</span><span class="leader-val">$132K</span></div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <div class="leader-head"><div><div class="leader-title">FNCS Avg. Placement</div><div class="leader-sub">Min. 5 majors · Last 12 months</div></div><a href="#" class="view-all-mini">→</a></div>
+      <div class="leader-list">
+        <div class="leader-row"><span class="leader-rank gold">1</span><span class="leader-name">Peterbot</span><span class="leader-val">2.1</span></div>
+        <div class="leader-row"><span class="leader-rank gold">2</span><span class="leader-name">Pollo</span><span class="leader-val">2.4</span></div>
+        <div class="leader-row"><span class="leader-rank gold">3</span><span class="leader-name">Acorn</span><span class="leader-val">2.7</span></div>
+        <div class="leader-row"><span class="leader-rank">4</span><span class="leader-name">Khanada</span><span class="leader-val">3.1</span></div>
+        <div class="leader-row"><span class="leader-rank">5</span><span class="leader-name">VicterV</span><span class="leader-val">3.0</span></div>
+        <div class="leader-row"><span class="leader-rank">6</span><span class="leader-name">Flickzy</span><span class="leader-val">3.2</span></div>
+        <div class="leader-row"><span class="leader-rank">7</span><span class="leader-name">MariusCOW</span><span class="leader-val">3.4</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORG STANDINGS -->
+  <div class="section-label">Organization Power Index <a href="teams.html" class="more">All teams</a></div>
+  <div class="table-card">
+    <table class="t-rank">
+      <thead><tr><th style="width: 36px;">#</th><th>Organization</th><th>Region</th><th class="num">Active Players</th><th class="num">2026 Earnings</th><th class="num">All-Time</th><th class="num">Power Index</th></tr></thead>
+      <tbody>
+        <tr><td class="rk gold">1</td><td><a href="team.html" class="pl-cell"><div class="avatar bg-falcons sq">F</div><div class="pl-name">Team Falcons</div></a></td><td>🇸🇦 SAU</td><td class="num">8</td><td class="num">$1,420,000</td><td class="num" style="font-weight: 800;">$3,840,000</td><td class="num" style="color: var(--win); font-weight: 800;">94.8</td></tr>
+        <tr><td class="rk gold">2</td><td><a href="#" class="pl-cell"><div class="avatar bg-dignitas sq">D</div><div class="pl-name">Dignitas</div></a></td><td>🇺🇸 USA</td><td class="num">4</td><td class="num">$612,000</td><td class="num" style="font-weight: 800;">$2,184,000</td><td class="num">88.2</td></tr>
+        <tr><td class="rk gold">3</td><td><a href="#" class="pl-cell"><div class="avatar bg-faze sq">F</div><div class="pl-name">FaZe Clan</div></a></td><td>🇺🇸 USA</td><td class="num">5</td><td class="num">$418,000</td><td class="num" style="font-weight: 800;">$2,894,000</td><td class="num">82.4</td></tr>
+        <tr><td class="rk">4</td><td><a href="#" class="pl-cell"><div class="avatar bg-nrg sq">N</div><div class="pl-name">NRG</div></a></td><td>🇺🇸 USA</td><td class="num">6</td><td class="num">$382,000</td><td class="num" style="font-weight: 800;">$2,640,000</td><td class="num">79.1</td></tr>
+        <tr><td class="rk">5</td><td><a href="#" class="pl-cell"><div class="avatar bg-100t sq">T</div><div class="pl-name">100 Thieves</div></a></td><td>🇺🇸 USA</td><td class="num">5</td><td class="num">$298,000</td><td class="num" style="font-weight: 800;">$1,894,000</td><td class="num">76.8</td></tr>
+        <tr><td class="rk">6</td><td><a href="#" class="pl-cell"><div class="avatar bg-liquid sq">L</div><div class="pl-name">Team Liquid</div></a></td><td>🇳🇱 NLD</td><td class="num">7</td><td class="num">$284,000</td><td class="num" style="font-weight: 800;">$1,742,000</td><td class="num">74.2</td></tr>
+        <tr><td class="rk">7</td><td><a href="#" class="pl-cell"><div class="avatar bg-tsm sq">T</div><div class="pl-name">TSM</div></a></td><td>🇺🇸 USA</td><td class="num">4</td><td class="num">$214,000</td><td class="num" style="font-weight: 800;">$1,448,000</td><td class="num">71.5</td></tr>
+        <tr><td class="rk">8</td><td><a href="#" class="pl-cell"><div class="avatar bg-sentinels sq">S</div><div class="pl-name">Sentinels</div></a></td><td>🇺🇸 USA</td><td class="num">3</td><td class="num">$142,000</td><td class="num" style="font-weight: 800;">$1,184,000</td><td class="num">68.4</td></tr>
+        <tr><td class="rk">9</td><td><a href="#" class="pl-cell"><div class="avatar bg-wave sq">W</div><div class="pl-name">Wave Esports</div></a></td><td>🇩🇪 GER</td><td class="num">4</td><td class="num">$184,000</td><td class="num" style="font-weight: 800;">$648,000</td><td class="num">66.2</td></tr>
+        <tr><td class="rk">10</td><td><a href="#" class="pl-cell"><div class="avatar bg-quest sq">Q</div><div class="pl-name">Quest Esports</div></a></td><td>🇦🇪 UAE</td><td class="num">5</td><td class="num">$162,000</td><td class="num" style="font-weight: 800;">$542,000</td><td class="num">63.8</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AGENT</a></div>
+      <div class="footer-col"><h5>Games</h5><a href="#">Fortnite</a><a href="#">CS2</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Agent Esports.</div><div>Photos via Unsplash.</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

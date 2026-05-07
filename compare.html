@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Compare Players · AGENT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .compare-grid { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; }
+  .compare-side { padding: 32px; position: relative; min-height: 320px; color: #fff; overflow: hidden; }
+  .compare-side.A { background: linear-gradient(135deg, #006d35 0%, #003d1d 100%); border-radius: 4px 0 0 4px; }
+  .compare-side.B { background: linear-gradient(135deg, #4a2a8a 0%, #2a1545 100%); border-radius: 0 4px 4px 0; }
+  .compare-side::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center / cover no-repeat; opacity: 0.12; mix-blend-mode: overlay; }
+  .compare-side > * { position: relative; }
+  .compare-vs { display: grid; place-items: center; background: var(--bg-darker); color: #fff; font-weight: 900; font-size: 18px; letter-spacing: 0.04em; }
+  .compare-side .cs-portrait { width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.15); display: grid; place-items: center; font-size: 56px; font-weight: 900; margin-bottom: 16px; border: 3px solid rgba(255,255,255,0.25); }
+  .compare-side h2 { font-size: 36px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+  .compare-side .cs-real { font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+  .compare-side .cs-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .compare-side .cs-tags .badge { background: rgba(255,255,255,0.15); color: #fff; border: 0; }
+
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .compare-table tr { border-bottom: 1px solid var(--border); }
+  .compare-table tr:last-child { border-bottom: 0; }
+  .compare-table td { padding: 14px 20px; }
+  .compare-table td.A, .compare-table td.B { font-family: "JetBrains Mono", monospace; font-weight: 800; font-size: 18px; width: 40%; }
+  .compare-table td.A { text-align: right; }
+  .compare-table td.B { text-align: left; }
+  .compare-table td.label { text-align: center; font-size: 11px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; width: 20%; }
+  .compare-table td.A.win, .compare-table td.B.win { color: var(--win); }
+  .compare-table td.A.loss, .compare-table td.B.loss { color: var(--text-2); }
+
+  .h2h-banner {
+    margin-top: 24px;
+    padding: 24px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 32px;
+  }
+  .h2h-side { text-align: center; }
+  .h2h-side .num { font-family: "JetBrains Mono", monospace; font-size: 56px; font-weight: 900; line-height: 1; }
+  .h2h-side .lab { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-top: 8px; }
+  .h2h-side .num.win { color: var(--win); }
+  .h2h-side .num.loss { color: var(--loss); }
+  .h2h-bar-big { width: 200px; height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; display: flex; }
+  .h2h-bar-big .fill { height: 100%; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AGENT</a>
+      <a href="#" class="topbar-link">AGENT+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AGENT</a>
+    <nav class="gamenav">
+      <a href="index.html" class="active">Fortnite</a>
+      <a href="#">CS2</a><a href="#">Valorant</a><a href="#">League</a><a href="#">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="event.html">Live Coverage</a>
+    <a href="history.html">History</a>
+    <a href="stats.html">Stats</a>
+    <a href="compare.html" class="active">Compare</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span><span class="here">Compare Players</span>
+  </div>
+
+  <div class="page-header">
+    <h1 class="page-title">Compare Players</h1>
+    <p class="page-sub">Side-by-side breakdown of any two competitors. Selected: Peterbot vs Khanada · top NA East and top NA West.</p>
+  </div>
+
+  <!-- PLAYER SELECT BAR -->
+  <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px;">
+      <div class="avatar bg-falcons">P</div>
+      <div style="flex: 1;">
+        <div style="font-weight: 800; font-size: 14px;">Peterbot</div>
+        <div style="font-size: 11px; color: var(--text-2);">Team Falcons · #1 PR · NA East</div>
+      </div>
+      <button style="padding: 6px 10px; font-size: 11px; font-weight: 700; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; cursor: pointer;">Change</button>
+    </div>
+    <div style="display: grid; place-items: center; font-weight: 900; color: var(--text-3);">VS</div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px;">
+      <div class="avatar bg-dignitas">K</div>
+      <div style="flex: 1;">
+        <div style="font-weight: 800; font-size: 14px;">Khanada</div>
+        <div style="font-size: 11px; color: var(--text-2);">Dignitas · #5 PR · NA West</div>
+      </div>
+      <button style="padding: 6px 10px; font-size: 11px; font-weight: 700; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; cursor: pointer;">Change</button>
+    </div>
+  </div>
+
+  <!-- COMPARE HERO -->
+  <div class="compare-grid">
+    <div class="compare-side A">
+      <div class="cs-portrait">P</div>
+      <h2>Peterbot</h2>
+      <div class="cs-real">Peter Kata · 18 yo · 🇺🇸 USA</div>
+      <div class="cs-tags">
+        <span class="badge">Team Falcons</span>
+        <span class="badge">2024 FNCS Global Champ</span>
+        <span class="badge">Duo: Pollo</span>
+      </div>
+    </div>
+    <div class="compare-vs">VS</div>
+    <div class="compare-side B">
+      <div class="cs-portrait">K</div>
+      <h2>Khanada</h2>
+      <div class="cs-real">Khanyon Garcia · 22 yo · 🇺🇸 USA</div>
+      <div class="cs-tags">
+        <span class="badge">Dignitas</span>
+        <span class="badge">FNCS '26 Major 1 NA-W winner</span>
+        <span class="badge">Duo: VicterV</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEAD-TO-HEAD BANNER -->
+  <div class="h2h-banner">
+    <div class="h2h-side">
+      <div class="num win">8</div>
+      <div class="lab">Peterbot wins · in FNCS finals lobbies</div>
+    </div>
+    <div style="display: grid; place-items: center; gap: 8px;">
+      <div style="font-size: 11px; color: var(--text-3); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;">Head-to-Head</div>
+      <div class="h2h-bar-big">
+        <div class="fill" style="width: 67%; background: var(--win);"></div>
+        <div class="fill" style="width: 33%; background: var(--loss);"></div>
+      </div>
+      <div style="font-size: 12px; color: var(--text-2);">12 lobbies · last 12 majors</div>
+    </div>
+    <div class="h2h-side">
+      <div class="num loss">4</div>
+      <div class="lab">Khanada wins</div>
+    </div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <div class="card" style="margin-top: 24px;">
+    <div class="card-head">
+      <div><div class="card-title">Career & Performance</div><div class="card-sub">Lifetime stats · highlighted = better</div></div>
+    </div>
+    <table class="compare-table">
+      <tbody>
+        <tr><td class="A win">$1,213,400</td><td class="label">Career Earnings</td><td class="B loss">$1,278,940</td></tr>
+        <tr><td class="A loss">110</td><td class="label">Career Tournaments</td><td class="B win">131</td></tr>
+        <tr><td class="A win">10</td><td class="label">Tournament Wins</td><td class="B loss">6</td></tr>
+        <tr><td class="A win">28</td><td class="label">Top 3 Finishes</td><td class="B loss">20</td></tr>
+        <tr><td class="A win">3,284</td><td class="label">Power Rating</td><td class="B loss">2,991</td></tr>
+        <tr><td class="A win">2.1</td><td class="label">FNCS Avg. Placement</td><td class="B loss">3.1</td></tr>
+        <tr><td class="A win">10.84</td><td class="label">2026 K/D</td><td class="B loss">9.92</td></tr>
+        <tr><td class="A win">31.2%</td><td class="label">Win Rate (90d)</td><td class="B loss">26.4%</td></tr>
+        <tr><td class="A win">$214,500</td><td class="label">Earnings (90d)</td><td class="B loss">$148,900</td></tr>
+        <tr><td class="A loss">951K</td><td class="label">Twitch Followers</td><td class="B win">1.2M</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ACHIEVEMENTS COMPARISON -->
+  <div class="card">
+    <div class="card-head"><div><div class="card-title">Trophy Cabinet</div><div class="card-sub">FNCS wins side-by-side</div></div></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 18px; gap: 32px;">
+      <div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Peterbot</div>
+        <div style="display: grid; gap: 8px;">
+          <div style="padding: 12px; background: #fff5d6; border-radius: 4px; font-size: 13px;"><strong>🏆 2024 FNCS Global Championship</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">Copenhagen LAN · with Pollo · $200K</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>🥇 8 Regional Major Wins</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">NA East · 2022-2026</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>🌍 DreamHack Atlanta '26</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">LAN · with Pollo · $62.5K</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>⭐ '24 Streamer Awards Nominee</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">Fortnite Streamer of the Year</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Khanada</div>
+        <div style="display: grid; gap: 8px;">
+          <div style="padding: 12px; background: #fff5d6; border-radius: 4px; font-size: 13px;"><strong>🏆 FNCS 2026 Major 1 · NA West</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">with VicterV · 160-pt margin · $30K</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>🥇 5 Regional Major Wins</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">NA East + NA West · 2021-2026</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>👑 Cash Cup King</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">14 Cash Cup wins lifetime</div></div>
+          <div style="padding: 12px; background: var(--bg-alt); border-radius: 4px; font-size: 13px;"><strong>📈 Longest Active Pro</strong><div style="font-size: 11px; color: var(--text-2); margin-top: 2px;">Competing since 2018 · NRG era</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI ANALYSIS -->
+  <div class="card">
+    <div class="card-head"><div><div class="card-title">Matchup Analysis</div><div class="card-sub">Generated from 12 head-to-head FNCS lobbies + 47 scrim matches</div></div></div>
+    <div class="card-body" style="font-size: 14px; line-height: 1.65;">
+      <p style="margin-bottom: 12px;"><strong>The data favors Peterbot in head-to-head encounters</strong> · 8 wins to Khanada's 4 across the last 12 FNCS Major qualifiers and finals where both competed. Peterbot's edge is most visible in mid-game phases (zones 4-6), where his rotation timing and pathing average 23% better point-per-minute output.</p>
+      <p style="margin-bottom: 12px;">Khanada's strength is endgame: in lobbies that reach top 10, his K/D actually exceeds Peterbot's by a small margin (10.42 vs 10.18 in those late-game scenarios). The conclusion that emerges across our sample: Peterbot wins more often because he survives more efficiently to that endgame, not because he's a better endgame player.</p>
+      <p>In the upcoming FNCS 2026 Major 1 Summit Final (Game 12), both are still in qualification range. Peterbot needs a top-5 placement to lock his Antwerp LAN spot. Khanada needs a top-3 with a Victory Royale to overtake the Falcons trio. Watch the Brutal Strongholds rotation · that's where this matchup historically gets decided.</p>
+    </div>
+  </div>
+
+  <!-- POPULAR COMPARISONS -->
+  <div class="section-label">Popular Matchups</div>
+  <div class="org-grid">
+    <a href="#" class="org-card" style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+      <div style="display: flex; gap: -4px;">
+        <div class="avatar bg-falcons">P</div>
+        <div class="avatar bg-falcons" style="margin-left: -8px; border: 2px solid #fff;">P</div>
+      </div>
+      <div><div style="font-weight: 800; font-size: 13px;">Peterbot vs Pollo</div><div style="font-size: 11px; color: var(--text-2);">Falcons internal · the duo</div></div>
+    </a>
+    <a href="#" class="org-card" style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+      <div style="display: flex;">
+        <div class="avatar bg-default">B</div>
+        <div class="avatar bg-falcons" style="margin-left: -8px; border: 2px solid #fff;">P</div>
+      </div>
+      <div><div style="font-weight: 800; font-size: 13px;">Bugha vs Peterbot</div><div style="font-size: 11px; color: var(--text-2);">Era-defining players · WC '19 vs '24 GC</div></div>
+    </a>
+    <a href="#" class="org-card" style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+      <div style="display: flex;">
+        <div class="avatar bg-dignitas">K</div>
+        <div class="avatar bg-dignitas" style="margin-left: -8px; border: 2px solid #fff;">V</div>
+      </div>
+      <div><div style="font-weight: 800; font-size: 13px;">Khanada vs VicterV</div><div style="font-size: 11px; color: var(--text-2);">Dignitas duo head-to-head</div></div>
+    </a>
+    <a href="#" class="org-card" style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+      <div style="display: flex;">
+        <div class="avatar bg-default">M</div>
+        <div class="avatar bg-falcons" style="margin-left: -8px; border: 2px solid #fff;">M</div>
+      </div>
+      <div><div style="font-weight: 800; font-size: 13px;">Mongraal vs MariusCOW</div><div style="font-size: 11px; color: var(--text-2);">EU mechanical kings · then vs now</div></div>
+    </a>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AGENT</a></div>
+      <div class="footer-col"><h5>Games</h5><a href="#">Fortnite</a><a href="#">CS2</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Agent Esports.</div><div>Photos via Unsplash.</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
