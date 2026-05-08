@@ -82,6 +82,40 @@
     { type: 'page', name: 'Broadcast Schedule', meta: 'What is broadcasting today and this week', url: 'schedule.html', cls: 'bg-default' },
     // Daily digest
     { type: 'page', name: 'Today in Esports', meta: 'Daily digest across all 5 games', url: 'digest.html', cls: 'bg-default' },
+    // Rocket League
+    { type: 'page', name: 'Rocket League', meta: 'Section landing · RLCS, Worlds, Majors', url: 'rocketleague.html', cls: 'bg-default' },
+    { type: 'player', name: 'jstn', meta: 'Justin Morales · FUT Esports · RLCS Season 8 World Champion · USA', url: 'jstn.html', cls: 'bg-default' },
+    { type: 'player', name: 'SquishyMuffinz', meta: 'Mariano Arruda · G.A.S. · RLCS Season 6 World Champion · CAN', url: 'squishy.html', cls: 'bg-default' },
+    { type: 'player', name: 'Comm', meta: 'Robert Kyser · Free agent · USA', url: 'comm.html', cls: 'bg-default' },
+    { type: 'player', name: 'Daniel', meta: 'Daniel Piecenski · NRG · 2025 RLCS World Champion · USA', url: 'daniel.html', cls: 'bg-default' },
+    { type: 'player', name: 'Vatira', meta: 'Axel Touret · Karmine Corp · 3 RLCS Major wins · FRA', url: 'vatira.html', cls: 'bg-default' },
+    { type: 'team', name: 'Karmine Corp', meta: 'French RL org · 2 RLCS Major wins', url: 'karmine-corp.html', cls: 'bg-default' },
+    { type: 'team', name: 'G2 Rocket League', meta: 'Berlin · 2 RLCS Major wins · 2x Worlds RU', url: 'g2rl.html', cls: 'bg-g2' },
+    { type: 'team', name: 'Vitality Rocket League', meta: 'Paris · 2 RLCS World Championships', url: 'vitalityrl.html', cls: 'bg-vit' },
+    { type: 'tournament', name: 'RLCS 2024 World Championship', meta: 'Fort Worth · Team BDS def. G2 Stride', url: 'tournament-rlcs-2024-major3.html', cls: 'bg-default' },
+    // Call of Duty
+    { type: 'page', name: 'Call of Duty', meta: 'Section landing · CDL, Champs, Warzone', url: 'cod.html', cls: 'bg-default' },
+    { type: 'player', name: 'Scump', meta: 'Seth Abner · retired · CWL 2017 Champion · USA', url: 'scump.html', cls: 'bg-default' },
+    { type: 'player', name: 'Shotzzy', meta: 'Anthony Cuevas-Castro · OpTic Texas · 3x CDL Champion · USA', url: 'shotzzy.html', cls: 'bg-default' },
+    { type: 'player', name: 'Simp', meta: 'Chris Lehr · FaZe Vegas · 1x CDL Champion · USA', url: 'simp.html', cls: 'bg-default' },
+    { type: 'player', name: 'Kenny', meta: 'Kenneth Williams · LA Thieves · 2x CDL Champion · USA', url: 'kenny.html', cls: 'bg-default' },
+    { type: 'player', name: 'Aydan', meta: 'Aydan Conrad · Gen.G · 2025 EWC Warzone Champion · USA', url: 'aydan.html', cls: 'bg-default' },
+    { type: 'team', name: 'OpTic Texas', meta: 'Dallas · CDL Champs 2024 + 2025', url: 'optic-texas.html', cls: 'bg-default' },
+    { type: 'team', name: 'FaZe Vegas', meta: 'Las Vegas · 2021 CDL Champion · 2024 EWC Champion', url: 'atl-faze.html', cls: 'bg-faze' },
+    { type: 'team', name: 'Toronto KOI', meta: 'Toronto · 2x Stage Major Champion', url: 'toronto-ultra.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'CDL Major IV 2024', meta: 'Burbank · NY Subliners def. Atlanta FaZe 4-2 · HyDra MVP', url: 'tournament-cdl-major4-2024.html', cls: 'bg-default' },
+    // More tournament archives
+    { type: 'tournament', name: 'PGL Antwerp Major 2022', meta: 'CS:GO · FaZe def. NaVi 2-0 · rain MVP', url: 'tournament-pgl-antwerp-2022.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'VCT Masters Madrid 2024', meta: 'Sentinels def. Gen.G 3-2 · zekken MVP', url: 'tournament-masters-madrid-2024.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'MSI 2024', meta: 'Chengdu · Gen.G def. BLG 3-1 · Lehends MVP', url: 'tournament-msi-2024.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'FNCS Invitational 2022', meta: 'Raleigh · Setty & Kami won · first in-person FNCS finals', url: 'tournament-fncs-invitational-2022.html', cls: 'bg-default' },
+    // Streamers hub
+    { type: 'page', name: 'Streamers Directory', meta: 'Browse all streamers and content creators', url: 'streamers.html', cls: 'bg-default' },
+    { type: 'page', name: 'Streamer Leaderboard', meta: 'Most-followed creators across all games', url: 'streamer-leaderboard.html', cls: 'bg-default' },
+    { type: 'page', name: 'Streamer Trends', meta: 'Who is gaining followers fastest', url: 'streamer-trends.html', cls: 'bg-default' },
+    // News + Records
+    { type: 'page', name: 'News Archive', meta: 'Every story across every game', url: 'news.html', cls: 'bg-default' },
+    { type: 'page', name: 'All-Time Records', meta: 'The numbers behind the games · all 5 titles', url: 'records.html', cls: 'bg-default' },
     { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' },
     // Game sections
     { type: 'page', name: 'Fortnite', meta: 'Section landing · FNCS, Cash Cup, Power Rankings', url: 'fortnite.html', cls: 'bg-default' },

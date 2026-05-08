@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="All News · Every Story Across Every Game · AgentTV" />
+<meta property="og:description" content="The complete AgentTV news archive. Every reported story across Fortnite, Counter-Strike, Valorant, League of Legends, Apex, Rocket League and Call of Duty in one place." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/news.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="All News · Every Story Across Every Game · AgentTV" />
+<meta name="twitter:description" content="The complete AgentTV news archive. Every reported story across Fortnite, Counter-Strike, Valorant, League of Legends, Apex, Rocket League and Call of Duty in one place." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>All News · Every Story Across Every Game · AgentTV</title>
+<meta name="description" content="The complete AgentTV news archive. Profiles, analysis, roster moves, tournament reports and investigations across every game we cover." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-marks.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." aria-label="Search players and teams" />
+      <button class="btn-watch">Watch Live</button>
+    </div>
+  </div>
+</header>
+
+<!-- NEWS SUB NAV -->
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="news.html" class="active">All News</a>
+    <a href="#by-game">By Game</a>
+    <a href="#by-series">By Series</a>
+    <a href="#long-reads">Long Reads</a>
+    <a href="digest.html">Daily Digest</a>
+    <span class="subnav-divider"></span>
+    <a href="#tournament">Tournaments</a>
+    <a href="#roster">Roster</a>
+    <a href="#analysis">Analysis</a>
+    <a href="#profile">Profiles</a>
+    <a href="#investigation">Investigations</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- HERO STRIP -->
+  <div class="hero-card" style="margin-bottom: 28px; display: block; min-height: 240px;">
+    <div class="hero-bg bg-grad-7"></div>
+    <div class="hero-content" style="justify-content: center;">
+      <div class="hero-tag live">News Archive</div>
+      <div class="hero-eyebrow">Updated continuously · 11 stories on file · Issue tracking since Jan 2024</div>
+      <h1 class="hero-headline" style="font-size: 56px; max-width: 900px;">All News</h1>
+      <p class="hero-dek" style="max-width: 720px;">Every story across every game. Profiles, roster moves, tournament reports, analysis pieces and longform investigations from the AgentTV desk, in one searchable archive.</p>
+      <div class="hero-byline">
+        <strong>The AgentTV newsroom</strong>
+        <span>·</span>
+        <span>Filed across Fortnite, CS2, Valorant, League, Apex</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR: GAMES -->
+  <div class="directory-filters" style="margin-bottom: 12px;">
+    <span style="font-size: 10px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 4px;">Game</span>
+    <button class="filter active">All Games</button>
+    <button class="filter">Fortnite</button>
+    <button class="filter">CS2</button>
+    <button class="filter">Valorant</button>
+    <button class="filter">LoL</button>
+    <button class="filter">Apex</button>
+    <button class="filter">Rocket League</button>
+    <button class="filter">CoD</button>
+  </div>
+
+  <!-- FILTER BAR: CATEGORIES + SORT -->
+  <div class="directory-filters" style="margin-bottom: 24px;">
+    <span style="font-size: 10px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 4px;">Category</span>
+    <button class="filter active">All</button>
+    <button class="filter">Tournament</button>
+    <button class="filter">Roster</button>
+    <button class="filter">Analysis</button>
+    <button class="filter">Profile</button>
+    <button class="filter">Org News</button>
+    <button class="filter">Coaching</button>
+    <button class="filter">Investigation</button>
+    <span style="flex: 1;"></span>
+    <span style="font-size: 10px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 4px;">Sort</span>
+    <button class="filter active">Most Recent</button>
+    <button class="filter">Most Read</button>
+    <button class="filter">Editor's Pick</button>
+  </div>
+
+  <!-- TWO-COLUMN: NEWS GRID + RIGHT RAIL -->
+  <div style="display: grid; grid-template-columns: 1fr 320px; gap: 40px; margin-bottom: 32px;">
+
+    <!-- ============ MAIN NEWS COLUMN ============ -->
+    <div>
+
+      <div class="section-label red" id="long-reads">Latest Stories <a href="digest.html" class="more">Daily digest</a></div>
+
+      <!-- 4-COLUMN STORY GRID -->
+      <div class="story-grid" style="margin-bottom: 28px;">
+
+        <!-- 1. Falcons Empire (Org News) -->
+        <a href="article-falcons-empire.html" class="story-card">
+          <div class="story-thumb bg-grad-7">
+            <div class="story-thumb-game">All Games</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">FALCONS<br>EMPIRE</div>
+          </div>
+          <div class="story-cat">Org News · 24 min read</div>
+          <div class="story-headline">Inside Team Falcons' Esports Empire</div>
+          <div class="story-dek">A Saudi-backed organization is buying out rosters across a dozen disciplines at a pace nobody in modern esports has matched. The question is whether dominance ever bends to checkbook scale.</div>
+          <div class="story-byline">By Eshaal Aldhafeeri · Long Read · Org Strategy</div>
+        </a>
+
+        <!-- 2. Bugha Legacy (Profile/Reflection · Fortnite) -->
+        <a href="article-bugha-legacy.html" class="story-card">
+          <div class="story-thumb bg-grad-fortnite">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">BUGHA<br>AT 23</div>
+          </div>
+          <div class="story-cat">Profile · 18 min read</div>
+          <div class="story-headline">Bugha at 23: Why the 2019 World Cup Still Defines Esports</div>
+          <div class="story-dek">Seven years after a 16-year-old from Pottsgrove walked off the Arthur Ashe stage with three million dollars and a permanent place in the cultural memory of competitive gaming, the moment looks bigger, not smaller.</div>
+          <div class="story-byline">By Lena Brooks · Long Read · Reflection</div>
+        </a>
+
+        <!-- 3. Vitality Dynasty (Analysis · CS2) -->
+        <a href="article-vitality-dynasty.html" class="story-card">
+          <div class="story-thumb bg-grad-cs">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Analysis</div>
+            <div class="story-thumb-text">VITALITY<br>DYNASTY</div>
+          </div>
+          <div class="story-cat">Analysis · 14 min read</div>
+          <div class="story-headline">How Vitality Built a CS2 Dynasty Around ZywOo</div>
+          <div class="story-dek">For five years, Mathieu Herbaut carried teams. In the CS2 era, the team finally caught up. The story of how Team Vitality became the most complete roster in modern Counter-Strike.</div>
+          <div class="story-byline">By Sara Patel · Analysis</div>
+        </a>
+
+        <!-- 4. donk Phenom (Profile · CS2) -->
+        <a href="article-donk-phenom.html" class="story-card">
+          <div class="story-thumb bg-grad-cs">
+            <div class="story-thumb-game">CS2</div>
+            <div class="story-thumb-tag">Profile</div>
+            <div class="story-thumb-text">DONK<br>17 YO MVP</div>
+          </div>
+          <div class="story-cat">Profile · 12 min read</div>
+          <div class="story-headline">donk and the New Generation: CS2's 17-Year-Old MVP</div>
+          <div class="story-dek">Danil Kryshkovets did not come up the traditional Counter-Strike way. He came up faster than the traditional way and, at 17, has rewritten what a debut season looks like at the top of the game.</div>
+          <div class="story-byline">By Sara Patel · Profile</div>
+        </a>
+
+        <!-- 5. Paper Rex Toronto (Tournament · Valorant) -->
+        <a href="article-paperrex-toronto.html" class="story-card">
+          <div class="story-thumb bg-grad-valorant">
+            <div class="story-thumb-game">Valorant</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">PAPER REX<br>TORONTO</div>
+          </div>
+          <div class="story-cat">Tournament · 16 min read</div>
+          <div class="story-headline">Paper Rex's Pacific Breakthrough at Masters Toronto</div>
+          <div class="story-dek">For four years, the Pacific region was the test case for whether structural difference could survive contact with EMEA tape work. In Toronto, Paper Rex stopped being a test case and became the answer.</div>
+          <div class="story-byline">By Jordan Romero · Long Read · Feature</div>
+        </a>
+
+        <!-- 6. Demon1 Comeback (Profile · Valorant) -->
+        <a href="article-demon1-comeback.html" class="story-card">
+          <div class="story-thumb bg-grad-valorant">
+            <div class="story-thumb-game">Valorant</div>
+            <div class="story-thumb-tag">Profile</div>
+            <div class="story-thumb-text">DEMON1<br>RETURN</div>
+          </div>
+          <div class="story-cat">Profile · 13 min read</div>
+          <div class="story-headline">Demon1's Quiet Comeback After the EG Breakup</div>
+          <div class="story-dek">Max Mazanov was 21 when his Champions-winning roster came apart. He has spent the last two years putting the career back together piece by piece, on a quieter team, in a quieter way.</div>
+          <div class="story-byline">By Jordan Romero · Career Profile</div>
+        </a>
+
+        <!-- 7. Faker Six (Profile · LoL) -->
+        <a href="article-faker-six.html" class="story-card">
+          <div class="story-thumb bg-grad-lol">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">FAKER<br>SIX RINGS</div>
+          </div>
+          <div class="story-cat">Profile · 22 min read</div>
+          <div class="story-headline">Faker, Six Times: The Case for the Greatest of All Time</div>
+          <div class="story-dek">No professional player in any team-based esport has won a sixth global championship. Lee Sang-hyeok did, in November 2024, more than a decade after the first one. Why the sixth ring still mattered anyway.</div>
+          <div class="story-byline">By Marcus Chen · Long Read · The GOAT Case</div>
+        </a>
+
+        <!-- 8. BLG Rising (Analysis · LoL) -->
+        <a href="article-blg-rising.html" class="story-card">
+          <div class="story-thumb bg-grad-lol">
+            <div class="story-thumb-game">League</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">BLG<br>RISING</div>
+          </div>
+          <div class="story-cat">Analysis · 17 min read</div>
+          <div class="story-headline">Bilibili Gaming and the LPL's Long Climb to Worlds Glory</div>
+          <div class="story-dek">Two domestic titles, two MSI runs, and two consecutive Worlds finals lost on the very last map. Bilibili Gaming has spent three seasons being the closest thing the LPL has to a championship-tier roster.</div>
+          <div class="story-byline">By Marcus Chen · Long Read · LPL Deep Dive</div>
+        </a>
+
+        <!-- 9. ImperialHal Falcons (Roster · Apex) -->
+        <a href="article-imperialhal-falcons.html" class="story-card">
+          <div class="story-thumb bg-grad-4">
+            <div class="story-thumb-game">Apex</div>
+            <div class="story-thumb-tag">Roster</div>
+            <div class="story-thumb-text">HAL TO<br>FALCONS</div>
+          </div>
+          <div class="story-cat">Roster · 15 min read</div>
+          <div class="story-headline">ImperialHal's Falcons Move and the End of an Era at TSM</div>
+          <div class="story-dek">For five years, the question in competitive Apex was whether anyone could solve TSM. The captain has just walked out the door, the duo that made the offense possible walked with him.</div>
+          <div class="story-byline">By Jordan Romero · Long Read · Move Story</div>
+        </a>
+
+        <!-- 10. Genburten Mechanical (Profile · Apex) -->
+        <a href="article-genburten-mechanical.html" class="story-card">
+          <div class="story-thumb bg-grad-4">
+            <div class="story-thumb-game">Apex</div>
+            <div class="story-thumb-tag">Feature</div>
+            <div class="story-thumb-text">GEN<br>BURTEN</div>
+          </div>
+          <div class="story-cat">Profile · 11 min read</div>
+          <div class="story-headline">Genburten and the Mechanical Ceiling of Apex Legends</div>
+          <div class="story-dek">Some players win because the team plays better around them. Some win because they can do, with their hands, things the rest of the field cannot replicate. Genburten is the cleanest example of the second category.</div>
+          <div class="story-byline">By Jordan Romero · Feature · Mechanical Profile</div>
+        </a>
+
+        <!-- 11. Peterbot Article (Profile · Fortnite) -->
+        <a href="article.html" class="story-card">
+          <div class="story-thumb bg-grad-fortnite">
+            <div class="story-thumb-game">Fortnite</div>
+            <div class="story-thumb-tag">Long Read</div>
+            <div class="story-thumb-text">PETER<br>BOT</div>
+          </div>
+          <div class="story-cat">Profile · 22 min read</div>
+          <div class="story-headline">Inside Peterbot's path from 13-year-old qualifier to FNCS Global Champion at 17</div>
+          <div class="story-dek">Peter Kata's rise from a Hungarian-American teenager grinding scrims after school to the most decorated Fortnite player of his generation. A reported feature with interviews from teammates, coaches, and the man himself.</div>
+          <div class="story-byline">By Marcus Chen · Long Read · Profile</div>
+        </a>
+
+      </div>
+
+      <!-- PAGINATION PLACEHOLDER -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 12px; padding: 32px 0; border-top: 1px solid var(--border); margin-top: 16px;">
+        <button class="filter" disabled style="opacity: 0.4; cursor: not-allowed;">← Newer stories</button>
+        <span style="font-size: 12px; color: var(--text-2); font-weight: 700;">Page 1 of 1</span>
+        <button class="filter">Older stories →</button>
+      </div>
+
+      <!-- NEWSLETTER SIGNUP (matches digest pattern) -->
+      <div class="card" style="margin-top: 28px; background: linear-gradient(135deg, #1e293b, #475569); color: #fff; border: 0;">
+        <div class="card-body" style="padding: 28px 32px;">
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.75); margin-bottom: 8px;">AgentTV Newsletter</div>
+          <div style="font-size: 26px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 8px;">The biggest stories in esports, every weekday at 9am ET.</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.78); margin-bottom: 18px; max-width: 480px;">Hand-picked features, profiles and analysis from the AgentTV desk. No filler, no scoreboards, no spam.</div>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';" style="display: flex; gap: 10px; max-width: 480px;">
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email address" style="flex: 1; padding: 12px 14px; border-radius: 4px; border: 0; background: rgba(255,255,255,0.95); color: #111; font-size: 14px; font-family: inherit; font-weight: 600;" />
+            <button type="submit" style="padding: 12px 22px; border-radius: 4px; border: 0; background: var(--red); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; font-family: inherit;">Subscribe</button>
+          </form>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 12px;">Free, unsubscribe anytime in one click.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ RIGHT RAIL ============ -->
+    <aside>
+
+      <!-- TRENDING NOW -->
+      <div class="section-label red">Trending Now</div>
+      <div class="rail-card">
+        <div class="rail-body">
+          <a href="article.html" class="rail-row">
+            <div class="rail-rank gold">1</div>
+            <div>
+              <div class="rail-name">Inside Peterbot's path to FNCS Global Champion at 17</div>
+              <div class="rail-meta">Fortnite · Profile · 22 min</div>
+            </div>
+            <div class="rail-val">★</div>
+          </a>
+          <a href="article-faker-six.html" class="rail-row">
+            <div class="rail-rank gold">2</div>
+            <div>
+              <div class="rail-name">Faker, Six Times: The Case for the GOAT</div>
+              <div class="rail-meta">League · Long Read</div>
+            </div>
+            <div class="rail-val">★</div>
+          </a>
+          <a href="article-falcons-empire.html" class="rail-row">
+            <div class="rail-rank gold">3</div>
+            <div>
+              <div class="rail-name">Inside Team Falcons' Esports Empire</div>
+              <div class="rail-meta">All Games · Org Strategy</div>
+            </div>
+            <div class="rail-val">★</div>
+          </a>
+          <a href="article-paperrex-toronto.html" class="rail-row">
+            <div class="rail-rank">4</div>
+            <div>
+              <div class="rail-name">Paper Rex's Pacific Breakthrough at Masters Toronto</div>
+              <div class="rail-meta">Valorant · Tournament</div>
+            </div>
+            <div class="rail-val">★</div>
+          </a>
+          <a href="article-imperialhal-falcons.html" class="rail-row">
+            <div class="rail-rank">5</div>
+            <div>
+              <div class="rail-name">ImperialHal's Falcons Move and the End of an Era at TSM</div>
+              <div class="rail-meta">Apex · Roster</div>
+            </div>
+            <div class="rail-val">★</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- POPULAR THIS WEEK -->
+      <div class="section-label">Popular This Week</div>
+      <div class="rail-card">
+        <div class="rail-body">
+          <a href="article-bugha-legacy.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Bugha at 23: Why the 2019 World Cup Still Defines Esports</div>
+              <div class="rail-meta">Fortnite · Reflection</div>
+            </div>
+            <div class="rail-val">18m</div>
+          </a>
+          <a href="article-vitality-dynasty.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">How Vitality Built a CS2 Dynasty Around ZywOo</div>
+              <div class="rail-meta">CS2 · Analysis</div>
+            </div>
+            <div class="rail-val">14m</div>
+          </a>
+          <a href="article-donk-phenom.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">donk and the New Generation: CS2's 17-Year-Old MVP</div>
+              <div class="rail-meta">CS2 · Profile</div>
+            </div>
+            <div class="rail-val">12m</div>
+          </a>
+          <a href="article-blg-rising.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Bilibili Gaming and the LPL's Long Climb</div>
+              <div class="rail-meta">League · Analysis</div>
+            </div>
+            <div class="rail-val">17m</div>
+          </a>
+          <a href="article-genburten-mechanical.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Genburten and the Mechanical Ceiling of Apex</div>
+              <div class="rail-meta">Apex · Feature</div>
+            </div>
+            <div class="rail-val">11m</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER (rail version) -->
+      <div class="section-label">Newsletter</div>
+      <div class="rail-card" style="background: linear-gradient(135deg, #1e293b, #475569); color: #fff; border: 0;">
+        <div style="padding: 18px;">
+          <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7); margin-bottom: 6px;">Daily · 9am ET</div>
+          <div style="font-size: 16px; font-weight: 900; line-height: 1.2; margin-bottom: 10px;">Today in Esports, in your inbox.</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 14px; line-height: 1.4;">A scrollable digest of every story that matters across the scene, written by the AgentTV desk.</div>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email address" style="width: 100%; padding: 10px 12px; border-radius: 3px; border: 0; background: rgba(255,255,255,0.95); color: #111; font-size: 13px; font-family: inherit; font-weight: 600; box-sizing: border-box; margin-bottom: 8px;" />
+            <button type="submit" style="width: 100%; padding: 10px 14px; border-radius: 3px; border: 0; background: var(--red); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; font-family: inherit;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- BY SECTION -->
+      <div class="section-label" id="by-game">Browse by Game</div>
+      <div class="rail-card">
+        <div class="rail-body">
+          <a href="fortnite.html" class="rail-row"><div class="rail-rank">FN</div><div><div class="rail-name">Fortnite</div><div class="rail-meta">FNCS, World Cup, Cash Cups</div></div><div class="rail-val">3</div></a>
+          <a href="cs2.html" class="rail-row"><div class="rail-rank">CS</div><div><div class="rail-name">Counter-Strike 2</div><div class="rail-meta">Majors, IEM, BLAST</div></div><div class="rail-val">2</div></a>
+          <a href="valorant.html" class="rail-row"><div class="rail-rank">V</div><div><div class="rail-name">Valorant</div><div class="rail-meta">VCT, Champions, Masters</div></div><div class="rail-val">2</div></a>
+          <a href="lol.html" class="rail-row"><div class="rail-rank">LoL</div><div><div class="rail-name">League of Legends</div><div class="rail-meta">Worlds, MSI, LCK, LPL</div></div><div class="rail-val">2</div></a>
+          <a href="apex.html" class="rail-row"><div class="rail-rank">AL</div><div><div class="rail-name">Apex Legends</div><div class="rail-meta">ALGS, Championship, Splits</div></div><div class="rail-val">2</div></a>
+        </div>
+      </div>
+
+      <!-- RECORDS LINK -->
+      <div class="section-label">Also From AgentTV</div>
+      <div class="rail-card">
+        <div class="rail-body">
+          <a href="records.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">All-Time Records</div>
+              <div class="rail-meta">The numbers behind the games</div>
+            </div>
+            <div class="rail-val">→</div>
+          </a>
+          <a href="digest.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Daily Digest</div>
+              <div class="rail-meta">Today's stories in one scroll</div>
+            </div>
+            <div class="rail-val">→</div>
+          </a>
+          <a href="history.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Fortnite History</div>
+              <div class="rail-meta">Every event since 2018</div>
+            </div>
+            <div class="rail-val">→</div>
+          </a>
+          <a href="tournaments.html" class="rail-row">
+            <div class="rail-rank">★</div>
+            <div>
+              <div class="rail-name">Tournaments Hub</div>
+              <div class="rail-meta">Live, upcoming, archived</div>
+            </div>
+            <div class="rail-val">→</div>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="fortnite.html">Fortnite</a>
+        <a href="cs2.html">Counter-Strike 2</a>
+        <a href="valorant.html">Valorant</a>
+        <a href="lol.html">League of Legends</a>
+        <a href="apex.html">Apex Legends</a>
+        <a href="#">Rocket League</a>
+        <a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="news.html">All News</a>
+        <a href="records.html">All-Time Records</a>
+        <a href="digest.html">Daily Digest</a>
+        <a href="#">Power Rankings</a>
+        <a href="#">Earnings</a>
+        <a href="tournaments.html">Tournaments</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Epic Games, Valve, Riot Games or any publisher.</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Streamer Leaderboards · Most-Followed Creators · AgentTV" />
+<meta property="og:description" content="Most-followed esports creators on Twitch, YouTube and Instagram. Numbers sourced from each player's existing AgentTV wiki entry, not pulled in real time." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/streamer-leaderboard.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Streamer Leaderboards · Most-Followed Creators · AgentTV" />
+<meta name="twitter:description" content="Most-followed esports creators on Twitch, YouTube and Instagram." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Streamer Leaderboards · Most-Followed Creators · AgentTV</title>
+<meta name="description" content="Three top-25 leaderboards for esports content creators sorted by Twitch followers, YouTube subscribers and Instagram followers. Numbers sourced from existing AgentTV wiki entries." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-marks.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="watch.html" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." aria-label="Search players and teams" />
+      <a href="watch.html" class="btn-watch">Watch Live</a>
+    </div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="streamers.html">Streamers</a>
+    <a href="streamer-leaderboard.html" class="active">Leaderboards</a>
+    <a href="streamer-trends.html">Trends</a>
+    <a href="article.html">News</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <a href="streamers.html">Streamers</a>
+    <span class="sep">›</span>
+    <span class="here">Leaderboards</span>
+  </div>
+
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Top 25 · Three Platforms</div>
+    <h1 class="page-title">Most-Followed Esports Creators</h1>
+    <p class="page-sub">Ranked by Twitch followers, YouTube subscribers and Instagram followers. Each row links to the creator's wiki on AgentTV when one exists, otherwise to their Twitch or YouTube channel directly with attribution. All counts are static, taken from the documented values on each wiki entry.</p>
+  </div>
+
+  <div class="info-card" style="margin: 16px 0 24px; padding: 12px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 3px; font-size: 12px; color: var(--text-2); line-height: 1.55;">
+    <strong style="color: var(--text);">Methodology.</strong> AgentTV does not run a live counter. The figures below are taken from the social-link sections of existing wiki pages on this site. Where a wiki entry lists a handle but no number, the row is excluded from the count-based ranking. Ties are broken alphabetically. Three platforms only · Twitter, TikTok and other networks are tracked on individual wiki pages.
+  </div>
+
+  <!-- TWITCH LEADERBOARD -->
+  <div class="section-label red">Top 25 by Twitch Followers <a href="streamer-trends.html" class="more">See trend movement</a></div>
+
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead>
+        <tr>
+          <th style="width: 36px;">#</th>
+          <th>Creator</th>
+          <th>Game</th>
+          <th>Twitch Handle</th>
+          <th class="num">Followers</th>
+          <th>Wiki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rk gold">1</td>
+          <td><a href="ninja.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/5/53/Ninja_at_Red_Bull_Rise_Till_Dawn.jpg/300px-Ninja_at_Red_Bull_Rise_Till_Dawn.jpg" alt="Ninja" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Ninja</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">ninja</span></td>
+          <td class="num">18.6M</td>
+          <td><a href="ninja.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">2</td>
+          <td><a href="tfue.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Tfue</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">Tfue</span></td>
+          <td class="num">11.4M</td>
+          <td><a href="tfue.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">3</td>
+          <td><a href="mongraal.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/2a/Red_Bull_Mongraal.jpg/300px-Red_Bull_Mongraal.jpg" alt="Mongraal" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Mongraal</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">Mongraal</span></td>
+          <td class="num">7.2M</td>
+          <td><a href="mongraal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">4</td>
+          <td><a href="clix.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/e/ee/XSET_Clix_at_the_FNCS_2025_Global_Championship.jpg/300px-XSET_Clix_at_the_FNCS_2025_Global_Championship.jpg" alt="Clix" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Clix</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">Clix</span></td>
+          <td class="num">5.8M</td>
+          <td><a href="clix.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">5</td>
+          <td><a href="bugha.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/21/Bugha.jpg/300px-Bugha.jpg" alt="Bugha" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Bugha</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">bugha</span></td>
+          <td class="num">5.4M</td>
+          <td><a href="bugha.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">6</td>
+          <td><a href="tenz.html" class="pl-cell"><div class="avatar bg-default">TZ</div><div class="pl-name">TenZ</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">tenz</span></td>
+          <td class="num">4.4M</td>
+          <td><a href="tenz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">7</td>
+          <td><a href="faker.html" class="pl-cell"><div class="avatar bg-default">F</div><div class="pl-name">Faker</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">faker</span></td>
+          <td class="num">2.4M</td>
+          <td><a href="faker.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">8</td>
+          <td><a href="s1mple.html" class="pl-cell"><div class="avatar bg-default">S1</div><div class="pl-name">s1mple</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">s1mple</span></td>
+          <td class="num">2.4M</td>
+          <td><a href="s1mple.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">9</td>
+          <td><a href="imperialhal.html" class="pl-cell"><div class="avatar bg-default">IH</div><div class="pl-name">ImperialHal</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">imperialhal__</span></td>
+          <td class="num">2.4M</td>
+          <td><a href="imperialhal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">10</td>
+          <td><a href="#" class="pl-cell"><div class="avatar bg-default">B</div><div class="pl-name">Benjyfishy</div></a></td>
+          <td>Valorant · ex-Fortnite</td>
+          <td><span class="mono">benjyfishy</span></td>
+          <td class="num">2.4M</td>
+          <td><span style="font-size: 11px; color: var(--text-3);">no wiki</span></td>
+        </tr>
+        <tr>
+          <td class="rk">11</td>
+          <td><a href="mrsavage.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/d/d1/MrSavage_at_the_FNCS_2025_Global_Championship.jpg" alt="MrSavage" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">MrSavage</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">mrsavage</span></td>
+          <td class="num">2.1M</td>
+          <td><a href="mrsavage.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">12</td>
+          <td><a href="aspas.html" class="pl-cell"><div class="avatar bg-default">A</div><div class="pl-name">aspas</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">aspaszin</span></td>
+          <td class="num">2.0M</td>
+          <td><a href="aspas.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">13</td>
+          <td><a href="khanada.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/6/69/DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg/300px-DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg" alt="Khanada" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Khanada</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">khanada_</span></td>
+          <td class="num">1.2M</td>
+          <td><a href="khanada.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">14</td>
+          <td><a href="aqua.html" class="pl-cell"><div class="avatar bg-default">A</div><div class="pl-name">Aqua</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">aqua</span></td>
+          <td class="num">1.2M</td>
+          <td><a href="aqua.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">15</td>
+          <td><a href="caps.html" class="pl-cell"><div class="avatar bg-default">C</div><div class="pl-name">Caps</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">caps</span></td>
+          <td class="num">1.1M</td>
+          <td><a href="caps.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">16</td>
+          <td><a href="reps.html" class="pl-cell"><div class="avatar bg-default">RP</div><div class="pl-name">Reps</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">tsm_reps</span></td>
+          <td class="num">980K</td>
+          <td><a href="reps.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">17</td>
+          <td><a href="player.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a8/Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg/300px-Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg" alt="Peterbot" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Peterbot</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">peterbot</span></td>
+          <td class="num">951K</td>
+          <td><a href="player.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">18</td>
+          <td><a href="verhulst.html" class="pl-cell"><div class="avatar bg-default">V</div><div class="pl-name">Verhulst</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">verhulst</span></td>
+          <td class="num">820K</td>
+          <td><a href="verhulst.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">19</td>
+          <td><a href="zywoo.html" class="pl-cell"><div class="avatar bg-default">Z</div><div class="pl-name">ZywOo</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">cs_zywoo</span></td>
+          <td class="num">720K</td>
+          <td><a href="zywoo.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">20</td>
+          <td><a href="demon1.html" class="pl-cell"><div class="avatar bg-default">D</div><div class="pl-name">Demon1</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">Demon1</span></td>
+          <td class="num">540K</td>
+          <td><a href="demon1.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">21</td>
+          <td><a href="jinggg.html" class="pl-cell"><div class="avatar bg-default">J</div><div class="pl-name">jinggg</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">jingggxd</span></td>
+          <td class="num">485K</td>
+          <td><a href="jinggg.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">22</td>
+          <td><a href="donk.html" class="pl-cell"><div class="avatar bg-default">D</div><div class="pl-name">donk</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">donk1437</span></td>
+          <td class="num">380K</td>
+          <td><a href="donk.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">23</td>
+          <td><a href="saadhak.html" class="pl-cell"><div class="avatar bg-default">SD</div><div class="pl-name">Saadhak</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">saadhak</span></td>
+          <td class="num">320K</td>
+          <td><a href="saadhak.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">24</td>
+          <td><a href="nyhrox.html" class="pl-cell"><div class="avatar bg-default">N</div><div class="pl-name">Nyhrox</div></a></td>
+          <td>Fortnite (retired)</td>
+          <td><span class="mono">nyhrox</span></td>
+          <td class="num">248K</td>
+          <td><a href="nyhrox.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">25</td>
+          <td><a href="boostio.html" class="pl-cell"><div class="avatar bg-default">B</div><div class="pl-name">Boostio</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">boostio</span></td>
+          <td class="num">210K</td>
+          <td><a href="boostio.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- YOUTUBE LEADERBOARD -->
+  <div class="section-label red">Top 25 by YouTube Subscribers</div>
+
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead>
+        <tr>
+          <th style="width: 36px;">#</th>
+          <th>Creator</th>
+          <th>Game</th>
+          <th>YouTube Handle</th>
+          <th class="num">Subscribers</th>
+          <th>Wiki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rk gold">1</td>
+          <td><a href="ninja.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/5/53/Ninja_at_Red_Bull_Rise_Till_Dawn.jpg/300px-Ninja_at_Red_Bull_Rise_Till_Dawn.jpg" alt="Ninja" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Ninja</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">ninja</span></td>
+          <td class="num">24M</td>
+          <td><a href="ninja.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">2</td>
+          <td><a href="tfue.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Tfue</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">TTfue</span></td>
+          <td class="num">12.1M</td>
+          <td><a href="tfue.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">3</td>
+          <td><a href="mongraal.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/2a/Red_Bull_Mongraal.jpg/300px-Red_Bull_Mongraal.jpg" alt="Mongraal" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Mongraal</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">Mongraal</span></td>
+          <td class="num">5.33M</td>
+          <td><a href="mongraal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">4</td>
+          <td><a href="bugha.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/21/Bugha.jpg/300px-Bugha.jpg" alt="Bugha" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Bugha</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">bugha</span></td>
+          <td class="num">2.1M</td>
+          <td><a href="bugha.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">5</td>
+          <td><a href="tenz.html" class="pl-cell"><div class="avatar bg-default">TZ</div><div class="pl-name">TenZ</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">TenZ</span></td>
+          <td class="num">2.0M</td>
+          <td><a href="tenz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">6</td>
+          <td><a href="faker.html" class="pl-cell"><div class="avatar bg-default">F</div><div class="pl-name">Faker</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">@T1_Faker</span></td>
+          <td class="num">1.6M</td>
+          <td><a href="faker.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">7</td>
+          <td><a href="aspas.html" class="pl-cell"><div class="avatar bg-default">A</div><div class="pl-name">aspas</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@aspaszin</span></td>
+          <td class="num">680K</td>
+          <td><a href="aspas.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">8</td>
+          <td><a href="zywoo.html" class="pl-cell"><div class="avatar bg-default">Z</div><div class="pl-name">ZywOo</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@ZywOo</span></td>
+          <td class="num">540K</td>
+          <td><a href="zywoo.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">9</td>
+          <td><a href="imperialhal.html" class="pl-cell"><div class="avatar bg-default">IH</div><div class="pl-name">ImperialHal</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">ImperialHal</span></td>
+          <td class="num">512K</td>
+          <td><a href="imperialhal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">10</td>
+          <td><a href="reps.html" class="pl-cell"><div class="avatar bg-default">RP</div><div class="pl-name">Reps</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">@TSMReps</span></td>
+          <td class="num">241K</td>
+          <td><a href="reps.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">11</td>
+          <td><a href="demon1.html" class="pl-cell"><div class="avatar bg-default">D</div><div class="pl-name">Demon1</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@Demon1_</span></td>
+          <td class="num">220K</td>
+          <td><a href="demon1.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">12</td>
+          <td><a href="verhulst.html" class="pl-cell"><div class="avatar bg-default">V</div><div class="pl-name">Verhulst</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">Verhulst</span></td>
+          <td class="num">186K</td>
+          <td><a href="verhulst.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">13</td>
+          <td><a href="saadhak.html" class="pl-cell"><div class="avatar bg-default">SD</div><div class="pl-name">Saadhak</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">Saadhak</span></td>
+          <td class="num">110K</td>
+          <td><a href="saadhak.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">14</td>
+          <td><a href="boostio.html" class="pl-cell"><div class="avatar bg-default">B</div><div class="pl-name">Boostio</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@Boostio</span></td>
+          <td class="num">95K</td>
+          <td><a href="boostio.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">15</td>
+          <td><a href="caps.html" class="pl-cell"><div class="avatar bg-default">C</div><div class="pl-name">Caps</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">G2 Caps</span></td>
+          <td class="num">·</td>
+          <td><a href="caps.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">16</td>
+          <td><a href="khanada.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/6/69/DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg/300px-DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg" alt="Khanada" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Khanada</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">UCn0I1vIvUBnHrf</span></td>
+          <td class="num">·</td>
+          <td><a href="khanada.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">17</td>
+          <td><a href="m0nesy.html" class="pl-cell"><div class="avatar bg-default">M</div><div class="pl-name">m0NESY</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@m0NESY</span></td>
+          <td class="num">·</td>
+          <td><a href="m0nesy.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">18</td>
+          <td><a href="niko.html" class="pl-cell"><div class="avatar bg-default">N</div><div class="pl-name">NiKo</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@NiKo_cs</span></td>
+          <td class="num">·</td>
+          <td><a href="niko.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">19</td>
+          <td><a href="ropz.html" class="pl-cell"><div class="avatar bg-default">R</div><div class="pl-name">ropz</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">c/Ropz</span></td>
+          <td class="num">·</td>
+          <td><a href="ropz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">20</td>
+          <td><a href="twistzz.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Twistzz</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@Twistzz</span></td>
+          <td class="num">·</td>
+          <td><a href="twistzz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">21</td>
+          <td><a href="chovy.html" class="pl-cell"><div class="avatar bg-default">CV</div><div class="pl-name">Chovy</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">@Chovy</span></td>
+          <td class="num">·</td>
+          <td><a href="chovy.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">22</td>
+          <td><a href="genburten.html" class="pl-cell"><div class="avatar bg-default">G</div><div class="pl-name">Genburten</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">Genburten</span></td>
+          <td class="num">·</td>
+          <td><a href="genburten.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">23</td>
+          <td><a href="zer0.html" class="pl-cell"><div class="avatar bg-default">Z</div><div class="pl-name">zer0</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">@Zer0OCE</span></td>
+          <td class="num">·</td>
+          <td><a href="zer0.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">24</td>
+          <td><a href="pollo.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/8/80/Gentle_Mates_Pollo_at_the_FNCS_2025_Global_Championship.jpg/300px-Gentle_Mates_Pollo_at_the_FNCS_2025_Global_Championship.jpg" alt="Pollo" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Pollo</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">pollofn6</span></td>
+          <td class="num">·</td>
+          <td><a href="pollo.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">25</td>
+          <td><a href="player.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a8/Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg/300px-Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg" alt="Peterbot" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Peterbot</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@PeterbotYT</span></td>
+          <td class="num">·</td>
+          <td><a href="player.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- INSTAGRAM LEADERBOARD -->
+  <div class="section-label red">Top 25 by Instagram Followers</div>
+
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead>
+        <tr>
+          <th style="width: 36px;">#</th>
+          <th>Creator</th>
+          <th>Game</th>
+          <th>Instagram Handle</th>
+          <th class="num">Followers</th>
+          <th>Wiki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rk gold">1</td>
+          <td><a href="ninja.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/5/53/Ninja_at_Red_Bull_Rise_Till_Dawn.jpg/300px-Ninja_at_Red_Bull_Rise_Till_Dawn.jpg" alt="Ninja" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Ninja</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">@ninja</span></td>
+          <td class="num">13M</td>
+          <td><a href="ninja.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">2</td>
+          <td><a href="mongraal.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/2a/Red_Bull_Mongraal.jpg/300px-Red_Bull_Mongraal.jpg" alt="Mongraal" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Mongraal</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@mongraal_</span></td>
+          <td class="num">4.5M</td>
+          <td><a href="mongraal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk gold">3</td>
+          <td><a href="bugha.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/21/Bugha.jpg/300px-Bugha.jpg" alt="Bugha" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Bugha</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@bugha</span></td>
+          <td class="num">4.1M</td>
+          <td><a href="bugha.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">4</td>
+          <td><a href="faker.html" class="pl-cell"><div class="avatar bg-default">F</div><div class="pl-name">Faker</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">@faker</span></td>
+          <td class="num">2.0M</td>
+          <td><a href="faker.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">5</td>
+          <td><a href="aspas.html" class="pl-cell"><div class="avatar bg-default">A</div><div class="pl-name">aspas</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@aspaszin</span></td>
+          <td class="num">1.8M</td>
+          <td><a href="aspas.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">6</td>
+          <td><a href="tenz.html" class="pl-cell"><div class="avatar bg-default">TZ</div><div class="pl-name">TenZ</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@tenzofficial</span></td>
+          <td class="num">1.5M</td>
+          <td><a href="tenz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">7</td>
+          <td><a href="jinggg.html" class="pl-cell"><div class="avatar bg-default">J</div><div class="pl-name">jinggg</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@jingggxd</span></td>
+          <td class="num">520K</td>
+          <td><a href="jinggg.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">8</td>
+          <td><a href="demon1.html" class="pl-cell"><div class="avatar bg-default">D</div><div class="pl-name">Demon1</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@demon1</span></td>
+          <td class="num">340K</td>
+          <td><a href="demon1.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">9</td>
+          <td><a href="saadhak.html" class="pl-cell"><div class="avatar bg-default">SD</div><div class="pl-name">Saadhak</div></a></td>
+          <td>Valorant</td>
+          <td><span class="mono">@saadhakofc</span></td>
+          <td class="num">280K</td>
+          <td><a href="saadhak.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">10</td>
+          <td><a href="verhulst.html" class="pl-cell"><div class="avatar bg-default">V</div><div class="pl-name">Verhulst</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">@verhulst</span></td>
+          <td class="num">98K</td>
+          <td><a href="verhulst.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">11</td>
+          <td><a href="clix.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/e/ee/XSET_Clix_at_the_FNCS_2025_Global_Championship.jpg/300px-XSET_Clix_at_the_FNCS_2025_Global_Championship.jpg" alt="Clix" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Clix</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@clix</span></td>
+          <td class="num">·</td>
+          <td><a href="clix.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">12</td>
+          <td><a href="tfue.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Tfue</div></a></td>
+          <td>Variety · Fortnite</td>
+          <td><span class="mono">@tfue</span></td>
+          <td class="num">·</td>
+          <td><a href="tfue.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">13</td>
+          <td><a href="mrsavage.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/d/d1/MrSavage_at_the_FNCS_2025_Global_Championship.jpg" alt="MrSavage" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">MrSavage</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@mrsavage</span></td>
+          <td class="num">·</td>
+          <td><a href="mrsavage.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">14</td>
+          <td><a href="khanada.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/6/69/DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg/300px-DIG_Khanada_at_the_FNCS_2025_Global_Championship.jpg" alt="Khanada" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Khanada</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@tsmkhanada</span></td>
+          <td class="num">·</td>
+          <td><a href="khanada.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">15</td>
+          <td><a href="player.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/a/a8/Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg/300px-Falcons_Peterbot_at_the_FNCS_2025_Global_Championship.jpg" alt="Peterbot" referrerpolicy="no-referrer" loading="lazy" /></div><div class="pl-name">Peterbot</div></a></td>
+          <td>Fortnite</td>
+          <td><span class="mono">@peterbot</span></td>
+          <td class="num">·</td>
+          <td><a href="player.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">16</td>
+          <td><a href="caps.html" class="pl-cell"><div class="avatar bg-default">C</div><div class="pl-name">Caps</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">@g2.caps_</span></td>
+          <td class="num">·</td>
+          <td><a href="caps.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">17</td>
+          <td><a href="chovy.html" class="pl-cell"><div class="avatar bg-default">CV</div><div class="pl-name">Chovy</div></a></td>
+          <td>League of Legends</td>
+          <td><span class="mono">@chovy_jihun</span></td>
+          <td class="num">·</td>
+          <td><a href="chovy.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">18</td>
+          <td><a href="imperialhal.html" class="pl-cell"><div class="avatar bg-default">IH</div><div class="pl-name">ImperialHal</div></a></td>
+          <td>Apex</td>
+          <td><span class="mono">@imperialhal</span></td>
+          <td class="num">·</td>
+          <td><a href="imperialhal.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">19</td>
+          <td><a href="niko.html" class="pl-cell"><div class="avatar bg-default">N</div><div class="pl-name">NiKo</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@csgoniko</span></td>
+          <td class="num">·</td>
+          <td><a href="niko.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">20</td>
+          <td><a href="m0nesy.html" class="pl-cell"><div class="avatar bg-default">M</div><div class="pl-name">m0NESY</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@m0nesy13</span></td>
+          <td class="num">·</td>
+          <td><a href="m0nesy.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">21</td>
+          <td><a href="s1mple.html" class="pl-cell"><div class="avatar bg-default">S1</div><div class="pl-name">s1mple</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@s1mpleo</span></td>
+          <td class="num">·</td>
+          <td><a href="s1mple.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">22</td>
+          <td><a href="zywoo.html" class="pl-cell"><div class="avatar bg-default">Z</div><div class="pl-name">ZywOo</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@cs_zywoo</span></td>
+          <td class="num">·</td>
+          <td><a href="zywoo.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">23</td>
+          <td><a href="ropz.html" class="pl-cell"><div class="avatar bg-default">R</div><div class="pl-name">ropz</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@ropzicle</span></td>
+          <td class="num">·</td>
+          <td><a href="ropz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">24</td>
+          <td><a href="twistzz.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Twistzz</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@twistzzcs</span></td>
+          <td class="num">·</td>
+          <td><a href="twistzz.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+        <tr>
+          <td class="rk">25</td>
+          <td><a href="donk.html" class="pl-cell"><div class="avatar bg-default">D</div><div class="pl-name">donk</div></a></td>
+          <td>CS2</td>
+          <td><span class="mono">@donk1221</span></td>
+          <td class="num">·</td>
+          <td><a href="donk.html" style="font-size: 11px; font-weight: 800;">View →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-card" style="margin-top: 12px; padding: 14px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 3px; font-size: 12px; color: var(--text-2); line-height: 1.55;">
+    <strong style="color: var(--text);">Reading these tables.</strong> A center dot in the count column means that the player's wiki page lists a verified handle for the platform but does not document a follower number. Those rows are still useful for finding the channel, just not for ranking. We do not estimate, scrape or interpolate values · we publish what is on the wiki, and we update both the wiki and this page when we get new verified figures.
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Creators</h5>
+        <a href="streamers.html">Directory</a>
+        <a href="streamer-leaderboard.html">Leaderboards</a>
+        <a href="streamer-trends.html">Trends</a>
+        <a href="watch.html">Watch Hub</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="players.html">Players</a>
+        <a href="teams.html">Teams</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="history.html">History</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="#">Editorial Standards</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Photos hotlinked from Liquipedia under CC BY-SA 3.0. Follower counts as documented on AgentTV wiki pages.</div>
+      <div>v0.6.0 · Streamer Leaderboards</div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+</body>
+</html>
