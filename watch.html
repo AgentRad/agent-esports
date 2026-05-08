@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AgentTV Watch Hub · Live Esports Streams in One Place" />
+<meta property="og:description" content="Watch live esports broadcasts directly on AgentTV. Fortnite, Counter-Strike, Valorant, League and more, every official channel in one player." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/watch.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AgentTV Watch Hub · Live Esports Streams in One Place" />
+<meta name="twitter:description" content="Watch live esports broadcasts directly on AgentTV. Fortnite, Counter-Strike, Valorant, League and more, every official channel in one player." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Watch Hub · AgentTV</title>
+<meta name="description" content="Watch live esports broadcasts directly on AgentTV. Featured player plus a full directory of official Twitch channels by game." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-marks.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="watch.html" class="topbar-link active">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP (filled by app.js) -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." aria-label="Search players and teams" />
+      <a href="watch.html" class="btn-watch">Watch Live</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO HEADLINE -->
+  <div style="padding: 24px 0 16px 0;">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;">AgentTV Watch Hub</div>
+    <h1 style="font-size: 44px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.02; margin-bottom: 8px;">Watch Live · All Esports</h1>
+    <p style="font-size: 15px; color: var(--text-2); max-width: 780px;">Featured stream below pulls from official Twitch channels. Pick a broadcast from the rail or browse by game. No bouncing between tabs, no extra logins.</p>
+  </div>
+
+  <!-- WATCH LAYOUT: PLAYER + RIGHT RAIL -->
+  <div style="display: grid; grid-template-columns: 1fr 360px; gap: 24px; margin-bottom: 32px;">
+
+    <!-- LEFT: PLAYER + INFO BAR -->
+    <div>
+      <div style="position: relative; width: 100%; padding-top: 56.25%; background: #000; border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
+        <iframe
+          id="watch-player"
+          src="https://player.twitch.tv/?channel=fortnite&parent=agent-esports.vercel.app&parent=localhost"
+          allowfullscreen="true"
+          frameborder="0"
+          scrolling="no"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+          title="AgentTV Featured Stream"
+          allow="autoplay; fullscreen"
+        ></iframe>
+      </div>
+
+      <!-- STREAM INFO BAR -->
+      <div class="card" style="margin-top: 12px;">
+        <div class="card-body" style="display: flex; align-items: center; gap: 16px; padding: 14px 18px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #1a3a8a, #5b1f7a); display: grid; place-items: center; font-weight: 900; color: #fff; font-size: 16px; flex-shrink: 0;" id="watch-avatar">FN</div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+              <span style="font-size: 10px; font-weight: 900; padding: 3px 7px; background: var(--red); color: #fff; border-radius: 2px; letter-spacing: 0.06em;">LIVE</span>
+              <span style="font-size: 11px; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.06em;" id="watch-game">Fortnite · Official</span>
+            </div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--text); line-height: 1.25;" id="watch-title">Featured broadcast on AgentTV</div>
+            <div style="font-size: 12px; color: var(--text-2); margin-top: 4px;">
+              Channel: <strong id="watch-channel" style="color: var(--text);">fortnite</strong>
+              <span style="margin: 0 8px; color: var(--border-strong);">|</span>
+              Viewers: <span class="mono" id="watch-viewers">live</span>
+              <span style="margin: 0 8px; color: var(--border-strong);">|</span>
+              Source: <span style="color: var(--text);">Twitch (official embed)</span>
+            </div>
+          </div>
+          <a href="#" id="watch-extlink" style="font-size: 12px; font-weight: 800; padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 3px; color: var(--text); white-space: nowrap;" target="_blank" rel="noopener">Open on Twitch</a>
+        </div>
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div style="margin-top: 12px; padding: 10px 14px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 3px; font-size: 11px; color: var(--text-2); line-height: 1.5;">
+        Streams embedded via official Twitch and YouTube players. Content remains property of the respective broadcaster. AgentTV does not capture, record, or rebroadcast stream content; the official player is loaded directly and respects each channel's ads, subscriptions, and monetization.
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL: NOW LIVE -->
+    <aside class="rail-card" style="align-self: start;">
+      <div class="rail-head">
+        <div class="rail-title">Now Live</div>
+        <div class="rail-sub">Pick a channel to load it in the player</div>
+      </div>
+      <div class="rail-body" style="max-height: 760px; overflow-y: auto;" id="watch-rail">
+
+        <button type="button" class="watch-card" data-channel="fortnite" data-title="Official Fortnite Channel" data-game="Fortnite · Official" data-viewers="92,400" data-grad="bg-grad-fortnite" data-mark="FN">
+          <div class="wc-thumb bg-grad-fortnite"><span>FORTNITE</span></div>
+          <div class="wc-info">
+            <div class="wc-name">Fortnite</div>
+            <div class="wc-meta">Fortnite · 92.4K viewers</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="eslcs" data-title="ESL Counter-Strike Broadcast" data-game="CS2 · ESL Pro Tour" data-viewers="148,200" data-grad="bg-grad-cs" data-mark="CS">
+          <div class="wc-thumb bg-grad-cs"><span>ESL CS</span></div>
+          <div class="wc-info">
+            <div class="wc-name">ESL CS</div>
+            <div class="wc-meta">Counter-Strike 2 · 148.2K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="vitality" data-title="Team Vitality Channel" data-game="CS2 · Team Vitality" data-viewers="38,100" data-grad="bg-vit" data-mark="VIT">
+          <div class="wc-thumb bg-vit"><span>VITALITY</span></div>
+          <div class="wc-info">
+            <div class="wc-name">Vitality</div>
+            <div class="wc-meta">Counter-Strike 2 · 38.1K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="fazetv" data-title="FaZe Clan Broadcast Channel" data-game="Multi-game · FaZe Clan" data-viewers="22,750" data-grad="bg-faze" data-mark="FAZ">
+          <div class="wc-thumb bg-faze"><span>FAZETV</span></div>
+          <div class="wc-info">
+            <div class="wc-name">FaZeTV</div>
+            <div class="wc-meta">Multi-game · 22.7K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="optic" data-title="OpTic Gaming Channel" data-game="Multi-game · OpTic" data-viewers="18,900" data-grad="bg-grad-4" data-mark="OPT">
+          <div class="wc-thumb bg-grad-4"><span>OPTIC</span></div>
+          <div class="wc-info">
+            <div class="wc-name">OpTic</div>
+            <div class="wc-meta">Multi-game · 18.9K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="t1" data-title="T1 Esports Channel" data-game="League · T1 Esports" data-viewers="64,300" data-grad="bg-grad-1" data-mark="T1">
+          <div class="wc-thumb bg-grad-1"><span>T1</span></div>
+          <div class="wc-info">
+            <div class="wc-name">T1</div>
+            <div class="wc-meta">League of Legends · 64.3K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="blastpremier" data-title="BLAST Premier Broadcast" data-game="CS2 · BLAST Premier" data-viewers="86,500" data-grad="bg-grad-3" data-mark="BLA">
+          <div class="wc-thumb bg-grad-3"><span>BLAST</span></div>
+          <div class="wc-info">
+            <div class="wc-name">BLAST</div>
+            <div class="wc-meta">Counter-Strike 2 · 86.5K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="riotgames" data-title="Riot Games Esports Channel" data-game="League · Official Riot" data-viewers="142,000" data-grad="bg-grad-lol" data-mark="LCK">
+          <div class="wc-thumb bg-grad-lol"><span>RIOT</span></div>
+          <div class="wc-info">
+            <div class="wc-name">RiotGames</div>
+            <div class="wc-meta">League of Legends · 142K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="valorant" data-title="Official Valorant Channel" data-game="Valorant · Official" data-viewers="71,800" data-grad="bg-grad-valorant" data-mark="VAL">
+          <div class="wc-thumb bg-grad-valorant"><span>VALORANT</span></div>
+          <div class="wc-info">
+            <div class="wc-name">PlayVALORANT</div>
+            <div class="wc-meta">Valorant · 71.8K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="blg_ofc" data-title="Bilibili Gaming Channel" data-game="League · BLG Esports" data-viewers="29,400" data-grad="bg-grad-2" data-mark="BLG">
+          <div class="wc-thumb bg-grad-2"><span>BLG OFC</span></div>
+          <div class="wc-info">
+            <div class="wc-name">BLG_OFC</div>
+            <div class="wc-meta">League of Legends · 29.4K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="nrg" data-title="NRG Esports Channel" data-game="Multi-game · NRG" data-viewers="15,600" data-grad="bg-nrg" data-mark="NRG">
+          <div class="wc-thumb bg-nrg"><span>NRG</span></div>
+          <div class="wc-info">
+            <div class="wc-name">NRG</div>
+            <div class="wc-meta">Multi-game · 15.6K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="esl_csgo" data-title="ESL CS Secondary Channel" data-game="CS2 · ESL Pro League" data-viewers="42,800" data-grad="bg-grad-cs" data-mark="ESL">
+          <div class="wc-thumb bg-grad-cs"><span>ESL CSGO</span></div>
+          <div class="wc-info">
+            <div class="wc-name">ESL_CSGO</div>
+            <div class="wc-meta">Counter-Strike 2 · 42.8K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="100thieves" data-title="100 Thieves Channel" data-game="Multi-game · 100 Thieves" data-viewers="11,200" data-grad="bg-100t" data-mark="100T">
+          <div class="wc-thumb bg-100t"><span>100THIEVES</span></div>
+          <div class="wc-info">
+            <div class="wc-name">100Thieves</div>
+            <div class="wc-meta">Multi-game · 11.2K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="g2esports" data-title="G2 Esports Channel" data-game="Multi-game · G2 Esports" data-viewers="19,400" data-grad="bg-g2" data-mark="G2">
+          <div class="wc-thumb bg-g2"><span>G2 ESPORTS</span></div>
+          <div class="wc-info">
+            <div class="wc-name">G2Esports</div>
+            <div class="wc-meta">Multi-game · 19.4K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+        <button type="button" class="watch-card" data-channel="teamliquid" data-title="Team Liquid Channel" data-game="Multi-game · Team Liquid" data-viewers="13,750" data-grad="bg-liquid" data-mark="TL">
+          <div class="wc-thumb bg-liquid"><span>TEAMLIQUID</span></div>
+          <div class="wc-info">
+            <div class="wc-name">TeamLiquid</div>
+            <div class="wc-meta">Multi-game · 13.7K</div>
+          </div>
+          <span class="wc-cta">Watch</span>
+        </button>
+
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- CATEGORIES: 3 COLUMNS -->
+  <div class="section-label">Browse Channels by Game</div>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px;">
+
+    <!-- FORTNITE COLUMN -->
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">Fortnite Channels</div>
+          <div class="card-sub">Official broadcasts and team streams</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding: 6px 14px 14px 14px;">
+        <button type="button" class="cat-row" data-channel="fortnite" data-title="Official Fortnite Channel" data-game="Fortnite · Official" data-viewers="92,400" data-grad="bg-grad-fortnite" data-mark="FN">
+          <span class="cat-slug">fortnite</span>
+          <span class="cat-name">Official Fortnite</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="fncs" data-title="FNCS Broadcast Channel" data-game="Fortnite · FNCS" data-viewers="58,900" data-grad="bg-grad-fortnite" data-mark="FNCS">
+          <span class="cat-slug">fncs</span>
+          <span class="cat-name">FNCS Broadcast</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="bugha" data-title="Bugha Channel" data-game="Fortnite · Player" data-viewers="14,200" data-grad="bg-grad-fortnite" data-mark="BG">
+          <span class="cat-slug">bugha</span>
+          <span class="cat-name">Bugha</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="clix" data-title="Clix Channel" data-game="Fortnite · Player" data-viewers="22,100" data-grad="bg-grad-fortnite" data-mark="CX">
+          <span class="cat-slug">clix</span>
+          <span class="cat-name">Clix</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="mongraal" data-title="Mongraal Channel" data-game="Fortnite · Player" data-viewers="9,800" data-grad="bg-grad-fortnite" data-mark="MG">
+          <span class="cat-slug">mongraal</span>
+          <span class="cat-name">Mongraal</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="mrsavage" data-title="MrSavage Channel" data-game="Fortnite · Player" data-viewers="6,400" data-grad="bg-grad-fortnite" data-mark="MS">
+          <span class="cat-slug">mrsavage</span>
+          <span class="cat-name">MrSavage</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="ninja" data-title="Ninja Channel" data-game="Fortnite · Variety" data-viewers="18,600" data-grad="bg-grad-fortnite" data-mark="NJ">
+          <span class="cat-slug">ninja</span>
+          <span class="cat-name">Ninja</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="tfue" data-title="Tfue Channel" data-game="Fortnite · Variety" data-viewers="7,200" data-grad="bg-grad-fortnite" data-mark="TF">
+          <span class="cat-slug">tfue</span>
+          <span class="cat-name">Tfue</span>
+          <span class="cat-load">Load</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CS2 COLUMN -->
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">CS2 Channels</div>
+          <div class="card-sub">League broadcasts and pro team channels</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding: 6px 14px 14px 14px;">
+        <button type="button" class="cat-row" data-channel="eslcs" data-title="ESL CS Main Channel" data-game="CS2 · ESL Pro Tour" data-viewers="148,200" data-grad="bg-grad-cs" data-mark="ESL">
+          <span class="cat-slug">eslcs</span>
+          <span class="cat-name">ESL CS</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="blastpremier" data-title="BLAST Premier" data-game="CS2 · BLAST Premier" data-viewers="86,500" data-grad="bg-grad-3" data-mark="BLA">
+          <span class="cat-slug">blastpremier</span>
+          <span class="cat-name">BLAST Premier</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="vitality" data-title="Vitality" data-game="CS2 · Team Vitality" data-viewers="38,100" data-grad="bg-vit" data-mark="VIT">
+          <span class="cat-slug">vitality</span>
+          <span class="cat-name">Vitality</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="navi" data-title="Natus Vincere" data-game="CS2 · NAVI" data-viewers="34,700" data-grad="bg-navi" data-mark="NAV">
+          <span class="cat-slug">natusvincere</span>
+          <span class="cat-name">NAVI</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="fazeclan" data-title="FaZe Clan CS" data-game="CS2 · FaZe Clan" data-viewers="26,500" data-grad="bg-faze" data-mark="FAZ">
+          <span class="cat-slug">fazeclan</span>
+          <span class="cat-name">FaZe Clan</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="g2esports" data-title="G2 Esports CS" data-game="CS2 · G2 Esports" data-viewers="19,400" data-grad="bg-g2" data-mark="G2">
+          <span class="cat-slug">g2esports</span>
+          <span class="cat-name">G2 Esports</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="teamspirit" data-title="Team Spirit" data-game="CS2 · Team Spirit" data-viewers="21,300" data-grad="bg-grad-1" data-mark="SPR">
+          <span class="cat-slug">teamspirit</span>
+          <span class="cat-name">Team Spirit</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="esl_csgo" data-title="ESL Pro League" data-game="CS2 · ESL Pro League" data-viewers="42,800" data-grad="bg-grad-cs" data-mark="EPL">
+          <span class="cat-slug">esl_csgo</span>
+          <span class="cat-name">ESL Pro League</span>
+          <span class="cat-load">Load</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- VALORANT COLUMN -->
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">Valorant Channels</div>
+          <div class="card-sub">VCT broadcasts and franchised teams</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding: 6px 14px 14px 14px;">
+        <button type="button" class="cat-row" data-channel="valorant" data-title="Official Valorant Channel" data-game="Valorant · Official" data-viewers="71,800" data-grad="bg-grad-valorant" data-mark="VAL">
+          <span class="cat-slug">valorant</span>
+          <span class="cat-name">PlayVALORANT</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="valorant_americas" data-title="VCT Americas" data-game="Valorant · VCT Americas" data-viewers="56,200" data-grad="bg-grad-valorant" data-mark="VCT">
+          <span class="cat-slug">valorant_americas</span>
+          <span class="cat-name">VCT Americas</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="valorant_emea" data-title="VCT EMEA" data-game="Valorant · VCT EMEA" data-viewers="48,600" data-grad="bg-grad-valorant" data-mark="EMEA">
+          <span class="cat-slug">valorant_emea</span>
+          <span class="cat-name">VCT EMEA</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="valorant_pacific" data-title="VCT Pacific" data-game="Valorant · VCT Pacific" data-viewers="33,900" data-grad="bg-grad-valorant" data-mark="PAC">
+          <span class="cat-slug">valorant_pacific</span>
+          <span class="cat-name">VCT Pacific</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="sentinels" data-title="Sentinels" data-game="Valorant · Sentinels" data-viewers="24,100" data-grad="bg-sentinels" data-mark="SEN">
+          <span class="cat-slug">sentinels</span>
+          <span class="cat-name">Sentinels</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="loud_gg" data-title="LOUD" data-game="Valorant · LOUD" data-viewers="17,200" data-grad="bg-loud" data-mark="LOUD">
+          <span class="cat-slug">loud_gg</span>
+          <span class="cat-name">LOUD</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="paperrex" data-title="Paper Rex" data-game="Valorant · Paper Rex" data-viewers="12,500" data-grad="bg-grad-3" data-mark="PRX">
+          <span class="cat-slug">paperrex</span>
+          <span class="cat-name">Paper Rex</span>
+          <span class="cat-load">Load</span>
+        </button>
+        <button type="button" class="cat-row" data-channel="fnatic" data-title="Fnatic" data-game="Valorant · Fnatic" data-viewers="15,800" data-grad="bg-grad-6" data-mark="FNC">
+          <span class="cat-slug">fnatic</span>
+          <span class="cat-name">Fnatic</span>
+          <span class="cat-load">Load</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="card" style="margin-bottom: 32px;">
+    <div class="card-body" style="padding: 18px;">
+      <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;">How AgentTV Watch Works</div>
+      <div style="font-size: 14px; color: var(--text); line-height: 1.55; max-width: 920px;">
+        Every broadcast on AgentTV is loaded through the official Twitch player. We pass the channel slug into the player URL and the streamer keeps full control of the experience: ads play, subscriber chat works, monetization is unaffected. We do not capture or rebroadcast video, and we do not store stream content. If you'd rather watch on the source platform, hit the "Open on Twitch" button next to the player.
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Watch</h5>
+        <a href="watch.html">Watch Hub</a>
+        <a href="schedule.html">Broadcast Schedule</a>
+        <a href="#">Channel Directory</a>
+        <a href="#">VOD Library</a>
+        <a href="#">Picture-in-Picture</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a>
+        <a href="#">Player Profiles</a>
+        <a href="#">Team Profiles</a>
+        <a href="#">Power Rankings</a>
+        <a href="schedule.html">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="#">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Streams embedded via official Twitch and YouTube players. Content remains property of the respective broadcaster.</div>
+      <div>v0.5.0 · Watch Hub</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline styles for watch-only elements (kept on-page since we cannot edit styles.css) -->
+<style>
+  .watch-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 14px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .watch-card:hover { background: var(--bg-alt); }
+  .watch-card.is-active { background: var(--bg-alt); box-shadow: inset 3px 0 0 var(--red); }
+  .watch-card:last-child { border-bottom: 0; }
+  .wc-thumb {
+    height: 48px;
+    border-radius: 3px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    padding: 0 6px;
+    text-align: center;
+  }
+  .wc-info { min-width: 0; }
+  .wc-name { font-weight: 800; font-size: 13px; color: var(--text); }
+  .wc-meta { font-size: 11px; color: var(--text-2); margin-top: 2px; font-family: "JetBrains Mono", monospace; }
+  .wc-cta {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 10px;
+    border-radius: 2px;
+    background: var(--red);
+    color: #fff;
+  }
+  .cat-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+  }
+  .cat-row:last-child { border-bottom: 0; }
+  .cat-row:hover .cat-name { color: var(--red); }
+  .cat-name { grid-column: 1; grid-row: 1; font-weight: 800; font-size: 13px; color: var(--text); }
+  .cat-slug { grid-column: 1; grid-row: 2; font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-3); margin-top: 1px; }
+  .cat-load {
+    grid-column: 2; grid-row: 1 / span 2;
+    font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 5px 9px; border-radius: 2px; border: 1px solid var(--border-strong); color: var(--text);
+  }
+  .cat-row:hover .cat-load { background: var(--red); color: #fff; border-color: var(--red); }
+</style>
+
+<script>
+  (function () {
+    var player = document.getElementById('watch-player');
+    var titleEl = document.getElementById('watch-title');
+    var gameEl = document.getElementById('watch-game');
+    var channelEl = document.getElementById('watch-channel');
+    var viewersEl = document.getElementById('watch-viewers');
+    var avatarEl = document.getElementById('watch-avatar');
+    var extLink = document.getElementById('watch-extlink');
+
+    function loadChannel(btn) {
+      var slug = btn.getAttribute('data-channel');
+      if (!slug) return;
+      var host = window.location.hostname || 'localhost';
+      // Always include both parents so the embed works locally and in production
+      var src = 'https://player.twitch.tv/?channel=' + slug
+              + '&parent=agent-esports.vercel.app'
+              + '&parent=localhost'
+              + (host && host !== 'localhost' && host !== 'agent-esports.vercel.app' ? '&parent=' + host : '');
+      player.src = src;
+
+      titleEl.textContent = btn.getAttribute('data-title') || slug;
+      gameEl.textContent = btn.getAttribute('data-game') || '';
+      channelEl.textContent = slug;
+      viewersEl.textContent = btn.getAttribute('data-viewers') || 'live';
+      extLink.href = 'https://www.twitch.tv/' + slug;
+
+      var grad = btn.getAttribute('data-grad');
+      if (grad && avatarEl) {
+        avatarEl.className = '';
+        avatarEl.style.cssText = 'width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; color: #fff; font-size: 13px; flex-shrink: 0;';
+        avatarEl.classList.add(grad);
+        avatarEl.textContent = btn.getAttribute('data-mark') || '·';
+      }
+
+      // Highlight active card in rail
+      var rail = document.getElementById('watch-rail');
+      if (rail) {
+        var cards = rail.querySelectorAll('.watch-card');
+        for (var i = 0; i < cards.length; i++) cards[i].classList.remove('is-active');
+        if (btn.classList.contains('watch-card')) btn.classList.add('is-active');
+      }
+
+      // Smooth scroll to player on category click
+      if (btn.classList.contains('cat-row')) {
+        player.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    var triggers = document.querySelectorAll('.watch-card, .cat-row');
+    for (var i = 0; i < triggers.length; i++) {
+      triggers[i].addEventListener('click', (function (b) {
+        return function () { loadChannel(b); };
+      })(triggers[i]));
+    }
+  })();
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

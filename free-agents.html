@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Free Agent Tracker · Live Transfer Market · AgentTV" />
+<meta property="og:description" content="Live free-agent and transfer tracking across Fortnite, CS2, Valorant, League and Apex. AgentTV's central market board for who's available, who's signed, and who's whispered to be next." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/free-agents.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free Agent Tracker · Live Transfer Market · AgentTV" />
+<meta name="twitter:description" content="Live free-agent and transfer tracking across Fortnite, CS2, Valorant, League and Apex." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Free Agent Tracker · Live Transfer Market · AgentTV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="fortnite.html" class="active">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." aria-label="Search players and teams" />
+      <button class="btn-watch">Watch FNCS</button>
+    </div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="free-agents.html" class="active">Free Agents</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="history.html">History</a>
+    <a href="#">News</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span class="here">Free Agent Tracker</span>
+  </div>
+
+  <div class="page-header">
+    <h1 class="page-title">Free Agent Tracker</h1>
+    <p class="page-sub">Live transfer market across all 5 games. Confirmed availability, retired legends, and clearly-marked rumours, all updated as moves break.</p>
+  </div>
+
+  <div class="directory-filters">
+    <input type="search" placeholder="Search free agents by name or team..." />
+    <button class="filter active">All</button>
+    <button class="filter">Available Now</button>
+    <button class="filter">Recent Signings</button>
+    <button class="filter">Rumored</button>
+    <button class="filter">Retired</button>
+  </div>
+
+  <div class="directory-filters" style="margin-top: 8px;">
+    <span style="font-size: 11px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; margin-right: 8px;">Game</span>
+    <button class="filter active">All</button>
+    <button class="filter">Fortnite</button>
+    <button class="filter">CS2</button>
+    <button class="filter">Valorant</button>
+    <button class="filter">LoL</button>
+    <button class="filter">Apex</button>
+  </div>
+
+  <div class="section-label">Tracked Free Agents · Confirmed Status <a href="transfers.html" class="more">Recent transfers ›</a></div>
+
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead>
+        <tr>
+          <th style="width: 36px;">#</th>
+          <th>Player</th>
+          <th>Game</th>
+          <th>Last Team</th>
+          <th>Status</th>
+          <th>Last Active</th>
+          <th class="num">Career $</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rk gold">1</td>
+          <td><a href="bugha.html" class="pl-cell"><div class="avatar with-photo"><img src="https://liquipedia.net/commons/images/thumb/2/21/Bugha.jpg/100px-Bugha.jpg" alt="Bugha" referrerpolicy="no-referrer" /></div><div class="pl-name">Bugha</div></a></td>
+          <td>Fortnite</td>
+          <td>Dignitas</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span> <span class="badge" style="background: #fff4d6; color: #8a6300; border-color: #f1e0a3; margin-left: 4px;">Streaming</span></td>
+          <td>FNCS 2025</td>
+          <td class="num">$3.67M</td>
+        </tr>
+        <tr>
+          <td class="rk gold">2</td>
+          <td><a href="tayson.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">TaySon</div></a></td>
+          <td>Fortnite</td>
+          <td>Team Falcons</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span></td>
+          <td>Jan 2026</td>
+          <td class="num">$1.42M</td>
+        </tr>
+        <tr>
+          <td class="rk">3</td>
+          <td><a href="mongraal.html" class="pl-cell"><div class="avatar bg-default">M</div><div class="pl-name">Mongraal</div></a></td>
+          <td>Fortnite</td>
+          <td>FaZe Clan</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span> <span class="badge" style="background: #fff4d6; color: #8a6300; border-color: #f1e0a3; margin-left: 4px;">Streaming</span></td>
+          <td>Cash Cup, Mar 2025</td>
+          <td class="num">$1.53M</td>
+        </tr>
+        <tr>
+          <td class="rk">4</td>
+          <td><a href="boostio.html" class="pl-cell"><div class="avatar bg-default">B</div><div class="pl-name">Boostio</div></a></td>
+          <td>Valorant</td>
+          <td>Evil Geniuses</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span></td>
+          <td>Oct 2025</td>
+          <td class="num">$642K</td>
+        </tr>
+        <tr>
+          <td class="rk">5</td>
+          <td><a href="reps.html" class="pl-cell"><div class="avatar bg-default">R</div><div class="pl-name">Reps</div></a></td>
+          <td>Apex</td>
+          <td>TSM</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span></td>
+          <td>Mar 2025</td>
+          <td class="num">$498K</td>
+        </tr>
+        <tr>
+          <td class="rk">6</td>
+          <td><a href="sweet.html" class="pl-cell"><div class="avatar bg-default">S</div><div class="pl-name">Sweetdreams</div></a></td>
+          <td>Apex</td>
+          <td>·</td>
+          <td><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span></td>
+          <td>2025 split</td>
+          <td class="num">$612K</td>
+        </tr>
+        <tr>
+          <td class="rk">7</td>
+          <td><a href="tenz.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">TenZ</div></a></td>
+          <td>Valorant</td>
+          <td>Sentinels</td>
+          <td><span class="badge" style="background: #fff4d6; color: #8a6300; border-color: #f1e0a3;">Streaming</span> <span class="badge" style="background: #f0f0f2; color: #6b6b76; border-color: #d8d8de; margin-left: 4px;">Content Creator</span></td>
+          <td>Sept 2024 (retired comp)</td>
+          <td class="num">$948K</td>
+        </tr>
+        <tr>
+          <td class="rk">8</td>
+          <td><a href="tfue.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">Tfue</div></a></td>
+          <td>Fortnite</td>
+          <td>FaZe Clan</td>
+          <td><span class="badge" style="background: #f0f0f2; color: #6b6b76; border-color: #d8d8de;">Retired</span></td>
+          <td>2021 comp scene</td>
+          <td class="num">$682K</td>
+        </tr>
+        <tr>
+          <td class="rk">9</td>
+          <td><a href="aqua.html" class="pl-cell"><div class="avatar bg-default">A</div><div class="pl-name">Aqua</div></a></td>
+          <td>Fortnite</td>
+          <td>Cooler Esport</td>
+          <td><span class="badge" style="background: #f0f0f2; color: #6b6b76; border-color: #d8d8de;">Retired</span></td>
+          <td>2022</td>
+          <td class="num">$2.11M</td>
+        </tr>
+        <tr>
+          <td class="rk">10</td>
+          <td><a href="nyhrox.html" class="pl-cell"><div class="avatar bg-default">N</div><div class="pl-name">Nyhrox</div></a></td>
+          <td>Fortnite</td>
+          <td>Atlantis</td>
+          <td><span class="badge" style="background: #f0f0f2; color: #6b6b76; border-color: #d8d8de;">Retired</span></td>
+          <td>2022</td>
+          <td class="num">$1.96M</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-label">Status Legend</div>
+  <div class="table-card" style="margin-bottom: 32px; padding: 16px 18px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--text-2);">
+    <div><span class="badge" style="background: #fde8eb; color: #a30000; border-color: #f8c4cb;">Free Agent</span> Confirmed unsigned, open to offers</div>
+    <div><span class="badge" style="background: #f0f0f2; color: #6b6b76; border-color: #d8d8de;">Retired</span> No longer competing</div>
+    <div><span class="badge" style="background: #fff4d6; color: #8a6300; border-color: #f1e0a3;">Streaming</span> Streaming-focused, occasional comp</div>
+    <div><span class="badge" style="background: #e6f0ff; color: #0a47a3; border-color: #c3d7f7;">Trial</span> Trialing with an org, deal not announced</div>
+  </div>
+
+  <div class="section-label red">Rumored Movement · Unverified</div>
+  <p style="margin: 0 0 14px; font-size: 12px; color: var(--text-3); max-width: 760px;">Items below are aggregated chatter from community Discords, leak accounts and side-channel reports. None has been confirmed by an organisation, a player, or a player's representation. AgentTV does not vouch for any of these. Treat them as gossip until you see a roster post.</p>
+
+  <div class="table-card" style="margin-bottom: 32px;">
+    <table class="t-rank">
+      <thead>
+        <tr>
+          <th style="width: 36px;">·</th>
+          <th>Player</th>
+          <th>Game</th>
+          <th>Reported Direction</th>
+          <th>Status</th>
+          <th>Heard From</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rk">·</td>
+          <td><a href="boostio.html" class="pl-cell"><div class="avatar bg-default">B</div><div class="pl-name">Boostio</div></a></td>
+          <td>Valorant</td>
+          <td>Linked to a tier-2 Americas org for 2026 stage 1</td>
+          <td><span class="badge" style="background: #fff4ed; color: #9a3412; border-color: #fbd6b7;">Rumor (unverified)</span></td>
+          <td>Community thread</td>
+        </tr>
+        <tr>
+          <td class="rk">·</td>
+          <td><a href="mongraal.html" class="pl-cell"><div class="avatar bg-default">M</div><div class="pl-name">Mongraal</div></a></td>
+          <td>Fortnite</td>
+          <td>Possible one-off pickup for a major LAN trio</td>
+          <td><span class="badge" style="background: #fff4ed; color: #9a3412; border-color: #fbd6b7;">Rumor (unverified)</span></td>
+          <td>Stream chatter</td>
+        </tr>
+        <tr>
+          <td class="rk">·</td>
+          <td><a href="tayson.html" class="pl-cell"><div class="avatar bg-default">T</div><div class="pl-name">TaySon</div></a></td>
+          <td>Fortnite</td>
+          <td>Talks reported with multiple EU orgs ahead of FNCS</td>
+          <td><span class="badge" style="background: #fff4ed; color: #9a3412; border-color: #fbd6b7;">Rumor (unverified)</span></td>
+          <td>Insider account</td>
+        </tr>
+        <tr>
+          <td class="rk">·</td>
+          <td><a href="reps.html" class="pl-cell"><div class="avatar bg-default">R</div><div class="pl-name">Reps</div></a></td>
+          <td>Apex</td>
+          <td>Linked to a returning legacy NA roster, name withheld</td>
+          <td><span class="badge" style="background: #fff4ed; color: #9a3412; border-color: #fbd6b7;">Rumor (unverified)</span></td>
+          <td>Community thread</td>
+        </tr>
+        <tr>
+          <td class="rk">·</td>
+          <td><a href="sweet.html" class="pl-cell"><div class="avatar bg-default">S</div><div class="pl-name">Sweetdreams</div></a></td>
+          <td>Apex</td>
+          <td>Could be reunited with former IGL on a new EU project</td>
+          <td><span class="badge" style="background: #fff4ed; color: #9a3412; border-color: #fbd6b7;">Rumor (unverified)</span></td>
+          <td>Discord whisper</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size: 11px; color: var(--text-3); margin: 0 0 24px;">Last full sync: this morning. Confirmed roster moves are tracked on the <a href="transfers.html">Transfers</a> page. Wiki coverage for each player above is linked from their name.</p>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Games</h5><a href="fortnite.html">Fortnite</a><a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html">League</a><a href="apex.html">Apex</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="free-agents.html">Free Agents</a><a href="transfers.html">Transfers</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>v0.6.0</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

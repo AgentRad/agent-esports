@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Faker, Six Times: The Case for the Greatest of All Time · AgentTV" />
+<meta property="og:description" content="The serious source for esports. Live scores, player profiles, team profiles and tournament archives." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/article-faker-six.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Faker, Six Times: The Case for the Greatest of All Time · AgentTV" />
+<meta name="twitter:description" content="The serious source for esports. Live scores, player profiles, team profiles and tournament archives." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Faker, Six Times: The Case for the Greatest of All Time · AgentTV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .article-hero { aspect-ratio: 21 / 9; color: #fff; padding: 0; display: flex; align-items: end; position: relative; margin-bottom: 32px; }
+  .article-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.85) 100%); pointer-events: none; }
+  .article-hero-inner { padding: 32px 0; width: 100%; position: relative; z-index: 1; }
+  .article-hero h1 { font-size: 56px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; max-width: 960px; text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
+  .article-hero .article-tag { display: inline-block; background: var(--red); color: #fff; padding: 5px 11px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; border-radius: 2px; margin-bottom: 16px; }
+  .article-hero .article-dek { font-size: 18px; color: rgba(255,255,255,0.92); margin-top: 14px; max-width: 820px; line-height: 1.45; }
+  .article-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.2); max-width: 820px; }
+  .article-meta strong { color: #fff; font-weight: 800; }
+  .article-meta .div { color: rgba(255,255,255,0.4); }
+  .article-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; }
+  .article-body { font-size: 17px; line-height: 1.7; color: var(--text); max-width: 720px; }
+  .article-body p { margin-bottom: 22px; }
+  .article-body p:first-of-type::first-letter { font-size: 64px; font-weight: 900; float: left; line-height: 0.9; padding: 4px 12px 0 0; color: var(--red); font-family: "Inter", serif; letter-spacing: -0.03em; }
+  .article-body h2 { font-size: 28px; font-weight: 900; letter-spacing: -0.02em; margin: 32px 0 16px; line-height: 1.15; }
+  .article-body blockquote { border-left: 4px solid var(--red); padding: 12px 0 12px 24px; margin: 28px 0; font-size: 22px; font-weight: 700; line-height: 1.4; letter-spacing: -0.01em; }
+  .article-body blockquote cite { display: block; font-size: 12px; font-weight: 600; color: var(--text-2); margin-top: 12px; font-style: normal; text-transform: uppercase; letter-spacing: 0.08em; }
+  .article-body .pull-stat { background: var(--bg-alt); border-left: 4px solid var(--red); padding: 20px 24px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+  .article-body .pull-stat .num { font-family: "JetBrains Mono", monospace; font-size: 48px; font-weight: 900; line-height: 1; color: var(--text); letter-spacing: -0.03em; }
+  .article-body .pull-stat .label { font-size: 13px; color: var(--text-2); margin-top: 6px; max-width: 320px; }
+  .article-body figure { margin: 28px 0; }
+  .article-body figure .imgblock { width: 100%; aspect-ratio: 16 / 9; border-radius: 4px; display: block; }
+  .article-body figcaption { font-size: 12px; color: var(--text-2); margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--border); }
+  .related-card { background: var(--bg-alt); padding: 16px; border-radius: 4px; margin-bottom: 12px; display: block; transition: all 0.15s; }
+  .related-card:hover { background: #fff; box-shadow: var(--shadow); }
+  .related-card .rcat { font-size: 10px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; }
+  .related-card .rhead { font-size: 14px; font-weight: 800; line-height: 1.3; margin: 4px 0; color: var(--text); }
+  .related-card .rmeta { font-size: 11px; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Fortnite</a>
+      <a href="cs2.html">CS2</a><a href="valorant.html">Valorant</a><a href="lol.html" class="active">League</a><a href="apex.html">Apex</a><a href="#">Rocket League</a><a href="#">CoD</a><a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." aria-label="Search players and teams" /><button class="btn-watch">Watch Worlds</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="lol.html">Home</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+    <a href="tournaments.html">Tournaments</a>
+    <a href="event.html">Live Coverage</a>
+    <a href="history.html">History</a>
+    <a href="stats.html">Stats</a>
+    <a href="#" class="active">News</a>
+  </div>
+</div>
+
+<section class="article-hero bg-grad-lol">
+  <div class="container article-hero-inner">
+    <div class="breadcrumb" style="padding-top: 0; color: rgba(255,255,255,0.7); margin-bottom: 16px;">
+      <a href="lol.html" style="color: rgba(255,255,255,0.85);">League</a>
+      <span class="sep" style="color: rgba(255,255,255,0.4);">›</span>
+      <a href="#" style="color: rgba(255,255,255,0.85);">News</a>
+      <span class="sep" style="color: rgba(255,255,255,0.4);">›</span>
+      <span class="here" style="color: #fff;">Long Read</span>
+    </div>
+    <span class="article-tag">★ Long Read · The GOAT Case</span>
+    <h1>Faker, Six Times: The Case for the Greatest of All Time</h1>
+    <div class="article-dek">No professional player in any team-based esport has won a sixth global championship. Lee Sang-hyeok did, in November 2024, more than a decade after the first one. The case for Faker as the greatest of all time was already settled. Here is why the sixth ring still mattered anyway.</div>
+    <div class="article-meta">
+      <strong>By Marcus Chen</strong>
+      <span class="div">·</span>
+      <span>Senior Esports Reporter</span>
+      <span class="div">·</span>
+      <span>15 min read</span>
+      <span class="div">·</span>
+      <span>Published April 8, 2026</span>
+    </div>
+  </div>
+</section>
+
+<main class="container" style="padding-bottom: 64px;">
+  <div class="article-layout">
+    <article class="article-body">
+
+      <p>The image that ran on the front of every Korean sports daily the morning after the 2024 Worlds final was, almost coincidentally, the same image. <a href="faker.html">Faker</a> on the stage in London, holding the Summoner's Cup for the fifth time as a player and the sixth time as a champion of the world, with <a href="zeus.html">Zeus</a> and <a href="keria.html">Keria</a> on either side of him, and his expression unreadable in the way that has, by 2024, become its own genre of photograph. He had been in the same picture in 2013, 2015, 2016, 2023, and now 2024. The picture had become the career.</p>
+
+      <p>The argument over whether Lee Sang-hyeok is the greatest professional player in the history of esports has been, since at least 2017, a closed argument with formal challengers. Plenty of people have written reasonable cases for s1mple, for ZywOo, for Bjergsen, for ShowMaker, for ImperialHal, for individual players in specific titles. None of those cases has, in the broad shape, ever been competitive with Faker's. Six world championships, in a team-based esport, across thirteen calendar years, on a single organization, is a record that does not have a comparable adjacent in any other competitive activity.</p>
+
+      <h2>What six rings actually means</h2>
+
+      <p>To make the comparison concrete, the closest analogues in traditional sports are the basketball and hockey players who anchor multi-decade dynasties. Bill Russell, Jordan, Gretzky, Lemieux. Each of those careers is, structurally, a four-to-six year peak window inside which most of the rings happen. Faker's rings are differently distributed. The first three came inside a four-year stretch from 2013 to 2016. The fourth came seven years after the third. The fifth came in 2024, eleven years after the first. The career is not a single peak window. It is two distinct peak windows, with a recovery between them, on the same player.</p>
+
+      <blockquote>
+        "I think people who watched only the first run wrote me off. I think people who watch only the second run don't believe the first run happened. Both runs are real."
+        <cite>· Faker, AgentTV interview after the 2024 final, November 2024</cite>
+      </blockquote>
+
+      <p>The 2017 to 2022 stretch, sometimes called Faker's "valley" or "lost years" by writers who were not paying close attention, was actually the period during which his peers were retiring at scale. By 2020, almost every other star from the original LCK era had either retired or moved into coaching. Faker did neither. He kept playing, kept competing for finals, and kept losing finals to opponents who were younger, more rested, and more in tune with the patch. That part of the career is, by any reasonable framework, harder than the championship part. He stayed.</p>
+
+      <h2>The 2024 final, in particular</h2>
+
+      <p>The win in London was unusual for a reason that has nothing to do with the score. By 2024, <a href="t1.html">T1</a>'s structure no longer routed the team's offense through the mid laner. The 2024 roster was anchored, in different rounds, by Zeus's lane priority and Keria's roaming work. Faker's contribution was less mechanical and more strategic. He was, on the bench, in the draft room, and in mid-game decision-making, the player who steadied the team. The kill participation numbers in the final were, by his standards, modest. The win condition contribution was not.</p>
+
+      <div class="pull-stat">
+        <div class="num">6</div>
+        <div class="label">World Championship titles for Faker across 2013, 2015, 2016, 2023, and 2024 · with the 2023 and 2024 wins coming in back-to-back finals against weaker post-LPL fields</div>
+      </div>
+
+      <p>That style of contribution is harder to clip. It does not produce the highlight reel that the 2013 mid lane outplays produced. It produces, instead, a different kind of legacy. The version of Faker that wins the sixth championship is not the version of the player who carried the original SKT roster. It is a version that has learned to give up the ball, share the offense, and win as a captain rather than as the carry. The transition from one to the other is, statistically, almost unprecedented in esports.</p>
+
+      <h2>What the rest of the field has produced</h2>
+
+      <p>The cleanest comparable career in League of Legends history is, at present, ShowMaker. Two LCK titles, one MSI, one Worlds, with several deep international runs and a long career on a single organization. The numbers are great. They are not Faker's numbers. The next-best comparable, if you allow LPL careers, is JackeyLove, with a 2018 Worlds title and a long string of LPL placements. Also not competitive with Faker's curve. The only player whose career arc could, by 2030, plausibly close the gap is <a href="knight.html">Knight</a>, currently playing for <a href="blg.html">Bilibili Gaming</a>, and the gap to close is structurally large.</p>
+
+      <figure>
+        <div class="imgblock bg-grad-lol" style="position: relative;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: end; padding: 20px; color: #fff;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.85);">Worlds 2024 Grand Final · The O2 Arena, London</div>
+              <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">A sixth title, twelve years apart</div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Faker lifting the Summoner's Cup at <a href="tournament-worlds2024.html" style="color: rgba(255,255,255,0.9);">Worlds 2024</a>. The 2024 final was the second consecutive championship for the T1 core anchored by Zeus and Keria.</figcaption>
+      </figure>
+
+      <p>None of the other top-tier players in any other team-based esport has won six global titles. The s1mple-vs-Faker debate, in particular, falls apart on the structural numbers. s1mple has one Major title to Faker's six Worlds. The argument can be made that CS Majors are scarcer than Worlds, but six is six and one is one, and the math does not bend.</p>
+
+      <h2>The cultural argument</h2>
+
+      <p>What is harder to fit into any spreadsheet is the cultural footprint. Faker is, in Korea, a public figure on the order of an A-list actor. The 2024 final drew larger domestic ratings than several K-pop awards broadcasts. He has, in the last two years, given the kind of public-service interviews that a national figure is asked to give. He has talked about retirement openly. He has not retired. He has, in essence, become the face of an entire industry on a continent where the industry is taken more seriously than it is anywhere else.</p>
+
+      <blockquote>
+        "He is the player every parent in Korea has heard of, even the parents who do not know what League of Legends is. That is the difference."
+        <cite>· Coach kkOma, in a 2024 retrospective interview</cite>
+      </blockquote>
+
+      <p>That cultural weight is not part of the conventional GOAT case, but it is part of what gives the GOAT case its durability. The voters who write about competitive esports are, by 2026, mostly people who started watching during the original SKT run. Faker has been the central figure of their entire viewing lives. They are not going to vote against him on a technicality. The case is overdetermined.</p>
+
+      <h2>What's left to argue</h2>
+
+      <p>The remaining open question is whether a seventh title is possible. T1 enters the 2026 Worlds cycle with the same core that won the last two, plus a new bot lane experiment that has, in the early Spring split, looked promising. Zeus is 21. Keria is 22. Faker, somehow, is still only 30. The math suggests one more deep playoff run is possible. The math also suggested two years ago that the fifth ring was a stretch.</p>
+
+      <p>Either way, the argument has effectively closed. The greatest player in the history of esports is the person who has won the most. He has won six. He is still playing. The case rests.</p>
+
+      <p style="font-size: 13px; color: var(--text-2); margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border);"><em>Marcus Chen is AgentTV's Senior Esports Reporter. Reach him at <a href="#" style="color: var(--red);">m.chen@agent.gg</a>.</em></p>
+
+    </article>
+
+    <aside>
+      <div style="position: sticky; top: 144px;">
+        <div class="section-label" style="margin-top: 8px;">In This Story</div>
+        <div style="margin-bottom: 24px; font-size: 13px;">
+          <a href="faker.html" style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div class="avatar bg-grad-lol">F</div>
+            <div><div style="font-weight: 800;">Faker</div><div style="font-size: 11px; color: var(--text-3);">Subject · T1 mid laner</div></div>
+          </a>
+          <a href="t1.html" style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div class="avatar bg-grad-lol sq">T1</div>
+            <div><div style="font-weight: 800;">T1</div><div style="font-size: 11px; color: var(--text-3);">Organization</div></div>
+          </a>
+          <a href="zeus.html" style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div class="avatar bg-grad-lol">Z</div>
+            <div><div style="font-weight: 800;">Zeus</div><div style="font-size: 11px; color: var(--text-3);">Top laner · T1</div></div>
+          </a>
+          <a href="keria.html" style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div class="avatar bg-grad-lol">K</div>
+            <div><div style="font-weight: 800;">Keria</div><div style="font-size: 11px; color: var(--text-3);">Support · T1</div></div>
+          </a>
+          <a href="tournament-worlds2024.html" style="display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+            <div class="avatar bg-grad-lol sq">W</div>
+            <div><div style="font-weight: 800;">Worlds 2024</div><div style="font-size: 11px; color: var(--text-3);">Tournament</div></div>
+          </a>
+        </div>
+
+        <div class="section-label">Related Stories</div>
+        <a href="article-blg-rising.html" class="related-card">
+          <div class="rcat">League</div>
+          <div class="rhead">Bilibili Gaming and the LPL's long climb to Worlds glory</div>
+          <div class="rmeta">10 min read · by M. Chen</div>
+        </a>
+        <a href="article-falcons-empire.html" class="related-card">
+          <div class="rcat">Org Strategy</div>
+          <div class="rhead">Inside Team Falcons' esports empire</div>
+          <div class="rmeta">14 min read · by E. Aldhafeeri</div>
+        </a>
+        <a href="article-vitality-dynasty.html" class="related-card">
+          <div class="rcat">CS2</div>
+          <div class="rhead">How Vitality built a CS2 dynasty around ZywOo</div>
+          <div class="rmeta">11 min read · by S. Patel</div>
+        </a>
+
+        <div class="section-label" style="margin-top: 24px;">Share</div>
+        <div style="display: flex; gap: 8px;">
+          <a href="#" style="flex: 1; padding: 10px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700;">𝕏 Share</a>
+          <a href="#" style="flex: 1; padding: 10px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700;">in LinkedIn</a>
+          <a href="#" style="flex: 1; padding: 10px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700;">⊕ Copy</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a></div>
+      <div class="footer-col"><h5>Games</h5><a href="fortnite.html">Fortnite</a><a href="cs2.html">CS2</a></div>
+      <div class="footer-col"><h5>Coverage</h5><a href="players.html">Players</a><a href="teams.html">Teams</a><a href="tournaments.html">Tournaments</a><a href="history.html">History</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="#">iOS</a></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 AgentTV.</div><div>Atmospheric photography via Unsplash.</div></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

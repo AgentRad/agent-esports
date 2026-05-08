@@ -57,6 +57,31 @@
     { type: 'page', name: 'XTQZZZ', meta: 'Coach · Vitality CS2 head coach · multi-Major winner', url: 'coach-xtqzzz.html', cls: 'bg-default' },
     { type: 'page', name: 'OnSet', meta: 'Coach · Sentinels Valorant head coach · Masters Madrid', url: 'coach-onset.html', cls: 'bg-default' },
     { type: 'page', name: 'Raven', meta: 'Coach · TSM Apex head coach · 2023 ALGS Champion', url: 'coach-raven.html', cls: 'bg-default' },
+    // Articles
+    { type: 'page', name: 'Inside Team Falcons Empire', meta: 'Long read · Saudi-backed esports expansion strategy', url: 'article-falcons-empire.html', cls: 'bg-default' },
+    { type: 'page', name: 'Bugha Legacy', meta: 'Why the 2019 World Cup still defines esports', url: 'article-bugha-legacy.html', cls: 'bg-default' },
+    { type: 'page', name: 'Vitality Dynasty', meta: 'How Vitality built a CS2 dynasty around ZywOo', url: 'article-vitality-dynasty.html', cls: 'bg-default' },
+    { type: 'page', name: 'donk Phenom', meta: 'CS2 17-year-old MVP profile', url: 'article-donk-phenom.html', cls: 'bg-default' },
+    { type: 'page', name: 'Paper Rex Toronto', meta: 'Pacific breakthrough at Masters Toronto', url: 'article-paperrex-toronto.html', cls: 'bg-default' },
+    { type: 'page', name: 'Demon1 Comeback', meta: 'Quiet comeback after the EG breakup', url: 'article-demon1-comeback.html', cls: 'bg-default' },
+    { type: 'page', name: 'Faker Six Times', meta: 'The case for the greatest of all time', url: 'article-faker-six.html', cls: 'bg-default' },
+    { type: 'page', name: 'BLG Rising', meta: 'LPL long climb to Worlds glory', url: 'article-blg-rising.html', cls: 'bg-default' },
+    { type: 'page', name: 'ImperialHal Falcons Move', meta: 'End of an era at TSM', url: 'article-imperialhal-falcons.html', cls: 'bg-default' },
+    { type: 'page', name: 'Genburten Mechanical', meta: 'Mechanical ceiling of Apex Legends', url: 'article-genburten-mechanical.html', cls: 'bg-default' },
+    // Brackets
+    { type: 'tournament', name: 'IEM Katowice Bracket', meta: '8-team CS2 single elim playoffs', url: 'bracket-iem-katowice.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'FNCS Summit Path', meta: 'Qualifier funnel diagram across 8 regions', url: 'bracket-fncs-summit.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'VCT Masters Toronto Bracket', meta: '8-team double elim Valorant playoffs', url: 'bracket-vct-masters.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'Worlds 2024 Bracket', meta: 'Verified single elim · T1 def. BLG 3-2', url: 'bracket-worlds.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'ALGS Playoffs Bracket', meta: 'Apex group + bracket + match point format', url: 'bracket-algs-playoffs.html', cls: 'bg-default' },
+    // Free agents and transfers
+    { type: 'page', name: 'Free Agent Tracker', meta: 'Live transfer market across all 5 games', url: 'free-agents.html', cls: 'bg-default' },
+    { type: 'page', name: 'Recent Transfers', meta: '2026 season roster moves across all games', url: 'transfers.html', cls: 'bg-default' },
+    // Watch hub
+    { type: 'page', name: 'Watch Live', meta: 'Embedded live broadcasts from all major channels', url: 'watch.html', cls: 'bg-default' },
+    { type: 'page', name: 'Broadcast Schedule', meta: 'What is broadcasting today and this week', url: 'schedule.html', cls: 'bg-default' },
+    // Daily digest
+    { type: 'page', name: 'Today in Esports', meta: 'Daily digest across all 5 games', url: 'digest.html', cls: 'bg-default' },
     { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' },
     // Game sections
     { type: 'page', name: 'Fortnite', meta: 'Section landing · FNCS, Cash Cup, Power Rankings', url: 'fortnite.html', cls: 'bg-default' },

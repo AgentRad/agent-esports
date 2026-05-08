@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Live Broadcast Schedule · AgentTV" />
+<meta property="og:description" content="What's broadcasting today and this week across every major esport. Times, games, and watch links in one place." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/schedule.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Live Broadcast Schedule · AgentTV" />
+<meta name="twitter:description" content="What's broadcasting today and this week across every major esport." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Broadcast Schedule · AgentTV</title>
+<meta name="description" content="Day-by-day broadcast schedule across Fortnite, Counter-Strike, Valorant, League, Apex and more. Set reminders for the streams you don't want to miss." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-marks.css">
+</head>
+<body>
+
+<!-- BLACK TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="watch.html" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Sign Up</a>
+      <a href="#" class="topbar-link">Log In</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE SCORE STRIP (filled by app.js) -->
+<div class="scorestrip">
+  <div class="scorestrip-inner" id="scorestrip"></div>
+</div>
+
+<!-- MAIN HEADER WITH GAME NAV -->
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">A</span>
+      AgentTV
+    </a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools">
+      <input type="search" class="search-box" placeholder="Search players, teams..." aria-label="Search players and teams" />
+      <a href="watch.html" class="btn-watch">Watch Live</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO HEADLINE -->
+  <div style="padding: 24px 0 16px 0;">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;">AgentTV Schedule</div>
+    <h1 style="font-size: 44px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.02; margin-bottom: 8px;">What's Broadcasting Today and This Week</h1>
+    <p style="font-size: 15px; color: var(--text-2); max-width: 780px;">Every official broadcast across the majors. Times listed in PT and ET, with the platform and a quick link to watch in the AgentTV player.</p>
+  </div>
+
+  <!-- LEGEND / FILTER STRIP -->
+  <div class="card" style="margin-bottom: 24px;">
+    <div class="card-body" style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 14px 18px;">
+      <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2);">Filter</div>
+      <span class="sched-pill is-on">All Games</span>
+      <span class="sched-pill">Fortnite</span>
+      <span class="sched-pill">CS2</span>
+      <span class="sched-pill">Valorant</span>
+      <span class="sched-pill">League</span>
+      <span class="sched-pill">Apex</span>
+      <span class="sched-pill">Rocket League</span>
+      <div style="margin-left: auto; font-size: 11px; color: var(--text-3); font-family: 'JetBrains Mono', monospace;">Times shown PT / ET · Auto-converted to your locale soon</div>
+    </div>
+  </div>
+
+  <!-- DAY GRID -->
+  <div class="sched-grid">
+
+    <!-- TODAY (May 7, Thursday) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label live-mini" style="background: var(--red); color: #fff; padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block;">TODAY</div>
+          <div class="sdh-day">Thursday</div>
+        </div>
+        <div class="sdh-date">May 7</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">9:00 AM</span><span class="se-et">12:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 1 Summit · Final Day</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Top 3 advance to Global LAN</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fncs</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Major 1 Summit">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">10:30 AM</span><span class="se-et">1:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">IEM Katowice 2026 · Quarterfinals Day 2</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Spodek Arena, Poland · BO3</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · eslcs</a></div>
+          <button type="button" class="se-remind" data-evt="IEM Katowice QF">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">12:00 PM</span><span class="se-et">3:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Masters Toronto · Group Stage Day 4</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Toronto, ON · 12 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Masters Toronto">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">2:00 PM</span><span class="se-et">5:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LCS Spring Playoffs · Round 1</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>LCS Studio, LA · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · riotgames</a></div>
+          <button type="button" class="se-remind" data-evt="LCS Spring Playoffs R1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">3:30 PM</span><span class="se-et">6:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ESL Pro League S20 · Group A Day 1</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Online Stage · 32 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · esl_csgo</a></div>
+          <button type="button" class="se-remind" data-evt="ESL Pro League S20">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">5:00 PM</span><span class="se-et">8:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 2 Open Qualifier · Round 1</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Open · all regions</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fortnite</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Open Q R1">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOMORROW (May 8, Friday) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border-strong);">TOMORROW</div>
+          <div class="sdh-day">Friday</div>
+        </div>
+        <div class="sdh-date">May 8</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">8:00 AM</span><span class="se-et">11:00 AM</span></div>
+          <div class="se-info">
+            <div class="se-title">IEM Katowice 2026 · Semifinals</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Spodek Arena · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · eslcs</a></div>
+          <button type="button" class="se-remind" data-evt="IEM Katowice SF">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">11:00 AM</span><span class="se-et">2:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Masters Toronto · Group Stage Day 5</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Toronto, ON</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Masters Toronto Day 5">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">12:30 PM</span><span class="se-et">3:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LEC Spring Final · Game 1</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>Berlin Studio · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · riotgames</a></div>
+          <button type="button" class="se-remind" data-evt="LEC Spring Final">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">2:00 PM</span><span class="se-et">5:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ALGS Split 2 Pro League · Week 3</div>
+            <div class="se-meta"><span class="se-game gm-apex">Apex</span><span>Online · NA + EMEA</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · PlayApex</a></div>
+          <button type="button" class="se-remind" data-evt="ALGS Pro League W3">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">4:00 PM</span><span class="se-et">7:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">BLAST Premier Spring Showdown · Group Stage</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Studio Copenhagen · 16 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · blastpremier</a></div>
+          <button type="button" class="se-remind" data-evt="BLAST Showdown Group">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">6:00 PM</span><span class="se-et">9:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 1 Summit · Trophy Ceremony</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Highlight reel and post-show</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fncs</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Trophy">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SAT (May 9) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text-2); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border);">SAT</div>
+          <div class="sdh-day">Saturday</div>
+        </div>
+        <div class="sdh-date">May 9</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">8:00 AM</span><span class="se-et">11:00 AM</span></div>
+          <div class="se-info">
+            <div class="se-title">IEM Katowice 2026 · Grand Final</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Spodek Arena · BO5 · $1.0M to winner</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · eslcs</a></div>
+          <button type="button" class="se-remind" data-evt="IEM Katowice Final">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">10:00 AM</span><span class="se-et">1:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ALGS Split 2 Playoffs · Day 1</div>
+            <div class="se-meta"><span class="se-game gm-apex">Apex</span><span>LAN London · 40 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · PlayApex</a></div>
+          <button type="button" class="se-remind" data-evt="ALGS Split 2 Day 1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">11:00 AM</span><span class="se-et">2:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LCK Spring Final · Game 1</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>LoL Park, Seoul · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · lck</a></div>
+          <button type="button" class="se-remind" data-evt="LCK Spring Final">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">12:00 PM</span><span class="se-et">3:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Masters Toronto · Playoffs Round 1</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Toronto, ON · BO3</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant_americas</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Masters Playoffs R1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">2:30 PM</span><span class="se-et">5:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">RLCS 2026 · Major 2 Group Stage Day 1</div>
+            <div class="se-meta"><span class="se-game gm-rl">Rocket League</span><span>Online · EU + NA · 16 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · rocketleague</a></div>
+          <button type="button" class="se-remind" data-evt="RLCS Major 2 Day 1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">5:00 PM</span><span class="se-et">8:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">BLAST Premier Spring Showdown · Playoffs</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Studio Copenhagen · BO3</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · blastpremier</a></div>
+          <button type="button" class="se-remind" data-evt="BLAST Showdown Playoffs">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUN (May 10) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text-2); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border);">SUN</div>
+          <div class="sdh-day">Sunday</div>
+        </div>
+        <div class="sdh-date">May 10</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">9:00 AM</span><span class="se-et">12:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ALGS Split 2 Playoffs · Day 2</div>
+            <div class="se-meta"><span class="se-game gm-apex">Apex</span><span>LAN London · Match Point format</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · PlayApex</a></div>
+          <button type="button" class="se-remind" data-evt="ALGS Day 2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">11:00 AM</span><span class="se-et">2:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Masters Toronto · Playoffs Round 2</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Toronto, ON · Lower Bracket</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Playoffs R2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">12:00 PM</span><span class="se-et">3:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LPL Spring Playoffs · Round 2</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>Shanghai Studio · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · blg_ofc</a></div>
+          <button type="button" class="se-remind" data-evt="LPL Playoffs R2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">1:30 PM</span><span class="se-et">4:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">RLCS 2026 · Major 2 Group Stage Day 2</div>
+            <div class="se-meta"><span class="se-game gm-rl">Rocket League</span><span>Online · top 8 advance</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · rocketleague</a></div>
+          <button type="button" class="se-remind" data-evt="RLCS Day 2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">3:00 PM</span><span class="se-et">6:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 2 Open Qualifier · Round 2</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Open · top 16 duos qualify</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fortnite</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Q R2">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MON (May 11) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text-2); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border);">MON</div>
+          <div class="sdh-day">Monday</div>
+        </div>
+        <div class="sdh-date">May 11</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">10:00 AM</span><span class="se-et">1:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ESL Pro League S20 · Group B Day 1</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Online Stage</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · esl_csgo</a></div>
+          <button type="button" class="se-remind" data-evt="ESL Pro League Group B">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">12:00 PM</span><span class="se-et">3:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LCK Summer Split · Open Week Preview Show</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>Studio show · roster talk</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · LCK</a></div>
+          <button type="button" class="se-remind" data-evt="LCK Preview">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">2:00 PM</span><span class="se-et">5:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Pacific Stage 2 · Week 1 Day 1</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Seoul Arena · 12 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant_pacific</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Pacific S2 W1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">3:30 PM</span><span class="se-et">6:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Post-Major Roundtable</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>AgentTV studio show</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">AgentTV · Studio</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Roundtable">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">5:00 PM</span><span class="se-et">8:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ALGS Split 2 Pro League · Week 3 Day 4</div>
+            <div class="se-meta"><span class="se-game gm-apex">Apex</span><span>Online · APAC South</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · PlayApex</a></div>
+          <button type="button" class="se-remind" data-evt="ALGS Pro W3 D4">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TUE (May 12) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text-2); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border);">TUE</div>
+          <div class="sdh-day">Tuesday</div>
+        </div>
+        <div class="sdh-date">May 12</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">9:00 AM</span><span class="se-et">12:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT EMEA Stage 2 · Week 1 Day 1</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Berlin Arena · 12 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant_emea</a></div>
+          <button type="button" class="se-remind" data-evt="VCT EMEA S2 W1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">11:00 AM</span><span class="se-et">2:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ESL Pro League S20 · Group A Day 2</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Online Stage</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · esl_csgo</a></div>
+          <button type="button" class="se-remind" data-evt="ESL Pro Group A D2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">1:00 PM</span><span class="se-et">4:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LCS Spring Playoffs · Round 2</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>LCS Studio, LA · BO5</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · riotgames</a></div>
+          <button type="button" class="se-remind" data-evt="LCS Playoffs R2">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">3:00 PM</span><span class="se-et">6:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 2 Summit Qualifiers · EU</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Top 16 duos to Summit</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fortnite</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Summit Q EU">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">5:30 PM</span><span class="se-et">8:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">RLCS Wildcard Showmatch</div>
+            <div class="se-meta"><span class="se-game gm-rl">Rocket League</span><span>Studio show · invitational</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · rocketleague</a></div>
+          <button type="button" class="se-remind" data-evt="RLCS Wildcard">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WED (May 13) -->
+    <section class="sched-day">
+      <div class="sched-day-head">
+        <div class="sdh-left">
+          <div class="sdh-label" style="background: var(--bg-alt); color: var(--text-2); padding: 3px 8px; font-size: 10px; font-weight: 900; letter-spacing: 0.06em; border-radius: 2px; display: inline-block; border: 1px solid var(--border);">WED</div>
+          <div class="sdh-day">Wednesday</div>
+        </div>
+        <div class="sdh-date">May 13</div>
+      </div>
+      <div class="sched-events">
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">10:00 AM</span><span class="se-et">1:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">VCT Americas Stage 2 · Week 1 Day 1</div>
+            <div class="se-meta"><span class="se-game gm-val">Valorant</span><span>Riot Arena · 11 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · valorant_americas</a></div>
+          <button type="button" class="se-remind" data-evt="VCT Americas S2 W1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">11:30 AM</span><span class="se-et">2:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">BLAST Premier Spring Final · Day 1</div>
+            <div class="se-meta"><span class="se-game gm-cs">CS2</span><span>Studio Copenhagen · top 8</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · blastpremier</a></div>
+          <button type="button" class="se-remind" data-evt="BLAST Spring Final D1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">1:00 PM</span><span class="se-et">4:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">LEC Summer Open Week · Day 1</div>
+            <div class="se-meta"><span class="se-game gm-lol">League</span><span>Berlin Studio · 10 teams</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · riotgames</a></div>
+          <button type="button" class="se-remind" data-evt="LEC Summer D1">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">3:00 PM</span><span class="se-et">6:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">RLCS 2026 · Major 2 Knockouts</div>
+            <div class="se-meta"><span class="se-game gm-rl">Rocket League</span><span>Online · BO7</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · rocketleague</a></div>
+          <button type="button" class="se-remind" data-evt="RLCS Knockouts">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">4:30 PM</span><span class="se-et">7:30 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">FNCS Major 2 Summit Qualifiers · NA East</div>
+            <div class="se-meta"><span class="se-game gm-fortnite">Fortnite</span><span>Top 16 duos to Summit</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">Twitch · fortnite</a></div>
+          <button type="button" class="se-remind" data-evt="FNCS Q NAE">Set Reminder</button>
+        </div>
+
+        <div class="sched-row">
+          <div class="se-time"><span class="se-pt">6:00 PM</span><span class="se-et">9:00 PM</span></div>
+          <div class="se-info">
+            <div class="se-title">ALGS Split 2 Pro League · Week 3 Finale</div>
+            <div class="se-meta"><span class="se-game gm-apex">Apex</span><span>Online · standings recap</span></div>
+          </div>
+          <div class="se-platform"><a href="watch.html" class="se-watch">YouTube · PlayApex</a></div>
+          <button type="button" class="se-remind" data-evt="ALGS W3 Finale">Set Reminder</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- BOTTOM DISCLAIMER -->
+  <div style="margin: 24px 0 32px 0; padding: 14px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 3px; font-size: 12px; color: var(--text-2); line-height: 1.55;">
+    Streams embedded via official Twitch and YouTube players. Content remains property of the respective broadcaster. Reminder buttons are a UI preview only and do not currently send notifications. Schedule subject to change at the broadcaster's discretion.
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;">
+          <span class="brand-mark">A</span>
+          AgentTV
+        </a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">
+          The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Watch</h5>
+        <a href="watch.html">Watch Hub</a>
+        <a href="schedule.html">Broadcast Schedule</a>
+        <a href="#">Channel Directory</a>
+        <a href="#">VOD Library</a>
+        <a href="#">Picture-in-Picture</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a>
+        <a href="#">Player Profiles</a>
+        <a href="#">Team Profiles</a>
+        <a href="#">Power Rankings</a>
+        <a href="schedule.html">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Editorial Standards</a>
+        <a href="#">Methodology</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+        <a href="#">Browser Extension</a>
+        <a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Streams embedded via official Twitch and YouTube players. Content remains property of the respective broadcaster.</div>
+      <div>v0.5.0 · Schedule</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .sched-pill {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    color: var(--text-2);
+    cursor: pointer;
+    background: #fff;
+  }
+  .sched-pill:hover { color: var(--text); border-color: var(--text); }
+  .sched-pill.is-on { background: var(--text); color: #fff; border-color: var(--text); }
+
+  .sched-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .sched-day {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .sched-day-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+  }
+  .sdh-left { display: flex; align-items: center; gap: 12px; }
+  .sdh-day { font-size: 18px; font-weight: 900; letter-spacing: -0.01em; color: var(--text); }
+  .sdh-date { font-family: "JetBrains Mono", monospace; font-weight: 800; font-size: 13px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .sched-events { padding: 0; }
+  .sched-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 200px 120px;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sched-row:last-child { border-bottom: 0; }
+  .sched-row:hover { background: var(--bg-alt); }
+
+  .se-time { display: flex; flex-direction: column; }
+  .se-pt { font-family: "JetBrains Mono", monospace; font-weight: 900; font-size: 14px; color: var(--text); }
+  .se-et { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-3); margin-top: 2px; }
+  .se-pt::before { content: "PT "; color: var(--text-3); font-weight: 700; font-size: 10px; letter-spacing: 0.04em; }
+  .se-et::before { content: "ET "; color: var(--text-3); font-weight: 700; font-size: 10px; letter-spacing: 0.04em; }
+
+  .se-title { font-weight: 800; font-size: 14px; color: var(--text); line-height: 1.3; }
+  .se-meta { font-size: 12px; color: var(--text-2); margin-top: 4px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+  .se-game {
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 7px;
+    border-radius: 2px;
+    color: #fff;
+  }
+  .gm-fortnite { background: linear-gradient(135deg, #6b21a8, #2563eb); }
+  .gm-cs { background: linear-gradient(135deg, #d97706, #5c2a0a); }
+  .gm-val { background: linear-gradient(135deg, #ff4655, #b91c1c); }
+  .gm-lol { background: linear-gradient(135deg, #c89b3c, #5a3a0e); }
+  .gm-apex { background: linear-gradient(135deg, #d62828, #5a0a0a); }
+  .gm-rl { background: linear-gradient(135deg, #1d6dde, #0a2c66); }
+
+  .se-platform { font-size: 11px; }
+  .se-watch {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: var(--link);
+    padding: 4px 0;
+    border-bottom: 1px dotted var(--border-strong);
+  }
+  .se-watch:hover { color: var(--red); border-color: var(--red); }
+
+  .se-remind {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 8px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    color: var(--text);
+    background: #fff;
+  }
+  .se-remind:hover { background: var(--red); color: #fff; border-color: var(--red); }
+  .se-remind.is-set { background: var(--win); color: #fff; border-color: var(--win); }
+
+  @media (max-width: 900px) {
+    .sched-row { grid-template-columns: 100px 1fr; }
+    .se-platform, .se-remind { grid-column: 2; }
+  }
+</style>
+
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.se-remind');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', (function (b) {
+        return function () {
+          if (b.classList.contains('is-set')) {
+            b.classList.remove('is-set');
+            b.textContent = 'Set Reminder';
+          } else {
+            b.classList.add('is-set');
+            b.textContent = 'Reminder Set';
+          }
+        };
+      })(btns[i]));
+    }
+
+    // Filter pills (visual only)
+    var pills = document.querySelectorAll('.sched-pill');
+    for (var j = 0; j < pills.length; j++) {
+      pills[j].addEventListener('click', (function (p) {
+        return function () {
+          for (var k = 0; k < pills.length; k++) pills[k].classList.remove('is-on');
+          p.classList.add('is-on');
+        };
+      })(pills[j]));
+    }
+  })();
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
