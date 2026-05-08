@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Live Chat · FNCS Summit Day 2 · AgentTV" />
+<meta property="og:description" content="Live event chat for AgentTV. Watch alongside thousands of fans during the FNCS Summit final day." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/live-chat.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Live Chat · AgentTV" />
+<meta name="twitter:description" content="Live event chat for AgentTV alongside the FNCS Summit broadcast." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Live Chat · FNCS Summit Day 2 · AgentTV</title>
+<meta name="description" content="Live event chat for AgentTV. Watch the FNCS Summit alongside thousands of fans." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html" class="active">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search..." /><button class="btn-watch">Watch FNCS</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="community.html">Community</a>
+    <a href="live-chat.html" class="active">Live Chat</a>
+    <a href="predictions.html">Predictions</a>
+    <a href="tier-list.html">Tier List</a>
+    <a href="watchlist.html">My Watchlist</a>
+    <a href="tournaments.html">Tournaments</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <a href="community.html">Community</a><span class="sep">›</span>
+    <span class="here">Live Chat · FNCS Summit Day 2</span>
+  </div>
+
+  <div class="page-header" style="padding-bottom: 16px;">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+      <span class="live-pip" style="display:inline-flex;align-items:center;gap:6px;">
+        <span style="width:6px;height:6px;background:var(--red);border-radius:50%;display:inline-block;animation:pulse 1.4s infinite;"></span>
+        Live now · Placeholder chat · No messages are sent
+      </span>
+    </div>
+    <h1 class="page-title">FNCS Major 1 Summit · Day 2</h1>
+    <p class="page-sub">Falcons trio leads at 770 with one game left. Khanada and the Dignitas duo sit second at 710. Top three advance to the FNCS Global LAN.</p>
+  </div>
+
+  <div class="two-col">
+
+    <!-- LEFT: CHAT -->
+    <div>
+      <div class="chat-shell">
+
+        <!-- HEADER -->
+        <div class="chat-head">
+          <div>
+            <div class="chat-head-title">Event Chat</div>
+            <div class="chat-head-sub">FNCS Summit · Final Game · NA East</div>
+          </div>
+          <div class="chat-head-stats">
+            <span class="chat-stat"><span class="dotpulse"></span> <strong id="chat-viewer-count">18,402</strong> watching</span>
+            <span class="chat-stat-sep">·</span>
+            <span class="chat-stat" id="chat-msg-rate">~ 312 msg/min</span>
+          </div>
+        </div>
+
+        <!-- PINNED MOD MESSAGES -->
+        <div class="chat-pinned">
+          <div class="chat-pin">
+            <span class="chat-pin-tag">PINNED · MOD</span>
+            <span class="chat-pin-by">AgentTV_Mod</span>
+            <span class="chat-pin-text">Welcome to the AgentTV chat. Be a fan, not a hater. Spoilers will be removed during live games · use the Predictions tab to lock in your call before the final game starts.</span>
+          </div>
+          <div class="chat-pin">
+            <span class="chat-pin-tag">PINNED · STAFF</span>
+            <span class="chat-pin-by">jordan_romero</span>
+            <span class="chat-pin-text">Live blog updating every game on the Fortnite hub · check the Predictions tab for the official AgentTV staff bracket. Final game starts in ~12 minutes.</span>
+          </div>
+        </div>
+
+        <!-- CHAT FEED -->
+        <div class="chat-feed" id="chat-feed">
+
+          <div class="chat-msg"><span class="chat-time">14:02</span><span class="chat-user u-fn">user1234</span><span class="chat-text">ok 60 point gap for second is doable if Falcons trio busts game 6</span></div>
+          <div class="chat-msg"><span class="chat-time">14:02</span><span class="chat-user u-mod">AgentTV_Mod <span class="chat-badge">MOD</span></span><span class="chat-text">Friendly reminder · spoiler tags during live games. Reports going through.</span></div>
+          <div class="chat-msg"><span class="chat-time">14:03</span><span class="chat-user u-fn">fnce_pal</span><span class="chat-text">peterbot is so quiet on stream this whole event lol locked in</span></div>
+          <div class="chat-msg"><span class="chat-time">14:03</span><span class="chat-user u-cs">hltv_fan</span><span class="chat-text">tuning in from the Vitality FaZe map break, came for FNCS final game</span></div>
+          <div class="chat-msg"><span class="chat-time">14:04</span><span class="chat-user u-fn">arena_tryhard</span><span class="chat-text">khanada needs a 9+ elim chicken to even sniff first realistically</span></div>
+          <div class="chat-msg"><span class="chat-time">14:04</span><span class="chat-user u-fn">pollo_believer</span><span class="chat-text">acorn point per kill ratio this season is absurd</span></div>
+          <div class="chat-msg"><span class="chat-time">14:05</span><span class="chat-user u-val">val_skeptic</span><span class="chat-text">imagine if this goes to a tiebreak after game 6</span></div>
+          <div class="chat-msg highlight"><span class="chat-time">14:05</span><span class="chat-user u-fn">fncs_truther</span><span class="chat-text">prediction · Falcons trio holds top, Dignitas duo holds 2nd, peterbot trio sneaks 3rd over Reet</span></div>
+          <div class="chat-msg"><span class="chat-time">14:06</span><span class="chat-user u-fn">setty_stan</span><span class="chat-text">setty being on three and still grinding open quals is incredible</span></div>
+          <div class="chat-msg"><span class="chat-time">14:06</span><span class="chat-user u-fn">user_4421</span><span class="chat-text">ajerss aim is unreal, surge endgame fight earlier was insane</span></div>
+          <div class="chat-msg"><span class="chat-time">14:07</span><span class="chat-user u-lol">midlane_mage</span><span class="chat-text">on a Fortnite stream and someone in chat just said TES vs T1 is overrated lmao</span></div>
+          <div class="chat-msg"><span class="chat-time">14:07</span><span class="chat-user u-fn">epik_whaler</span><span class="chat-text">epikwhale top 10 again? business as usual</span></div>
+          <div class="chat-msg"><span class="chat-time">14:08</span><span class="chat-user u-fn">mongraal_era</span><span class="chat-text">mongraal looking sharp this split, low key dark horse for major 2</span></div>
+          <div class="chat-msg"><span class="chat-time">14:08</span><span class="chat-user u-mod">AgentTV_Mod <span class="chat-badge">MOD</span></span><span class="chat-text">Chat slow mode is on for the final game · 5s between messages.</span></div>
+          <div class="chat-msg"><span class="chat-time">14:09</span><span class="chat-user u-fn">storm_chaser</span><span class="chat-text">whoever drew that final zone north of slappy needs a raise</span></div>
+          <div class="chat-msg"><span class="chat-time">14:09</span><span class="chat-user u-cs">spirit_supporter</span><span class="chat-text">checking in between rounds, who's leading right now</span></div>
+          <div class="chat-msg"><span class="chat-time">14:10</span><span class="chat-user u-fn">tournament_pal</span><span class="chat-text">Falcons trio 770, Khanada + Dig duo 710, peterbot trio 645</span></div>
+          <div class="chat-msg highlight"><span class="chat-time">14:10</span><span class="chat-user u-fn">nyhrox_diehard</span><span class="chat-text">3 LAN spots up for grabs in one game · this is exactly why FNCS is peak format</span></div>
+          <div class="chat-msg"><span class="chat-time">14:11</span><span class="chat-user u-fn">duo_dynamic</span><span class="chat-text">tayson and khanada have been grinding scrims all week, they're ready</span></div>
+          <div class="chat-msg"><span class="chat-time">14:11</span><span class="chat-user u-apex">algs_andy</span><span class="chat-text">FN endgames are just way more skill expressive than people give credit for</span></div>
+
+        </div>
+
+        <!-- INPUT -->
+        <form class="chat-input" id="chat-input" onsubmit="event.preventDefault(); return false;">
+          <input type="text" placeholder="Send a message... (placeholder · not connected to a real backend)" maxlength="280" />
+          <button type="submit" class="btn-watch" style="background: var(--red);">Send</button>
+        </form>
+        <div class="chat-input-foot">
+          By chatting you agree to the <a href="#">Community Rules</a>. Be a fan, not a hater · spoiler tags during live games.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL -->
+    <aside>
+
+      <!-- EVENT DETAILS -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Current Event</div>
+          <div class="rail-sub">FNCS Major 1 Summit · Day 2</div>
+        </div>
+        <div class="rail-body" style="padding: 14px 16px; font-size: 13px;">
+          <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px;">
+            <span style="color: var(--text-2);">Region</span><span style="font-weight: 700;">NA East</span>
+            <span style="color: var(--text-2);">Format</span><span style="font-weight: 700;">Trios · 6 games</span>
+            <span style="color: var(--text-2);">Game</span><span style="font-weight: 700;">5 of 6</span>
+            <span style="color: var(--text-2);">Prize Pool</span><span style="font-weight: 700;">$1.5M</span>
+            <span style="color: var(--text-2);">LAN spots</span><span style="font-weight: 700;">Top 3 advance</span>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--border); margin: 14px 0;">
+          <div style="font-size: 11px; font-weight: 800; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Standings</div>
+          <div style="display: flex; justify-content: space-between; padding: 4px 0;"><span><strong>1.</strong> Falcons trio</span><span style="font-family: 'JetBrains Mono', monospace; font-weight: 800;">770</span></div>
+          <div style="display: flex; justify-content: space-between; padding: 4px 0;"><span><strong>2.</strong> Khanada + Dig duo</span><span style="font-family: 'JetBrains Mono', monospace; font-weight: 800;">710</span></div>
+          <div style="display: flex; justify-content: space-between; padding: 4px 0;"><span><strong>3.</strong> Peterbot trio</span><span style="font-family: 'JetBrains Mono', monospace; font-weight: 800;">645</span></div>
+          <div style="display: flex; justify-content: space-between; padding: 4px 0; color: var(--text-2);"><span><strong>4.</strong> Reet trio</span><span style="font-family: 'JetBrains Mono', monospace;">612</span></div>
+          <div style="display: flex; justify-content: space-between; padding: 4px 0; color: var(--text-2);"><span><strong>5.</strong> Setty trio</span><span style="font-family: 'JetBrains Mono', monospace;">588</span></div>
+        </div>
+      </div>
+
+      <!-- TOP EMOTES -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Top Emotes (last 5 min)</div>
+          <div class="rail-sub">Placeholder spam tracker</div>
+        </div>
+        <div class="rail-body">
+          <div class="rail-row">
+            <span class="rail-rank gold">1</span>
+            <div><div class="rail-name" style="font-family: 'JetBrains Mono', monospace;">:agentpog:</div><div class="rail-meta">Used 4,212 times</div></div>
+            <span class="rail-val">▲ 38%</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank gold">2</span>
+            <div><div class="rail-name" style="font-family: 'JetBrains Mono', monospace;">:locked_in:</div><div class="rail-meta">Used 3,718 times</div></div>
+            <span class="rail-val">▲ 22%</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank gold">3</span>
+            <div><div class="rail-name" style="font-family: 'JetBrains Mono', monospace;">:cope:</div><div class="rail-meta">Used 2,902 times</div></div>
+            <span class="rail-val">▲ 14%</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">4</span>
+            <div><div class="rail-name" style="font-family: 'JetBrains Mono', monospace;">:wp:</div><div class="rail-meta">Used 2,418 times</div></div>
+            <span class="rail-val">▲ 9%</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">5</span>
+            <div><div class="rail-name" style="font-family: 'JetBrains Mono', monospace;">:zone_pull:</div><div class="rail-meta">Used 1,902 times</div></div>
+            <span class="rail-val">▲ 4%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVE NOW -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Other Live Chats</div>
+          <div class="rail-sub">Switch the broadcast</div>
+        </div>
+        <div class="rail-body" style="padding: 12px 16px;">
+          <a href="#" style="display:block; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 8px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>9,118 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 13px;">IEM Katowice · QF Map 3</div>
+          </a>
+          <a href="#" style="display:block; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 8px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>6,290 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 13px;">VCT Masters Toronto · Group A</div>
+          </a>
+          <a href="#" style="display:block; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>4,041 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 13px;">LCS Spring · TL vs C9</div>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;"><span class="brand-mark">A</span>AgentTV</a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="fortnite.html">Fortnite</a><a href="cs2.html">Counter-Strike 2</a><a href="valorant.html">Valorant</a><a href="lol.html">League of Legends</a><a href="apex.html">Apex Legends</a><a href="#">Rocket League</a><a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a><a href="players.html">Player Profiles</a><a href="teams.html">Team Profiles</a><a href="#">Power Rankings</a><a href="#">Earnings</a><a href="#">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Community</h5>
+        <a href="community.html">Threads & Polls</a><a href="live-chat.html">Live Chat</a><a href="predictions.html">Predictions</a><a href="tier-list.html">Tier List</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a><a href="#">Android</a><a href="#">Browser Extension</a><a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Epic Games, Valve, Riot Games or any publisher.</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.chat-shell { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; display: flex; flex-direction: column; height: 700px; max-height: calc(100vh - 200px); min-height: 540px; }
+.chat-head { padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--bg-darker); color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.chat-head-title { font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+.chat-head-sub { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.chat-head-stats { font-size: 11px; color: rgba(255,255,255,0.7); display: flex; gap: 8px; align-items: center; font-weight: 600; }
+.chat-stat { display: inline-flex; align-items: center; gap: 6px; }
+.chat-stat strong { color: #fff; font-family: "JetBrains Mono", monospace; font-weight: 800; }
+.chat-stat-sep { color: rgba(255,255,255,0.3); }
+.dotpulse { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: pulse 1.4s infinite; display: inline-block; }
+
+.chat-pinned { padding: 10px 16px; background: #fff5f5; border-bottom: 1px solid var(--border); }
+.chat-pin { font-size: 12px; line-height: 1.5; padding: 4px 0; }
+.chat-pin + .chat-pin { border-top: 1px dashed #f8c4cb; padding-top: 8px; margin-top: 4px; }
+.chat-pin-tag { font-size: 9px; font-weight: 900; letter-spacing: 0.1em; background: var(--red); color: #fff; padding: 2px 6px; border-radius: 2px; margin-right: 8px; }
+.chat-pin-by { font-weight: 800; color: var(--text); margin-right: 6px; }
+.chat-pin-text { color: var(--text-2); }
+
+.chat-feed { flex: 1; overflow-y: auto; padding: 8px 0; font-size: 13px; line-height: 1.5; }
+.chat-msg { padding: 4px 16px; display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+.chat-msg:hover { background: var(--bg-alt); }
+.chat-msg.highlight { background: #fffbe6; border-left: 3px solid var(--gold); padding-left: 13px; }
+.chat-time { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--text-3); flex-shrink: 0; }
+.chat-user { font-weight: 800; flex-shrink: 0; }
+.chat-user.u-fn { color: #0a47a3; }
+.chat-user.u-cs { color: #6b21a8; }
+.chat-user.u-val { color: #006e2e; }
+.chat-user.u-lol { color: var(--red); }
+.chat-user.u-apex { color: #b45309; }
+.chat-user.u-mod { color: var(--red); }
+.chat-badge { font-size: 9px; font-weight: 900; background: var(--red); color: #fff; padding: 1px 5px; border-radius: 2px; margin-left: 4px; letter-spacing: 0.06em; }
+.chat-text { color: var(--text); flex: 1; min-width: 0; word-break: break-word; }
+
+.chat-input { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--border); background: var(--bg-alt); }
+.chat-input input { flex: 1; padding: 10px 12px; border: 1px solid var(--border); border-radius: 3px; font: inherit; font-size: 13px; background: var(--bg); }
+.chat-input input:focus { outline: none; border-color: var(--text-2); }
+.chat-input-foot { padding: 6px 14px 12px; font-size: 11px; color: var(--text-3); background: var(--bg-alt); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+.chat-input-foot a { color: var(--text-2); text-decoration: underline; }
+</style>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script src="agenttv-community.js"></script>
+</body>
+</html>

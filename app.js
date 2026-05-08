@@ -45,6 +45,18 @@
     { type: 'page', name: 'Predictions', meta: 'Pick winners for upcoming events · save your scoresheet', url: 'predictions.html', cls: 'bg-default' },
     { type: 'page', name: 'My Watchlist', meta: 'Your followed players, teams, and tournaments', url: 'watchlist.html', cls: 'bg-default' },
     { type: 'page', name: 'Compare Across Games', meta: 'Side-by-side cross-game player comparison · Faker vs Bugha etc.', url: 'compare-games.html', cls: 'bg-default' },
+    { type: 'page', name: 'Community', meta: 'Discussions, polls, top contributors across all games', url: 'community.html', cls: 'bg-default' },
+    { type: 'page', name: 'Live Chat', meta: 'Live event chat alongside active broadcasts', url: 'live-chat.html', cls: 'bg-default' },
+    // Tournament archives
+    { type: 'tournament', name: 'Worlds 2024', meta: 'T1 def. BLG 3-2 in London · Faker MVP · LoL Championship', url: 'tournament-worlds2024.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'IEM Katowice 2026', meta: 'CS2 · $1M · Spodek Arena · Vitality defending', url: 'tournament-iem-katowice-2026.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'VCT Champions 2023', meta: 'LA · Evil Geniuses def. Paper Rex 3-1 · Demon1 MVP', url: 'tournament-vct-champions-2023.html', cls: 'bg-default' },
+    { type: 'tournament', name: 'ALGS Year 4 Championship', meta: 'Sapporo · GoNext Esports won · Effect MVP', url: 'tournament-algs-championship-2024.html', cls: 'bg-default' },
+    // Coaches
+    { type: 'page', name: 'kkOma', meta: 'Coach · T1 LoL head coach · 5x Worlds Champion staff', url: 'coach-kkoma.html', cls: 'bg-default' },
+    { type: 'page', name: 'XTQZZZ', meta: 'Coach · Vitality CS2 head coach · multi-Major winner', url: 'coach-xtqzzz.html', cls: 'bg-default' },
+    { type: 'page', name: 'OnSet', meta: 'Coach · Sentinels Valorant head coach · Masters Madrid', url: 'coach-onset.html', cls: 'bg-default' },
+    { type: 'page', name: 'Raven', meta: 'Coach · TSM Apex head coach · 2023 ALGS Champion', url: 'coach-raven.html', cls: 'bg-default' },
     { type: 'page', name: 'News &amp; Articles', meta: 'Long-form features and analysis', url: 'article.html', cls: 'bg-default' },
     // Game sections
     { type: 'page', name: 'Fortnite', meta: 'Section landing · FNCS, Cash Cup, Power Rankings', url: 'fortnite.html', cls: 'bg-default' },

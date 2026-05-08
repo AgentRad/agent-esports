@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AgentTV Community · Live Esports Discussion across 5 Games" />
+<meta property="og:description" content="Threads, polls, and live chat for the AgentTV community. Talk Fortnite, CS2, Valorant, League, and Apex with other fans." />
+<meta property="og:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta property="og:url" content="https://agent-esports.vercel.app/community.html" />
+<meta property="og:site_name" content="AgentTV" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AgentTV Community · Live Esports Discussion" />
+<meta name="twitter:description" content="Threads, polls, and live chat for the AgentTV community across all 5 major esports." />
+<meta name="twitter:image" content="https://agent-esports.vercel.app/og-default.svg" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Community · AgentTV</title>
+<meta name="description" content="Threads, polls, and live discussion for AgentTV fans across Fortnite, CS2, Valorant, League, and Apex." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-link">AgentTV</a>
+      <a href="#" class="topbar-link">AgentTV+</a>
+      <a href="#" class="topbar-link">Watch</a>
+      <a href="#" class="topbar-link">Listen</a>
+      <a href="#" class="topbar-link">Fantasy</a>
+    </div>
+    <div class="topbar-right"><a href="#" class="topbar-link">Sign Up</a><a href="#" class="topbar-link">Log In</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">A</span>AgentTV</a>
+    <nav class="gamenav">
+      <a href="index.html">Home</a>
+      <a href="fortnite.html">Fortnite</a>
+      <a href="cs2.html">CS2</a>
+      <a href="valorant.html">Valorant</a>
+      <a href="lol.html">League</a>
+      <a href="apex.html">Apex</a>
+      <a href="#">Rocket League</a>
+      <a href="#">More ▾</a>
+    </nav>
+    <div class="header-tools"><input type="search" class="search-box" placeholder="Search threads, polls..." aria-label="Search players and teams" /><button class="btn-watch">Watch Live</button></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container subnav-inner">
+    <a href="index.html">Home</a>
+    <a href="community.html" class="active">Community</a>
+    <a href="live-chat.html">Live Chat</a>
+    <a href="predictions.html">Predictions</a>
+    <a href="tier-list.html">Tier List</a>
+    <a href="watchlist.html">My Watchlist</a>
+    <a href="tournaments.html">Tournaments</a>
+  </div>
+</div>
+
+<main class="container" style="padding: 24px 0 48px;">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <span class="here">Community</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-header">
+    <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+      <span class="live-pip" style="display:inline-flex;align-items:center;gap:6px;">
+        <span style="width:6px;height:6px;background:var(--red);border-radius:50%;display:inline-block;animation:pulse 1.4s infinite;"></span>
+        <span id="active-readers">2,847 active readers</span>
+      </span>
+      · Placeholder community feature · Sign-in coming soon
+    </div>
+    <h1 class="page-title">AgentTV Community</h1>
+    <p class="page-sub">Where serious esports fans go to argue, predict, and overreact in real time. Threads and polls covering all 5 major games · Fortnite, Counter-Strike, Valorant, League, and Apex · plus a live event chat that runs alongside every broadcast.</p>
+    <div style="margin-top: 16px; display:flex; gap: 10px; flex-wrap: wrap;">
+      <button type="button" id="start-thread" class="btn-watch" style="background: var(--red);">+ Start a Thread</button>
+      <a href="live-chat.html" class="btn-watch" style="background: var(--bg-darker);">Open Live Chat ›</a>
+    </div>
+  </div>
+
+  <!-- TWO COLUMN LAYOUT -->
+  <div class="two-col">
+
+    <!-- LEFT MAIN -->
+    <div>
+
+      <!-- LIVE THREADS -->
+      <div class="section-label">Live Discussion Threads <a href="#" class="more">View all threads</a></div>
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-body" style="padding: 0;">
+
+          <a href="#" class="comm-thread" data-thread="t1">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t1" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t1">142</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#fde8eb;color:#a30000;border-color:#f8c4cb;">League</span>
+                  <span class="comm-meta">Posted by <strong>tournament_pal</strong> · 47 min ago</span>
+                </div>
+                <div class="comm-thread-title">Will T1 actually four-peat at Worlds 2026, or is the LPL window opening again?</div>
+                <div class="comm-thread-q">Faker is still Faker, but the meta keeps drifting toward team-fight comps that BLG runs better. Where does everyone stand?</div>
+                <div class="comm-thread-foot">
+                  <span>328 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>fnce_pal</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>3 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t2">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t2" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t2">98</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#e6f0ff;color:#0a47a3;border-color:#c3d7f7;">Fortnite</span>
+                  <span class="comm-meta">Posted by <strong>fncs_truther</strong> · 1 hr ago</span>
+                </div>
+                <div class="comm-thread-title">Is Peterbot the GOAT of Fortnite already, or is it still a Bugha conversation?</div>
+                <div class="comm-thread-q">Five FNCS finals, one Major win, top earner in 2025. At what point does the resume eclipse a single World Cup?</div>
+                <div class="comm-thread-foot">
+                  <span>211 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>esportshead97</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>6 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t3">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t3" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t3">87</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#fde8eb;color:#a30000;border-color:#f8c4cb;">League</span>
+                  <span class="comm-meta">Posted by <strong>lck_loyalist</strong> · 2 hr ago</span>
+                </div>
+                <div class="comm-thread-title">BLG vs T1 in Beijing · who has the actual edge in a BO5?</div>
+                <div class="comm-thread-q">Bin's tempo against Zeus is the matchup of the year. Who breaks first under playoff pressure?</div>
+                <div class="comm-thread-foot">
+                  <span>176 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>midlane_mage</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>12 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t4">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t4" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t4">73</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#f3eafd;color:#6b21a8;border-color:#ddc9f3;">CS2</span>
+                  <span class="comm-meta">Posted by <strong>hltv_fan</strong> · 2 hr ago</span>
+                </div>
+                <div class="comm-thread-title">FaZe coaching change rumor confirmed? What I'm hearing from EU sources</div>
+                <div class="comm-thread-q">Three different leak accounts pointing to the same name. Either it's coordinated or the dam is about to break.</div>
+                <div class="comm-thread-foot">
+                  <span>154 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>karrigan_stan</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>4 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t5">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t5" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t5">61</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#e8f7ee;color:#006e2e;border-color:#c1e4cd;">Valorant</span>
+                  <span class="comm-meta">Posted by <strong>val_skeptic</strong> · 3 hr ago</span>
+                </div>
+                <div class="comm-thread-title">Demon1 form watch heading into Toronto · is the slump real or noise?</div>
+                <div class="comm-thread-q">His ACS is down ~12% across the last six maps but his clutch rate is up. What are we actually looking at?</div>
+                <div class="comm-thread-foot">
+                  <span>132 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>raze_main_42</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>18 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t6">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t6" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t6">54</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#fff7e6;color:#b45309;border-color:#fde4b8;">Apex</span>
+                  <span class="comm-meta">Posted by <strong>algs_andy</strong> · 4 hr ago</span>
+                </div>
+                <div class="comm-thread-title">DZ's drop spot at ALGS London · genius or self-sabotage?</div>
+                <div class="comm-thread-q">They've trended all week toward a hot drop nobody else is contesting. Bold or reading too much into scrim data?</div>
+                <div class="comm-thread-foot">
+                  <span>89 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>verhulst_truther</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>22 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t7">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t7" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t7">42</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#e6f0ff;color:#0a47a3;border-color:#c3d7f7;">Fortnite</span>
+                  <span class="comm-meta">Posted by <strong>arena_tryhard</strong> · 5 hr ago</span>
+                </div>
+                <div class="comm-thread-title">FNCS Summit final game · Falcons trio holds, or do Khanada and Dignitas duo flip it?</div>
+                <div class="comm-thread-q">60-point gap, one game left. What's the realistic path for second to take first?</div>
+                <div class="comm-thread-foot">
+                  <span>118 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>pollo_believer</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>2 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="comm-thread" data-thread="t8">
+            <div class="comm-thread-row">
+              <div class="comm-vote">
+                <button type="button" class="vote-btn" data-thread="t8" aria-label="Upvote">▲</button>
+                <div class="vote-count" data-vote="t8">38</div>
+              </div>
+              <div class="comm-thread-body">
+                <div class="comm-tag-row">
+                  <span class="badge" style="background:#f3eafd;color:#6b21a8;border-color:#ddc9f3;">CS2</span>
+                  <span class="comm-meta">Posted by <strong>spirit_supporter</strong> · 6 hr ago</span>
+                </div>
+                <div class="comm-thread-title">Spirit's mid-round calling · do we already crown them the best in CS2?</div>
+                <div class="comm-thread-q">Three S-tier titles in a row, the comebacks aren't accidents. Convince me a different roster is calling at this level.</div>
+                <div class="comm-thread-foot">
+                  <span>104 replies</span>
+                  <span class="dot-sep">·</span>
+                  <span>Latest by <strong>donk_disciple</strong></span>
+                  <span class="dot-sep">·</span>
+                  <span>14 min ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- POLLS -->
+      <div class="section-label">Active Polls <a href="#" class="more">All polls</a></div>
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-body" style="padding: 0;">
+
+          <div class="comm-poll" data-poll="poll1">
+            <div class="comm-poll-head">
+              <div>
+                <div class="comm-poll-tag">
+                  <span class="badge" style="background:#e6f0ff;color:#0a47a3;border-color:#c3d7f7;">Fortnite</span>
+                  <span class="comm-meta" style="color: var(--text-3);">Closed · 5 min ago</span>
+                </div>
+                <div class="comm-poll-q">Who wins FNCS Major 1 Summit?</div>
+              </div>
+              <div class="comm-poll-stat">3,184 votes</div>
+            </div>
+            <div class="comm-poll-options">
+              <button type="button" class="poll-opt" data-poll="poll1" data-opt="a">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Falcons trio · Pollo / Acorn / Ajerss</span>
+                  <span class="poll-opt-pct">52%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 52%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll1" data-opt="b">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Khanada + Dignitas duo</span>
+                  <span class="poll-opt-pct">31%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 31%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll1" data-opt="c">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Peterbot's Falcons trio</span>
+                  <span class="poll-opt-pct">17%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 17%;"></span></div>
+              </button>
+            </div>
+          </div>
+
+          <div class="comm-poll" data-poll="poll2">
+            <div class="comm-poll-head">
+              <div>
+                <div class="comm-poll-tag">
+                  <span class="badge" style="background:#f3eafd;color:#6b21a8;border-color:#ddc9f3;">CS2</span>
+                  <span class="comm-meta">Closes in 2 days</span>
+                </div>
+                <div class="comm-poll-q">Best CS2 player of 2026 so far?</div>
+              </div>
+              <div class="comm-poll-stat">1,902 votes</div>
+            </div>
+            <div class="comm-poll-options">
+              <button type="button" class="poll-opt" data-poll="poll2" data-opt="a">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">donk · Team Spirit</span>
+                  <span class="poll-opt-pct">44%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 44%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll2" data-opt="b">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">m0NESY · G2</span>
+                  <span class="poll-opt-pct">29%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 29%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll2" data-opt="c">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">ZywOo · Vitality</span>
+                  <span class="poll-opt-pct">27%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 27%;"></span></div>
+              </button>
+            </div>
+          </div>
+
+          <div class="comm-poll" data-poll="poll3">
+            <div class="comm-poll-head">
+              <div>
+                <div class="comm-poll-tag">
+                  <span class="badge" style="background:#fde8eb;color:#a30000;border-color:#f8c4cb;">League</span>
+                  <span class="comm-meta">Closes in 5 days</span>
+                </div>
+                <div class="comm-poll-q">Most undervalued LoL pro right now?</div>
+              </div>
+              <div class="comm-poll-stat">1,418 votes</div>
+            </div>
+            <div class="comm-poll-options">
+              <button type="button" class="poll-opt" data-poll="poll3" data-opt="a">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Knight · TES</span>
+                  <span class="poll-opt-pct">38%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 38%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll3" data-opt="b">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Caps · G2</span>
+                  <span class="poll-opt-pct">36%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 36%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll3" data-opt="c">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Ruler · GenG</span>
+                  <span class="poll-opt-pct">26%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 26%;"></span></div>
+              </button>
+            </div>
+          </div>
+
+          <div class="comm-poll" data-poll="poll4">
+            <div class="comm-poll-head">
+              <div>
+                <div class="comm-poll-tag">
+                  <span class="badge" style="background:#e8f7ee;color:#006e2e;border-color:#c1e4cd;">Valorant</span>
+                  <span class="comm-meta">Closes in 6 hr</span>
+                </div>
+                <div class="comm-poll-q">Who lifts the trophy at VCT Masters Toronto?</div>
+              </div>
+              <div class="comm-poll-stat">2,610 votes</div>
+            </div>
+            <div class="comm-poll-options">
+              <button type="button" class="poll-opt" data-poll="poll4" data-opt="a">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Sentinels</span>
+                  <span class="poll-opt-pct">34%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 34%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll4" data-opt="b">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">Paper Rex</span>
+                  <span class="poll-opt-pct">33%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 33%;"></span></div>
+              </button>
+              <button type="button" class="poll-opt" data-poll="poll4" data-opt="c">
+                <div class="poll-opt-row">
+                  <span class="poll-opt-name">EG</span>
+                  <span class="poll-opt-pct">19%</span>
+                </div>
+                <div class="poll-bar"><span style="width: 19%;"></span></div>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT RAIL -->
+    <aside>
+
+      <!-- LEADERBOARD -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Top Contributors</div>
+          <div class="rail-sub">This week · placeholder leaderboard</div>
+        </div>
+        <div class="rail-body">
+          <div class="rail-row">
+            <span class="rail-rank gold">1</span>
+            <div>
+              <div class="rail-name">tournament_pal</div>
+              <div class="rail-meta">Joined 2024 · LoL focus</div>
+            </div>
+            <span class="rail-val">9,840</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank gold">2</span>
+            <div>
+              <div class="rail-name">esportshead97</div>
+              <div class="rail-meta">Joined 2022 · Multi-game</div>
+            </div>
+            <span class="rail-val">8,512</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank gold">3</span>
+            <div>
+              <div class="rail-name">fncs_truther</div>
+              <div class="rail-meta">Joined 2023 · Fortnite</div>
+            </div>
+            <span class="rail-val">7,401</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">4</span>
+            <div>
+              <div class="rail-name">hltv_fan</div>
+              <div class="rail-meta">Joined 2021 · CS2</div>
+            </div>
+            <span class="rail-val">6,388</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">5</span>
+            <div>
+              <div class="rail-name">val_skeptic</div>
+              <div class="rail-meta">Joined 2024 · Valorant</div>
+            </div>
+            <span class="rail-val">5,902</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">6</span>
+            <div>
+              <div class="rail-name">algs_andy</div>
+              <div class="rail-meta">Joined 2023 · Apex</div>
+            </div>
+            <span class="rail-val">5,114</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">7</span>
+            <div>
+              <div class="rail-name">midlane_mage</div>
+              <div class="rail-meta">Joined 2022 · LoL</div>
+            </div>
+            <span class="rail-val">4,876</span>
+          </div>
+          <div class="rail-row">
+            <span class="rail-rank">8</span>
+            <div>
+              <div class="rail-name">arena_tryhard</div>
+              <div class="rail-meta">Joined 2024 · Fortnite</div>
+            </div>
+            <span class="rail-val">4,210</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVE NOW -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Live Right Now</div>
+          <div class="rail-sub">Jump straight into chat</div>
+        </div>
+        <div class="rail-body" style="padding: 14px 16px;">
+          <a href="live-chat.html" style="display:block; padding: 12px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 10px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>Live · 18,402 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 14px;">FNCS Summit · Day 2 Final Game</div>
+            <div style="font-size: 12px; color: var(--text-2); margin-top: 2px;">Join the chat ›</div>
+          </a>
+          <a href="#" style="display:block; padding: 12px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 10px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>Live · 9,118 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 14px;">IEM Katowice · QF Vitality vs FaZe</div>
+            <div style="font-size: 12px; color: var(--text-2); margin-top: 2px;">Map 3 · Mirage</div>
+          </a>
+          <a href="#" style="display:block; padding: 12px; border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
+            <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+              <span style="display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1.4s infinite;"></span>Live · 6,290 in chat
+            </div>
+            <div style="font-weight: 700; font-size: 14px;">VCT Masters Toronto · Group A</div>
+            <div style="font-size: 12px; color: var(--text-2); margin-top: 2px;">Sentinels vs EG · Map 2</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMMUNITY RULES -->
+      <div class="rail-card">
+        <div class="rail-head">
+          <div class="rail-title">Community Rules</div>
+          <div class="rail-sub">Short version</div>
+        </div>
+        <div class="rail-body" style="padding: 14px 16px; font-size: 13px; color: var(--text-2); line-height: 1.55;">
+          <div style="margin-bottom: 8px;"><strong style="color: var(--text);">1.</strong> Be a fan, not a hater. Argue the play, not the player.</div>
+          <div style="margin-bottom: 8px;"><strong style="color: var(--text);">2.</strong> No leaks of unreleased rosters or contracts.</div>
+          <div style="margin-bottom: 8px;"><strong style="color: var(--text);">3.</strong> Spoiler tags during live events.</div>
+          <div><strong style="color: var(--text);">4.</strong> English in main threads · regional sub-threads coming soon.</div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 16px;"><span class="brand-mark">A</span>AgentTV</a>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); max-width: 320px; margin-top: 16px;">The serious source for esports. Live coverage, player profiles, and tournament data across every major competitive title.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Games</h5>
+        <a href="fortnite.html">Fortnite</a><a href="cs2.html">Counter-Strike 2</a><a href="valorant.html">Valorant</a><a href="lol.html">League of Legends</a><a href="apex.html">Apex Legends</a><a href="#">Rocket League</a><a href="#">Call of Duty</a>
+      </div>
+      <div class="footer-col">
+        <h5>Coverage</h5>
+        <a href="#">Live Scores</a><a href="players.html">Player Profiles</a><a href="teams.html">Team Profiles</a><a href="#">Power Rankings</a><a href="#">Earnings</a><a href="#">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <h5>Community</h5>
+        <a href="community.html">Threads & Polls</a><a href="live-chat.html">Live Chat</a><a href="predictions.html">Predictions</a><a href="tier-list.html">Tier List</a>
+      </div>
+      <div class="footer-col">
+        <h5>Apps & Tools</h5>
+        <a href="#">iOS</a><a href="#">Android</a><a href="#">Browser Extension</a><a href="#">API (beta)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AgentTV. Not affiliated with Epic Games, Valve, Riot Games or any publisher.</div>
+      <div>v0.5.0 · Data updated every 30s</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.comm-thread { display: block; color: var(--text); border-bottom: 1px solid var(--border); }
+.comm-thread:last-child { border-bottom: 0; }
+.comm-thread:hover { background: var(--bg-alt); }
+.comm-thread-row { display: grid; grid-template-columns: 56px 1fr; gap: 14px; padding: 16px 18px; align-items: start; }
+.comm-vote { display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 2px; }
+.vote-btn { width: 32px; height: 28px; border: 1px solid var(--border); background: var(--bg); border-radius: 2px; cursor: pointer; font-size: 11px; font-weight: 800; color: var(--text-2); transition: all 0.12s; }
+.vote-btn:hover { color: var(--red); border-color: var(--red); }
+.vote-btn.voted { background: var(--red); color: #fff; border-color: var(--red); }
+.vote-count { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 800; color: var(--text); }
+.comm-thread-body { min-width: 0; }
+.comm-tag-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.comm-meta { font-size: 11px; color: var(--text-2); }
+.comm-thread-title { font-size: 16px; font-weight: 800; line-height: 1.3; margin-bottom: 4px; letter-spacing: -0.01em; }
+.comm-thread:hover .comm-thread-title { color: var(--red); }
+.comm-thread-q { font-size: 13px; color: var(--text-2); line-height: 1.5; margin-bottom: 8px; }
+.comm-thread-foot { font-size: 11px; color: var(--text-3); display: flex; gap: 8px; flex-wrap: wrap; }
+.comm-thread-foot strong { color: var(--text-2); font-weight: 700; }
+.dot-sep { color: var(--text-3); }
+
+.comm-poll { padding: 18px; border-bottom: 1px solid var(--border); }
+.comm-poll:last-child { border-bottom: 0; }
+.comm-poll-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 14px; }
+.comm-poll-tag { display: flex; gap: 10px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+.comm-poll-q { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
+.comm-poll-stat { font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; color: var(--text-2); white-space: nowrap; }
+.comm-poll-options { display: flex; flex-direction: column; gap: 8px; }
+.poll-opt { width: 100%; text-align: left; padding: 10px 12px; border: 1px solid var(--border); background: var(--bg); border-radius: 3px; cursor: pointer; transition: border-color 0.12s; }
+.poll-opt:hover { border-color: var(--text-2); }
+.poll-opt.voted { border-color: var(--red); background: #fff5f5; }
+.poll-opt-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.poll-opt-pct { font-family: "JetBrains Mono", monospace; color: var(--text-2); }
+.poll-opt.voted .poll-opt-pct { color: var(--red); }
+.poll-bar { height: 4px; background: var(--bg-alt); border-radius: 2px; overflow: hidden; }
+.poll-bar span { display: block; height: 100%; background: var(--text-3); transition: background 0.2s; }
+.poll-opt.voted .poll-bar span { background: var(--red); }
+</style>
+
+<script src="app.js"></script>
+<script src="agenttv.js"></script>
+<script src="agenttv-community.js"></script>
+</body>
+</html>
